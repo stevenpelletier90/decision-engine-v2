@@ -1,4 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import {
+  Typography,
+  CircularProgress,
+  Alert,
+  Card,
+  CardContent,
+  List,
+  ListItem,
+  ListItemText,
+  Divider,
+} from '@mui/material';
 
 const DoctorProcedures = () => {
   const [data, setData] = useState([]);
@@ -25,29 +36,40 @@ const DoctorProcedures = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading data...</p>;
+    return <CircularProgress />;
   }
 
   if (error) {
-    return <p>Error fetching data: {error.message}</p>;
+    return <Alert severity='error'>Error fetching data: {error.message}</Alert>;
   }
 
   return (
     <div>
-      <h1>Doctor Procedures and Prices</h1>
+      <Typography variant='h4' gutterBottom>
+        Doctor Procedures and Prices
+      </Typography>
       {Object.keys(data).map((doctor) => (
-        <div key={doctor}>
-          <h2>{doctor}</h2>
-          <p>Location: {data[doctor].Location}</p>
-          <h3>Procedures:</h3>
-          <ul>
-            {Object.keys(data[doctor].Procedures).map((procedure) => (
-              <li key={procedure}>
-                {procedure}: {data[doctor].Procedures[procedure]}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Card key={doctor} sx={{ mb: 2 }}>
+          <CardContent>
+            <Typography variant='h5'>{doctor}</Typography>
+            <Typography variant='subtitle1' color='text.secondary'>
+              Location: {data[doctor].Location}
+            </Typography>
+            <Typography variant='h6' sx={{ mt: 2 }}>
+              Procedures:
+            </Typography>
+            <List>
+              {Object.entries(data[doctor].Procedures).map(([procedure, price], index) => (
+                <React.Fragment key={procedure}>
+                  {index > 0 && <Divider />}
+                  <ListItem>
+                    <ListItemText primary={procedure} secondary={`$${price}`} />
+                  </ListItem>
+                </React.Fragment>
+              ))}
+            </List>
+          </CardContent>
+        </Card>
       ))}
     </div>
   );
