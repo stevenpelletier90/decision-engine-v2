@@ -1,11 +1,27 @@
-$primary-color: #3498db;
+/* Your existing styles */
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+/* Custom styles for form fields */
+.custom-form-field {
+  .MuiOutlinedInput-root {
+    & fieldset {
+      border-color: rgba(0, 0, 0, 0.23);
+    }
+    &:hover fieldset {
+      border-color: rgba(0, 0, 0, 0.87);
+    }
+    &.Mui-focused fieldset {
+      border-color: #1976d2; /* primary color */
+    }
+  }
+
+  .MuiInputLabel-outlined {
+    background-color: #fff;
+    padding: 0 4px;
+
+    &.MuiInputLabel-shrink {
+      transform: translate(14px, -6px) scale(0.75);
+    }
+  }
 }
 
-h1 {
-  color: $primary-color;
-}
+/* Add any other custom styles you need */

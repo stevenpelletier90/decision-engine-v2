@@ -2,18 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Container, Typography, CircularProgress, Alert } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import RecommendationForm from './components/RecommendationForm';
+import InteractiveRecommendationForm from './components/InteractiveRecommendationForm';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#1976d2',
-    },
-    secondary: {
-      main: '#dc004e',
-    },
-  },
-});
+const theme = createTheme();
 
 const App = () => {
   const [data, setData] = useState({});
@@ -43,16 +34,16 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth='md'>
+      <Container maxWidth='lg'>
         <Typography variant='h2' component='h1' gutterBottom align='center' sx={{ mt: 4 }}>
-          Welcome to the Decision Engine
+          Interactive Procedure Finder
         </Typography>
         {loading ? (
-          <CircularProgress sx={{ display: 'block', margin: '20px auto' }} />
+          <CircularProgress />
         ) : error ? (
           <Alert severity='error'>Error fetching data: {error.message}</Alert>
         ) : (
-          <RecommendationForm data={data} />
+          <InteractiveRecommendationForm data={data} />
         )}
       </Container>
     </ThemeProvider>

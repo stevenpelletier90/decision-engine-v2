@@ -2,410 +2,605 @@
   "Dr. Gross": {
     "Location": "Atlanta",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 5350,
-      "Breast Augmentation (Saline)": 4700,
-      "Breast Augmentation (Gel)": 5200,
-      "Breast Lift (No implant)": 5700,
-      "Breast Reduction (No implant)": 6700,
-      "Tummy Tuck": 5200,
-      "Liposuction": 5150,
-      "Arm Lift": 5450,
-      "Thigh Lift": 5950
+      "Face": {
+        "Facelift": 10000
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4700,
+        "Breast Augmentation (Gel)": 5200,
+        "Breast Lift (No implant)": 5700,
+        "Breast Reduction (No implant)": 6700
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 5350,
+        "Tummy Tuck": 5200,
+        "Liposuction": 5150,
+        "Arm Lift": 5450,
+        "Thigh Lift": 5950
+      }
     }
   },
   "Dr. Gray": {
     "Location": "Atlanta",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 6300,
-      "Breast Augmentation (Saline)": 4850,
-      "Breast Augmentation (Gel)": 5350,
-      "Breast Lift (No implant)": 5850,
-      "Breast Reduction (No implant)": 6850,
-      "Tummy Tuck": 6300,
-      "Liposuction": 5050,
-      "Arm Lift": 6450,
-      "Thigh Lift": 6950
+      "Face": {
+        "Facelift": 10500
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4850,
+        "Breast Augmentation (Gel)": 5350,
+        "Breast Lift (No implant)": 5850,
+        "Breast Reduction (No implant)": 6850
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 6300,
+        "Tummy Tuck": 6300,
+        "Liposuction": 5050,
+        "Arm Lift": 6450,
+        "Thigh Lift": 6950
+      }
     }
   },
   "Dr. Fasusi": {
     "Location": "Atlanta",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 8950,
-      "Breast Augmentation (Saline)": 5150,
-      "Breast Augmentation (Gel)": 5650,
-      "Breast Lift (No implant)": 7350,
-      "Tummy Tuck": 7300,
-      "Liposuction": 7950,
-      "Arm Lift": 7750,
-      "Thigh Lift": 7750,
-      "Labiaplasty": 6000
+      "Face": {
+        "Facelift": 11000
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 5150,
+        "Breast Augmentation (Gel)": 5650,
+        "Breast Lift (No implant)": 7350
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 8950,
+        "Tummy Tuck": 7300,
+        "Liposuction": 7950,
+        "Arm Lift": 7750,
+        "Thigh Lift": 7750,
+        "Labiaplasty": 6000
+      }
     }
   },
   "Dr. Charepoo": {
     "Location": "Austin",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 6600,
-      "Breast Augmentation (Saline)": 5400,
-      "Breast Augmentation (Gel)": 5900,
-      "Breast Lift (No implant)": 6400,
-      "Breast Reduction (No implant)": 7400,
-      "Tummy Tuck": 5900,
-      "Liposuction": 5400,
-      "Arm Lift": 5950,
-      "Thigh Lift": 5950,
-      "Labiaplasty": 5000
+      "Face": {
+        "Facelift": 10800
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 5400,
+        "Breast Augmentation (Gel)": 5900,
+        "Breast Lift (No implant)": 6400,
+        "Breast Reduction (No implant)": 7400
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 6600,
+        "Tummy Tuck": 5900,
+        "Liposuction": 5400,
+        "Arm Lift": 5950,
+        "Thigh Lift": 5950,
+        "Labiaplasty": 5000
+      }
     }
   },
   "Dr. Kashyap": {
     "Location": "Austin",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 5600,
-      "Breast Augmentation (Saline)": 4400,
-      "Breast Augmentation (Gel)": 4900,
-      "Breast Lift (No implant)": 5400,
-      "Breast Reduction (No implant)": 6400,
-      "Tummy Tuck": 5550,
-      "Liposuction": 5050,
-      "Arm Lift": 5450
+      "Face": {
+        "Facelift": 10200
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4400,
+        "Breast Augmentation (Gel)": 4900,
+        "Breast Lift (No implant)": 5400,
+        "Breast Reduction (No implant)": 6400
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 5600,
+        "Tummy Tuck": 5550,
+        "Liposuction": 5050,
+        "Arm Lift": 5450
+      }
     }
   },
   "Dr. Kramer": {
     "Location": "Baltimore",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 5200,
-      "Breast Augmentation (Saline)": 4100,
-      "Breast Augmentation (Gel)": 4600,
-      "Breast Lift (No implant)": 5100,
-      "Breast Reduction (No implant)": 6100,
-      "Tummy Tuck": 4700,
-      "Liposuction": 4200,
-      "Arm Lift": 6450,
-      "Thigh Lift": 6450
+      "Face": {
+        "Facelift": 9800
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4100,
+        "Breast Augmentation (Gel)": 4600,
+        "Breast Lift (No implant)": 5100,
+        "Breast Reduction (No implant)": 6100
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 5200,
+        "Tummy Tuck": 4700,
+        "Liposuction": 4200,
+        "Arm Lift": 6450,
+        "Thigh Lift": 6450
+      }
     }
   },
   "Dr. Kumar": {
     "Location": "Baltimore",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 5850,
-      "Breast Augmentation (Saline)": 4450,
-      "Breast Augmentation (Gel)": 4950,
-      "Breast Lift (No implant)": 5450,
-      "Breast Reduction (No implant)": 6450,
-      "Tummy Tuck": 5350,
-      "Liposuction": 4850,
-      "Arm Lift": 6450,
-      "Thigh Lift": 6450
+      "Face": {
+        "Facelift": 10100
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4450,
+        "Breast Augmentation (Gel)": 4950,
+        "Breast Lift (No implant)": 5450,
+        "Breast Reduction (No implant)": 6450
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 5850,
+        "Tummy Tuck": 5350,
+        "Liposuction": 4850,
+        "Arm Lift": 6450,
+        "Thigh Lift": 6450
+      }
     }
   },
   "Dr. Rozentsvit": {
     "Location": "Chicago",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 5500,
-      "Breast Augmentation (Saline)": 4150,
-      "Breast Augmentation (Gel)": 4650,
-      "Breast Lift (No implant)": 5150,
-      "Breast Reduction (No implant)": 6150,
-      "Tummy Tuck": 5300,
-      "Liposuction": 5000,
-      "Arm Lift": 6000,
-      "Thigh Lift": 6000,
-      "Labiaplasty": 5300
+      "Face": {
+        "Facelift": 10300
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4150,
+        "Breast Augmentation (Gel)": 4650,
+        "Breast Lift (No implant)": 5150,
+        "Breast Reduction (No implant)": 6150
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 5500,
+        "Tummy Tuck": 5300,
+        "Liposuction": 5000,
+        "Arm Lift": 6000,
+        "Thigh Lift": 6000,
+        "Labiaplasty": 5300
+      }
     }
   },
   "Dr. Sisto": {
     "Location": "Chicago",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 6550,
-      "Breast Augmentation (Saline)": 4400,
-      "Breast Augmentation (Gel)": 4900,
-      "Breast Lift (No implant)": 5400,
-      "Breast Reduction (No implant)": 6400,
-      "Tummy Tuck": 6050,
-      "Liposuction": 5800,
-      "Arm Lift": 6000,
-      "Thigh Lift": 6000,
-      "Labiaplasty": 5300
+      "Face": {
+        "Facelift": 10500
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4400,
+        "Breast Augmentation (Gel)": 4900,
+        "Breast Lift (No implant)": 5400,
+        "Breast Reduction (No implant)": 6400
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 6550,
+        "Tummy Tuck": 6050,
+        "Liposuction": 5800,
+        "Arm Lift": 6000,
+        "Thigh Lift": 6000,
+        "Labiaplasty": 5300
+      }
     }
   },
   "Dr. Bronstein": {
     "Location": "Chicago",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 6350,
-      "Breast Augmentation (Saline)": 4800,
-      "Breast Augmentation (Gel)": 5300,
-      "Breast Lift (No implant)": 5800,
-      "Breast Reduction (No implant)": 6800,
-      "Tummy Tuck": 5850,
-      "Liposuction": 5600,
-      "Arm Lift": 6000,
-      "Thigh Lift": 6000,
-      "Labiaplasty": 5300
+      "Face": {
+        "Facelift": 10700
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4800,
+        "Breast Augmentation (Gel)": 5300,
+        "Breast Lift (No implant)": 5800,
+        "Breast Reduction (No implant)": 6800
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 6350,
+        "Tummy Tuck": 5850,
+        "Liposuction": 5600,
+        "Arm Lift": 6000,
+        "Thigh Lift": 6000,
+        "Labiaplasty": 5300
+      }
     }
   },
   "Dr. Shaikh": {
     "Location": "Dallas",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 6000,
-      "Breast Augmentation (Saline)": 4650,
-      "Breast Augmentation (Gel)": 5150,
-      "Breast Lift (No implant)": 6150,
-      "Breast Reduction (No implant)": 7150,
-      "Tummy Tuck": 5800,
-      "Liposuction": 5500,
-      "Arm Lift": 5000,
-      "Thigh Lift": 6500,
-      "Labiaplasty": 5000
+      "Face": {
+        "Facelift": 10200
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4650,
+        "Breast Augmentation (Gel)": 5150,
+        "Breast Lift (No implant)": 6150,
+        "Breast Reduction (No implant)": 7150
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 6000,
+        "Tummy Tuck": 5800,
+        "Liposuction": 5500,
+        "Arm Lift": 5000,
+        "Thigh Lift": 6500,
+        "Labiaplasty": 5000
+      }
     }
   },
   "Dr. Cooper": {
     "Location": "Dallas",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 7550,
-      "Breast Augmentation (Saline)": 5100,
-      "Breast Augmentation (Gel)": 5600,
-      "Breast Lift (No implant)": 6600,
-      "Breast Reduction (No implant)": 7600,
-      "Tummy Tuck": 8150,
-      "Liposuction": 6550,
-      "Arm Lift": 6500,
-      "Thigh Lift": 6500,
-      "Labiaplasty": 5000
+      "Face": {
+        "Facelift": 11000
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 5100,
+        "Breast Augmentation (Gel)": 5600,
+        "Breast Lift (No implant)": 6600,
+        "Breast Reduction (No implant)": 7600
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 7550,
+        "Tummy Tuck": 8150,
+        "Liposuction": 6550,
+        "Arm Lift": 6500,
+        "Thigh Lift": 6500,
+        "Labiaplasty": 5000
+      }
     }
   },
   "Dr. Mehio": {
     "Location": "Dallas",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 11950,
-      "Breast Augmentation (Saline)": 5900,
-      "Breast Augmentation (Gel)": 6400,
-      "Breast Lift (No implant)": 7150,
-      "Breast Reduction (No implant)": 8150,
-      "Tummy Tuck": 8950,
-      "Liposuction": 8450,
-      "Arm Lift": 7750,
-      "Thigh Lift": 7750,
-      "Labiaplasty": 6000
+      "Face": {
+        "Facelift": 11500
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 5900,
+        "Breast Augmentation (Gel)": 6400,
+        "Breast Lift (No implant)": 7150,
+        "Breast Reduction (No implant)": 8150
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 11950,
+        "Tummy Tuck": 8950,
+        "Liposuction": 8450,
+        "Arm Lift": 7750,
+        "Thigh Lift": 7750,
+        "Labiaplasty": 6000
+      }
     }
   },
   "Dr. Patino": {
     "Location": "Houston",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 5200,
-      "Breast Augmentation (Saline)": 4000,
-      "Breast Augmentation (Gel)": 4500,
-      "Breast Lift (No implant)": 5000,
-      "Breast Reduction (No implant)": 6000,
-      "Tummy Tuck": 5000,
-      "Liposuction": 4700,
-      "Arm Lift": 5000,
-      "Thigh Lift": 6500,
-      "Labiaplasty": 5000
+      "Face": {
+        "Facelift": 9800
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4000,
+        "Breast Augmentation (Gel)": 4500,
+        "Breast Lift (No implant)": 5000,
+        "Breast Reduction (No implant)": 6000
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 5200,
+        "Tummy Tuck": 5000,
+        "Liposuction": 4700,
+        "Arm Lift": 5000,
+        "Thigh Lift": 6500,
+        "Labiaplasty": 5000
+      }
     }
   },
   "Dr. Ziakas": {
     "Location": "Houston",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 4750,
-      "Breast Augmentation (Saline)": 3950,
-      "Breast Augmentation (Gel)": 4450,
-      "Breast Lift (No implant)": 5450,
-      "Breast Reduction (No implant)": 6450,
-      "Tummy Tuck": 4500,
-      "Liposuction": 4350,
-      "Arm Lift": 5000,
-      "Thigh Lift": 6500,
-      "Labiaplasty": 5000
+      "Face": {
+        "Facelift": 9600
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 3950,
+        "Breast Augmentation (Gel)": 4450,
+        "Breast Lift (No implant)": 5450,
+        "Breast Reduction (No implant)": 6450
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 4750,
+        "Tummy Tuck": 4500,
+        "Liposuction": 4350,
+        "Arm Lift": 5000,
+        "Thigh Lift": 6500,
+        "Labiaplasty": 5000
+      }
     }
   },
   "Dr. Sarcia": {
     "Location": "Houston",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 5000,
-      "Breast Augmentation (Saline)": 3950,
-      "Breast Augmentation (Gel)": 4450,
-      "Breast Lift (No implant)": 5450,
-      "Breast Reduction (No implant)": 6450,
-      "Tummy Tuck": 4600,
-      "Liposuction": 4400,
-      "Arm Lift": 5000,
-      "Thigh Lift": 6500
+      "Face": {
+        "Facelift": 9700
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 3950,
+        "Breast Augmentation (Gel)": 4450,
+        "Breast Lift (No implant)": 5450,
+        "Breast Reduction (No implant)": 6450
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 5000,
+        "Tummy Tuck": 4600,
+        "Liposuction": 4400,
+        "Arm Lift": 5000,
+        "Thigh Lift": 6500
+      }
     }
   },
   "Dr. Towle": {
     "Location": "Las Vegas",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 7050,
-      "Breast Augmentation (Saline)": 6125,
-      "Breast Augmentation (Gel)": 6625,
-      "Breast Lift (No implant)": 7125,
-      "Breast Reduction (No implant)": 8125,
-      "Tummy Tuck": 8150,
-      "Liposuction": 6650,
-      "Arm Lift": 7450,
-      "Thigh Lift": 7550,
-      "Labiaplasty": 7500
+      "Face": {
+        "Facelift": 11200
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 6125,
+        "Breast Augmentation (Gel)": 6625,
+        "Breast Lift (No implant)": 7125,
+        "Breast Reduction (No implant)": 8125
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 7050,
+        "Tummy Tuck": 8150,
+        "Liposuction": 6650,
+        "Arm Lift": 7450,
+        "Thigh Lift": 7550,
+        "Labiaplasty": 7500
+      }
     }
   },
   "Dr. Morse": {
     "Location": "Las Vegas",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 6650,
-      "Breast Augmentation (Saline)": 5525,
-      "Breast Augmentation (Gel)": 6025,
-      "Breast Lift (No implant)": 6525,
-      "Breast Reduction (No implant)": 7525,
-      "Tummy Tuck": 6150,
-      "Liposuction": 5650,
-      "Arm Lift": 6450,
-      "Thigh Lift": 6550,
-      "Labiaplasty": 7000
+      "Face": {
+        "Facelift": 10800
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 5525,
+        "Breast Augmentation (Gel)": 6025,
+        "Breast Lift (No implant)": 6525,
+        "Breast Reduction (No implant)": 7525
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 6650,
+        "Tummy Tuck": 6150,
+        "Liposuction": 5650,
+        "Arm Lift": 6450,
+        "Thigh Lift": 6550,
+        "Labiaplasty": 7000
+      }
     }
   },
   "Dr. Xu": {
     "Location": "Miami",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 4099,
-      "Breast Augmentation (Saline)": 3150,
-      "Breast Augmentation (Gel)": 3650,
-      "Breast Lift (No implant)": 4150,
-      "Breast Reduction (No implant)": 5150,
-      "Tummy Tuck": 4349,
-      "Liposuction": 3449,
-      "Arm Lift": 4900,
-      "Thigh Lift": 4900,
-      "Labiaplasty": 3500
+      "Face": {
+        "Facelift": 9300
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 3150,
+        "Breast Augmentation (Gel)": 3650,
+        "Breast Lift (No implant)": 4150,
+        "Breast Reduction (No implant)": 5150
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 4099,
+        "Tummy Tuck": 4349,
+        "Liposuction": 3449,
+        "Arm Lift": 4900,
+        "Thigh Lift": 4900,
+        "Labiaplasty": 3500
+      }
     }
   },
   "Dr. Wright": {
     "Location": "Miami",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 5400,
-      "Breast Augmentation (Saline)": 3800,
-      "Breast Augmentation (Gel)": 4300,
-      "Breast Lift (No implant)": 4800,
-      "Breast Reduction (No implant)": 5800,
-      "Tummy Tuck": 5400,
-      "Liposuction": 4650,
-      "Arm Lift": 5700,
-      "Thigh Lift": 5600,
-      "Labiaplasty": 3500
+      "Face": {
+        "Facelift": 9500
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 3800,
+        "Breast Augmentation (Gel)": 4300,
+        "Breast Lift (No implant)": 4800,
+        "Breast Reduction (No implant)": 5800
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 5400,
+        "Tummy Tuck": 5400,
+        "Liposuction": 4650,
+        "Arm Lift": 5700,
+        "Thigh Lift": 5600,
+        "Labiaplasty": 3500
+      }
     }
   },
   "Dr. Giorgis": {
     "Location": "Miami",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 4099,
-      "Breast Augmentation (Saline)": 3150,
-      "Breast Augmentation (Gel)": 3650,
-      "Breast Lift (No implant)": 4150,
-      "Breast Reduction (No implant)": 5150,
-      "Tummy Tuck": 4349,
-      "Liposuction": 3500,
-      "Arm Lift": 5200,
-      "Thigh Lift": 5200
+      "Face": {
+        "Facelift": 9400
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 3150,
+        "Breast Augmentation (Gel)": 3650,
+        "Breast Lift (No implant)": 4150,
+        "Breast Reduction (No implant)": 5150
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 4099,
+        "Tummy Tuck": 4349,
+        "Liposuction": 3500,
+        "Arm Lift": 5200,
+        "Thigh Lift": 5200
+      }
     }
   },
   "Dr. Elbayer": {
     "Location": "New York",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 5400,
-      "Breast Augmentation (Saline)": 4300,
-      "Breast Augmentation (Gel)": 4800,
-      "Breast Lift (No implant)": 5300,
-      "Breast Reduction (No implant)": 6300,
-      "Tummy Tuck": 5300,
-      "Liposuction": 4800,
-      "Arm Lift": 5950,
-      "Thigh Lift": 5950,
-      "Labiaplasty": 5000
+      "Face": {
+        "Facelift": 10000
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4300,
+        "Breast Augmentation (Gel)": 4800,
+        "Breast Lift (No implant)": 5300,
+        "Breast Reduction (No implant)": 6300
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 5400,
+        "Tummy Tuck": 5300,
+        "Liposuction": 4800,
+        "Arm Lift": 5950,
+        "Thigh Lift": 5950,
+        "Labiaplasty": 5000
+      }
     }
   },
-
   "Dr. Filstein": {
     "Location": "New York",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 5300,
-      "Breast Augmentation (Saline)": 4150,
-      "Breast Augmentation (Gel)": 4650,
-      "Breast Lift (No implant)": 5150,
-      "Breast Reduction (No implant)": 6150,
-      "Tummy Tuck": 5200,
-      "Liposuction": 4600,
-      "Arm Lift": 5950,
-      "Thigh Lift": 5950,
-      "Labiaplasty": 5000
+      "Face": {
+        "Facelift": 9800
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4150,
+        "Breast Augmentation (Gel)": 4650,
+        "Breast Lift (No implant)": 5150,
+        "Breast Reduction (No implant)": 6150
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 5300,
+        "Tummy Tuck": 5200,
+        "Liposuction": 4600,
+        "Arm Lift": 5950,
+        "Thigh Lift": 5950,
+        "Labiaplasty": 5000
+      }
     }
   },
   "Dr. Horowitz": {
     "Location": "New York",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 6300,
-      "Breast Augmentation (Saline)": 5100,
-      "Breast Augmentation (Gel)": 5600,
-      "Breast Lift (No implant)": 6100,
-      "Breast Reduction (No implant)": 7100,
-      "Tummy Tuck": 6100,
-      "Liposuction": 5600,
-      "Arm Lift": 6450,
-      "Thigh Lift": 6450
+      "Face": {
+        "Facelift": 10200
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 5100,
+        "Breast Augmentation (Gel)": 5600,
+        "Breast Lift (No implant)": 6100,
+        "Breast Reduction (No implant)": 7100
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 6300,
+        "Tummy Tuck": 6100,
+        "Liposuction": 5600,
+        "Arm Lift": 6450,
+        "Thigh Lift": 6450
+      }
     }
   },
   "Dr. Orlando": {
     "Location": "Phoenix",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 6000,
-      "Breast Augmentation (Saline)": 4650,
-      "Breast Augmentation (Gel)": 5150,
-      "Breast Lift (No implant)": 6150,
-      "Breast Reduction (No implant)": 7150,
-      "Tummy Tuck": 5800,
-      "Liposuction": 5500,
-      "Arm Lift": 5000,
-      "Thigh Lift": 6500,
-      "Labiaplasty": 5000
+      "Face": {
+        "Facelift": 10100
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 4650,
+        "Breast Augmentation (Gel)": 5150,
+        "Breast Lift (No implant)": 6150,
+        "Breast Reduction (No implant)": 7150
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 6000,
+        "Tummy Tuck": 5800,
+        "Liposuction": 5500,
+        "Arm Lift": 5000,
+        "Thigh Lift": 6500,
+        "Labiaplasty": 5000
+      }
     }
   },
   "Dr. Scroggins": {
     "Location": "Tampa",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 4199,
-      "Breast Augmentation (Saline)": 3200,
-      "Breast Augmentation (Gel)": 3700,
-      "Breast Lift (No implant)": 4200,
-      "Breast Reduction (No implant)": 5200,
-      "Tummy Tuck": 4399,
-      "Liposuction": 3999,
-      "Arm Lift": 4700,
-      "Thigh Lift": 4700
+      "Face": {
+        "Facelift": 9200
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 3200,
+        "Breast Augmentation (Gel)": 3700,
+        "Breast Lift (No implant)": 4200,
+        "Breast Reduction (No implant)": 5200
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 4199,
+        "Tummy Tuck": 4399,
+        "Liposuction": 3999,
+        "Arm Lift": 4700,
+        "Thigh Lift": 4700
+      }
     }
   },
   "Dr. Valauri": {
     "Location": "Tampa",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 4200,
-      "Breast Augmentation (Saline)": 3250,
-      "Breast Augmentation (Gel)": 3750,
-      "Breast Lift (No implant)": 4250,
-      "Breast Reduction (No implant)": 5250,
-      "Tummy Tuck": 4500,
-      "Liposuction": 3950,
-      "Arm Lift": 5350,
-      "Thigh Lift": 5350
+      "Face": {
+        "Facelift": 9300
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 3250,
+        "Breast Augmentation (Gel)": 3750,
+        "Breast Lift (No implant)": 4250,
+        "Breast Reduction (No implant)": 5250
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 4200,
+        "Tummy Tuck": 4500,
+        "Liposuction": 3950,
+        "Arm Lift": 5350,
+        "Thigh Lift": 5350
+      }
     }
   },
   "Dr. Garner": {
     "Location": "Tampa",
     "Procedures": {
-      "Brazilian Butt Lift (BBL)": 4099,
-      "Breast Augmentation (Saline)": 3150,
-      "Breast Augmentation (Gel)": 3650,
-      "Breast Lift (No implant)": 4150,
-      "Breast Reduction (No implant)": 5150,
-      "Tummy Tuck": 4299,
-      "Liposuction": 3899,
-      "Arm Lift": 4700,
-      "Thigh Lift": 4700,
-      "Labiaplasty": 3500
+      "Face": {
+        "Facelift": 9100
+      },
+      "Breast": {
+        "Breast Augmentation (Saline)": 3150,
+        "Breast Augmentation (Gel)": 3650,
+        "Breast Lift (No implant)": 4150,
+        "Breast Reduction (No implant)": 5150
+      },
+      "Body": {
+        "Brazilian Butt Lift (BBL)": 4099,
+        "Tummy Tuck": 4299,
+        "Liposuction": 3899,
+        "Arm Lift": 4700,
+        "Thigh Lift": 4700,
+        "Labiaplasty": 3500
+      }
     }
   }
 }

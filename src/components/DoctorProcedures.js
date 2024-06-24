@@ -1,48 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import {
-  Typography,
-  CircularProgress,
-  Alert,
-  Card,
-  CardContent,
-  List,
-  ListItem,
-  ListItemText,
-  Divider,
-} from '@mui/material';
+import React from 'react';
+import { Typography, Card, CardContent, List, ListItem, ListItemText, Divider } from '@mui/material';
 
-const DoctorProcedures = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetch('/doctor_procedures.json')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-        setError(error);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return <CircularProgress />;
-  }
-
-  if (error) {
-    return <Alert severity='error'>Error fetching data: {error.message}</Alert>;
-  }
-
+const DoctorProcedures = ({ data }) => {
   return (
     <div>
       <Typography variant='h4' gutterBottom>
