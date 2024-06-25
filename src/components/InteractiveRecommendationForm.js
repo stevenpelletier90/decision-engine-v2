@@ -10,6 +10,8 @@ import {
   InputLabel,
   Alert,
   OutlinedInput,
+  Card,
+  CardContent,
 } from '@mui/material';
 
 const InteractiveRecommendationForm = ({ data }) => {
@@ -17,7 +19,6 @@ const InteractiveRecommendationForm = ({ data }) => {
   const [bodyArea, setBodyArea] = useState('');
   const [selectedProcedure, setSelectedProcedure] = useState('');
   const [selectedLocation, setSelectedLocation] = useState('');
-  const [selectedDoctor, setSelectedDoctor] = useState('');
   const [priceRange, setPriceRange] = useState([0, 20000]);
 
   const bodyAreas = useMemo(() => ['Face', 'Breast', 'Body'], []);
@@ -63,22 +64,15 @@ const InteractiveRecommendationForm = ({ data }) => {
     setBodyArea(event.target.value);
     setSelectedProcedure('');
     setSelectedLocation('');
-    setSelectedDoctor('');
   };
 
   const handleProcedureChange = (event) => {
     setSelectedProcedure(event.target.value);
     setSelectedLocation('');
-    setSelectedDoctor('');
   };
 
   const handleLocationChange = (event) => {
     setSelectedLocation(event.target.value);
-    setSelectedDoctor('');
-  };
-
-  const handleDoctorChange = (event) => {
-    setSelectedDoctor(event.target.value);
   };
 
   const handlePriceRangeChange = (event, newValue) => {
@@ -114,6 +108,7 @@ const InteractiveRecommendationForm = ({ data }) => {
               value={gender}
               onChange={handleGenderChange}
               input={<OutlinedInput label='Gender' />}
+              aria-label='Select Gender'
             >
               <MenuItem value=''>
                 <em>Select Gender</em>
@@ -131,6 +126,7 @@ const InteractiveRecommendationForm = ({ data }) => {
               value={bodyArea}
               onChange={handleBodyAreaChange}
               input={<OutlinedInput label='Body Area' />}
+              aria-label='Select Body Area'
             >
               <MenuItem value=''>
                 <em>Select Body Area</em>
@@ -159,6 +155,7 @@ const InteractiveRecommendationForm = ({ data }) => {
               onChange={handleProcedureChange}
               disabled={!bodyArea || procedures.length === 0}
               input={<OutlinedInput label='Procedure' />}
+              aria-label='Select Procedure'
             >
               <MenuItem value=''>
                 <em>Select Procedure</em>
@@ -180,6 +177,7 @@ const InteractiveRecommendationForm = ({ data }) => {
               onChange={handleLocationChange}
               disabled={!selectedProcedure || availableLocations.length === 0}
               input={<OutlinedInput label='Location' />}
+              aria-label='Select Location'
             >
               <MenuItem value=''>
                 <em>Select Location</em>
@@ -187,27 +185,6 @@ const InteractiveRecommendationForm = ({ data }) => {
               {availableLocations.map((location) => (
                 <MenuItem key={location} value={location}>
                   {location}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-          <FormControl variant='outlined' fullWidth>
-            <InputLabel id='doctor-select-label'>Doctor</InputLabel>
-            <Select
-              labelId='doctor-select-label'
-              id='doctor-select'
-              name='doctor'
-              value={selectedDoctor}
-              onChange={handleDoctorChange}
-              disabled={!selectedLocation || availableDoctors.length === 0}
-              input={<OutlinedInput label='Doctor' />}
-            >
-              <MenuItem value=''>
-                <em>Select Doctor</em>
-              </MenuItem>
-              {availableDoctors.map((doctor) => (
-                <MenuItem key={doctor} value={doctor}>
-                  {doctor}
                 </MenuItem>
               ))}
             </Select>
@@ -227,22 +204,33 @@ const InteractiveRecommendationForm = ({ data }) => {
             min={0}
             max={maxPrice}
             step={100}
+            aria-labelledby='price-range-slider-label'
           />
-          <Typography>
+          <Typography id='price-range-slider-label'>
             ${priceRange[0]} - ${priceRange[1]}
           </Typography>
         </Grid>
       </Grid>
 
-      {selectedDoctor && (
+      {/* Display available doctors */}
+      {selectedLocation && availableDoctors.length > 0 && (
         <Box mt={4}>
           <Typography variant='h5' gutterBottom>
-            Selected Procedure Details
+            Available Doctors
           </Typography>
-          <Typography>Procedure: {selectedProcedure}</Typography>
-          <Typography>Location: {selectedLocation}</Typography>
-          <Typography>Doctor: {selectedDoctor}</Typography>
-          <Typography>Price: ${data[selectedDoctor].Procedures[bodyArea][selectedProcedure]}</Typography>
+          <Grid container spacing={2}>
+            {availableDoctors.map((doctorName) => (
+              <Grid item xs={12} sm={6} md={4} key={doctorName}>
+                <Card>
+                  <CardContent>
+                    <Typography variant='h6'>{doctorName}</Typography>
+                    <Typography>Location: {data[doctorName].Location}</Typography>
+                    <Typography>Price: ${data[doctorName].Procedures[bodyArea][selectedProcedure]}</Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
         </Box>
       )}
 
