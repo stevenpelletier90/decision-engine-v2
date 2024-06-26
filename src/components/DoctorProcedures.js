@@ -39,14 +39,12 @@ const DoctorProcedures = ({ data, selectedAreas, priceRange, gender }) => {
                     </Typography>
                     <Box className='procedure-list'>
                       {doctorData.Procedures[area] && Object.entries(doctorData.Procedures[area]).length > 0 ? (
-                        Object.entries(doctorData.Procedures[area])
-                          .filter(([procedure]) => procedure.includes(gender) || !procedure.includes('Male'))
-                          .map(([procedure, price]) => (
-                            <Typography key={procedure} variant='body2' className='procedure-item'>
-                              <span>{procedure}</span>
-                              <strong>{price}</strong>
-                            </Typography>
-                          ))
+                        Object.entries(doctorData.Procedures[area]).map(([procedure, price]) => (
+                          <Typography key={procedure} variant='body2' className='procedure-item'>
+                            <span>{procedure}</span>
+                            <strong>{price}</strong>
+                          </Typography>
+                        ))
                       ) : (
                         <Typography variant='body2' color='text.secondary'>
                           No procedures available for this area.
