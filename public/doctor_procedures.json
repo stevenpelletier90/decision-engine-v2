@@ -1,605 +1,2224 @@
 {
-  "Dr. Gross": {
-    "Location": "Atlanta",
-    "Procedures": {
-      "Face": {
-        "Facelift": 10000
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 4700,
-        "Breast Augmentation (Gel)": 5200,
-        "Breast Lift (No implant)": 5700,
-        "Breast Reduction (No implant)": 6700
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 5350,
-        "Tummy Tuck": 5200,
-        "Liposuction": 5150,
-        "Arm Lift": 5450,
-        "Thigh Lift": 5950
-      }
-    }
-  },
-  "Dr. Gray": {
-    "Location": "Atlanta",
-    "Procedures": {
-      "Face": {
-        "Facelift": 10500
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 4850,
-        "Breast Augmentation (Gel)": 5350,
-        "Breast Lift (No implant)": 5850,
-        "Breast Reduction (No implant)": 6850
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 6300,
-        "Tummy Tuck": 6300,
-        "Liposuction": 5050,
-        "Arm Lift": 6450,
-        "Thigh Lift": 6950
-      }
-    }
-  },
-  "Dr. Fasusi": {
-    "Location": "Atlanta",
-    "Procedures": {
-      "Face": {
-        "Facelift": 11000
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 5150,
-        "Breast Augmentation (Gel)": 5650,
-        "Breast Lift (No implant)": 7350
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 8950,
-        "Tummy Tuck": 7300,
-        "Liposuction": 7950,
-        "Arm Lift": 7750,
-        "Thigh Lift": 7750,
-        "Labiaplasty": 6000
-      }
-    }
-  },
-  "Dr. Charepoo": {
-    "Location": "Austin",
-    "Procedures": {
-      "Face": {
-        "Facelift": 10800
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 5400,
-        "Breast Augmentation (Gel)": 5900,
-        "Breast Lift (No implant)": 6400,
-        "Breast Reduction (No implant)": 7400
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 6600,
-        "Tummy Tuck": 5900,
-        "Liposuction": 5400,
-        "Arm Lift": 5950,
-        "Thigh Lift": 5950,
-        "Labiaplasty": 5000
-      }
-    }
-  },
-  "Dr. Kashyap": {
-    "Location": "Austin",
-    "Procedures": {
-      "Face": {
-        "Facelift": 10200
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 4400,
-        "Breast Augmentation (Gel)": 4900,
-        "Breast Lift (No implant)": 5400,
-        "Breast Reduction (No implant)": 6400
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 5600,
-        "Tummy Tuck": 5550,
-        "Liposuction": 5050,
-        "Arm Lift": 5450
-      }
-    }
-  },
-  "Dr. Kramer": {
-    "Location": "Baltimore",
-    "Procedures": {
-      "Face": {
-        "Facelift": 9800
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 4100,
-        "Breast Augmentation (Gel)": 4600,
-        "Breast Lift (No implant)": 5100,
-        "Breast Reduction (No implant)": 6100
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 5200,
-        "Tummy Tuck": 4700,
-        "Liposuction": 4200,
-        "Arm Lift": 6450,
-        "Thigh Lift": 6450
-      }
-    }
-  },
-  "Dr. Kumar": {
-    "Location": "Baltimore",
-    "Procedures": {
-      "Face": {
-        "Facelift": 10100
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 4450,
-        "Breast Augmentation (Gel)": 4950,
-        "Breast Lift (No implant)": 5450,
-        "Breast Reduction (No implant)": 6450
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 5850,
-        "Tummy Tuck": 5350,
-        "Liposuction": 4850,
-        "Arm Lift": 6450,
-        "Thigh Lift": 6450
-      }
-    }
-  },
-  "Dr. Rozentsvit": {
-    "Location": "Chicago",
-    "Procedures": {
-      "Face": {
-        "Facelift": 10300
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 4150,
-        "Breast Augmentation (Gel)": 4650,
-        "Breast Lift (No implant)": 5150,
-        "Breast Reduction (No implant)": 6150
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 5500,
-        "Tummy Tuck": 5300,
-        "Liposuction": 5000,
-        "Arm Lift": 6000,
-        "Thigh Lift": 6000,
-        "Labiaplasty": 5300
-      }
-    }
-  },
-  "Dr. Sisto": {
-    "Location": "Chicago",
-    "Procedures": {
-      "Face": {
-        "Facelift": 10500
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 4400,
-        "Breast Augmentation (Gel)": 4900,
-        "Breast Lift (No implant)": 5400,
-        "Breast Reduction (No implant)": 6400
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 6550,
-        "Tummy Tuck": 6050,
-        "Liposuction": 5800,
-        "Arm Lift": 6000,
-        "Thigh Lift": 6000,
-        "Labiaplasty": 5300
-      }
-    }
-  },
   "Dr. Bronstein": {
     "Location": "Chicago",
     "Procedures": {
-      "Face": {
-        "Facelift": 10700
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500",
+          "Male Ear Pinning": "$5,300",
+          "Male Neck Rejuvenation": "$8,800",
+          "Male Face Lift/Neck": "$12,300",
+          "Male Buccal Fat Removal": "$3,800",
+          "Male Dimpleplasty Procedure Alone": "$1,800"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500",
+          "Ear Pinning": "$5,300",
+          "Neck Rejuvenation": "$8,800",
+          "Face Lift/Neck": "$12,300",
+          "Buccal Fat Removal": "$3,800",
+          "Dimpleplasty Procedure Alone": "$1,800"
+        }
       },
       "Breast": {
-        "Breast Augmentation (Saline)": 4800,
-        "Breast Augmentation (Gel)": 5300,
-        "Breast Lift (No implant)": 5800,
-        "Breast Reduction (No implant)": 6800
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300",
+          "Breast Lift (No implant)": "$5,800",
+          "Breast Lift (Saline)": "$6,300",
+          "Breast Lift (Gel)": "$6,800",
+          "Breast Reduction (No implant)": "$6,800",
+          "Fat Transfer to Breast": "$6,950"
+        }
       },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 6350,
-        "Tummy Tuck": 5850,
-        "Liposuction": 5600,
-        "Arm Lift": 6000,
-        "Thigh Lift": 6000,
-        "Labiaplasty": 5300
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350",
+          "Male Tummy Tuck Fleur De Lise": "$9,200",
+          "Male Liposuction Up to 12 areas": "$5,600"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350",
+          "Tummy Tuck Fleur De Lise": "$9,200",
+          "Liposuction Up to 12 areas": "$5,600",
+          "Labiaplasty": "$5,300"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300",
+          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300",
+          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        }
+      },
+      "Buttocks": {
+        "Male": {
+          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$6,350"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$6,350"
+        }
       }
     }
   },
-  "Dr. Shaikh": {
-    "Location": "Dallas",
+
+  "Dr. Charepoo": {
+    "Location": "Austin",
     "Procedures": {
-      "Face": {
-        "Facelift": 10200
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Buccal Fat Removal": "$3,500",
+          "Male Renuvion/JPlasma (Chin)": "$900"
+        },
+        "Female": {
+          "Buccal Fat Removal": "$3,500",
+          "Renuvion/JPlasma (Chin)": "$900"
+        }
       },
       "Breast": {
-        "Breast Augmentation (Saline)": 4650,
-        "Breast Augmentation (Gel)": 5150,
-        "Breast Lift (No implant)": 6150,
-        "Breast Reduction (No implant)": 7150
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,600"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$5,400",
+          "Breast Augmentation (Gel)": "$5,900",
+          "Breast Lift (No implant)": "$6,400",
+          "Breast Lift (Saline)": "$6,900",
+          "Breast Lift (Gel)": "$7,400",
+          "Breast Reduction (No implant)": "$7,400",
+          "Fat Transfer to Breast": "$6,450"
+        }
       },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 6000,
-        "Tummy Tuck": 5800,
-        "Liposuction": 5500,
-        "Arm Lift": 5000,
-        "Thigh Lift": 6500,
-        "Labiaplasty": 5000
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$6,450",
+          "Male Arm Lift (Long scar)": "$5,950",
+          "Male Renuvion/JPlasma (Arms)": "$1,700"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$6,450",
+          "Arm Lift (Long scar)": "$5,950",
+          "Renuvion/JPlasma (Arms)": "$1,700"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$6,450",
+          "Male Thigh Lift (Long scar)": "$5,950"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$6,450",
+          "Thigh Lift (Long scar)": "$5,950"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,900",
+          "Male Tummy Tuck (Extended)": "$6,400",
+          "Male Liposuction Up to 12 areas": "$5,400",
+          "Male Renuvion/JPlasma (Full Abdomen)": "$3,200",
+          "Male Renuvion/JPlasma (Inner thighs)": "$1,700"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,900",
+          "Tummy Tuck (Extended)": "$6,400",
+          "Liposuction Up to 12 areas": "$5,400",
+          "Labiaplasty": "$5,000",
+          "Renuvion/JPlasma (Full Abdomen)": "$3,200",
+          "Renuvion/JPlasma (Inner thighs)": "$1,700"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Back Lift": "$5,000",
+          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        },
+        "Female": {
+          "Back Lift": "$5,000",
+          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        }
+      },
+      "Buttocks": {
+        "Male": {
+          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$6,600"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$6,600"
+        }
       }
     }
   },
+
   "Dr. Cooper": {
     "Location": "Dallas",
     "Procedures": {
-      "Face": {
-        "Facelift": 11000
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$3,700",
+          "Male Eyelid Lift Upper": "$3,500",
+          "Male Chin Implant": "$4,000",
+          "Male Earlobe Repair (Both)": "$2,000",
+          "Male Earlobe Repair (Single)": "$1,500",
+          "Male Neck Rejuvenation": "$9,000",
+          "Male Face Lift/Neck": "$12,000",
+          "Male Rhinoplasty": "$10,200",
+          "Male Buccal Fat Removal": "$3,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$3,700",
+          "Eyelid Lift Upper": "$3,500",
+          "Chin Implant": "$4,000",
+          "Earlobe Repair (Both)": "$2,000",
+          "Earlobe Repair (Single)": "$1,500",
+          "Neck Rejuvenation": "$9,000",
+          "Face Lift/Neck": "$12,000",
+          "Rhinoplasty": "$10,200",
+          "Buccal Fat Removal": "$3,500"
+        }
       },
       "Breast": {
-        "Breast Augmentation (Saline)": 5100,
-        "Breast Augmentation (Gel)": 5600,
-        "Breast Lift (No implant)": 6600,
-        "Breast Reduction (No implant)": 7600
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$7,100"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$5,100",
+          "Breast Augmentation (Gel)": "$5,600",
+          "Breast Lift (No implant)": "$6,600",
+          "Breast Lift (Saline)": "$7,100",
+          "Breast Lift (Gel)": "$7,600",
+          "Breast Reduction (No implant)": "$7,600",
+          "Fat Transfer to Breast": "$6,800"
+        }
       },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 7550,
-        "Tummy Tuck": 8150,
-        "Liposuction": 6550,
-        "Arm Lift": 6500,
-        "Thigh Lift": 6500,
-        "Labiaplasty": 5000
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$6,000",
+          "Male Arm Lift (Long scar)": "$6,500"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$6,000",
+          "Arm Lift (Long scar)": "$6,500"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$6,000",
+          "Male Thigh Lift (Long scar)": "$6,500"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$6,000",
+          "Thigh Lift (Long scar)": "$6,500"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$8,150",
+          "Male Tummy Tuck (Extended)": "$8,650",
+          "Male Tummy Tuck Fleur De Lise": "$11,400",
+          "Male Liposuction Up to 12 areas": "$6,550"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$8,150",
+          "Tummy Tuck (Extended)": "$8,650",
+          "Tummy Tuck Fleur De Lise": "$11,400",
+          "Liposuction Up to 12 areas": "$6,550",
+          "Abdominal Etching w/ Liposuction 12 Areas": "$8,550",
+          "Labiaplasty": "$5,000"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Back Lift": "$8,250",
+          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        },
+        "Female": {
+          "Back Lift": "$8,250",
+          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        }
+      },
+      "Buttocks": {
+        "Male": {
+          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$7,550"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$7,550"
+        }
       }
     }
   },
-  "Dr. Mehio": {
-    "Location": "Dallas",
-    "Procedures": {
-      "Face": {
-        "Facelift": 11500
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 5900,
-        "Breast Augmentation (Gel)": 6400,
-        "Breast Lift (No implant)": 7150,
-        "Breast Reduction (No implant)": 8150
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 11950,
-        "Tummy Tuck": 8950,
-        "Liposuction": 8450,
-        "Arm Lift": 7750,
-        "Thigh Lift": 7750,
-        "Labiaplasty": 6000
-      }
-    }
-  },
-  "Dr. Patino": {
-    "Location": "Houston",
-    "Procedures": {
-      "Face": {
-        "Facelift": 9800
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 4000,
-        "Breast Augmentation (Gel)": 4500,
-        "Breast Lift (No implant)": 5000,
-        "Breast Reduction (No implant)": 6000
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 5200,
-        "Tummy Tuck": 5000,
-        "Liposuction": 4700,
-        "Arm Lift": 5000,
-        "Thigh Lift": 6500,
-        "Labiaplasty": 5000
-      }
-    }
-  },
-  "Dr. Ziakas": {
-    "Location": "Houston",
-    "Procedures": {
-      "Face": {
-        "Facelift": 9600
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 3950,
-        "Breast Augmentation (Gel)": 4450,
-        "Breast Lift (No implant)": 5450,
-        "Breast Reduction (No implant)": 6450
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 4750,
-        "Tummy Tuck": 4500,
-        "Liposuction": 4350,
-        "Arm Lift": 5000,
-        "Thigh Lift": 6500,
-        "Labiaplasty": 5000
-      }
-    }
-  },
-  "Dr. Sarcia": {
-    "Location": "Houston",
-    "Procedures": {
-      "Face": {
-        "Facelift": 9700
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 3950,
-        "Breast Augmentation (Gel)": 4450,
-        "Breast Lift (No implant)": 5450,
-        "Breast Reduction (No implant)": 6450
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 5000,
-        "Tummy Tuck": 4600,
-        "Liposuction": 4400,
-        "Arm Lift": 5000,
-        "Thigh Lift": 6500
-      }
-    }
-  },
-  "Dr. Towle": {
-    "Location": "Las Vegas",
-    "Procedures": {
-      "Face": {
-        "Facelift": 11200
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 6125,
-        "Breast Augmentation (Gel)": 6625,
-        "Breast Lift (No implant)": 7125,
-        "Breast Reduction (No implant)": 8125
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 7050,
-        "Tummy Tuck": 8150,
-        "Liposuction": 6650,
-        "Arm Lift": 7450,
-        "Thigh Lift": 7550,
-        "Labiaplasty": 7500
-      }
-    }
-  },
-  "Dr. Morse": {
-    "Location": "Las Vegas",
-    "Procedures": {
-      "Face": {
-        "Facelift": 10800
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 5525,
-        "Breast Augmentation (Gel)": 6025,
-        "Breast Lift (No implant)": 6525,
-        "Breast Reduction (No implant)": 7525
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 6650,
-        "Tummy Tuck": 6150,
-        "Liposuction": 5650,
-        "Arm Lift": 6450,
-        "Thigh Lift": 6550,
-        "Labiaplasty": 7000
-      }
-    }
-  },
-  "Dr. Xu": {
-    "Location": "Miami",
-    "Procedures": {
-      "Face": {
-        "Facelift": 9300
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 3150,
-        "Breast Augmentation (Gel)": 3650,
-        "Breast Lift (No implant)": 4150,
-        "Breast Reduction (No implant)": 5150
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 4099,
-        "Tummy Tuck": 4349,
-        "Liposuction": 3449,
-        "Arm Lift": 4900,
-        "Thigh Lift": 4900,
-        "Labiaplasty": 3500
-      }
-    }
-  },
-  "Dr. Wright": {
-    "Location": "Miami",
-    "Procedures": {
-      "Face": {
-        "Facelift": 9500
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 3800,
-        "Breast Augmentation (Gel)": 4300,
-        "Breast Lift (No implant)": 4800,
-        "Breast Reduction (No implant)": 5800
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 5400,
-        "Tummy Tuck": 5400,
-        "Liposuction": 4650,
-        "Arm Lift": 5700,
-        "Thigh Lift": 5600,
-        "Labiaplasty": 3500
-      }
-    }
-  },
-  "Dr. Giorgis": {
-    "Location": "Miami",
-    "Procedures": {
-      "Face": {
-        "Facelift": 9400
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 3150,
-        "Breast Augmentation (Gel)": 3650,
-        "Breast Lift (No implant)": 4150,
-        "Breast Reduction (No implant)": 5150
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 4099,
-        "Tummy Tuck": 4349,
-        "Liposuction": 3500,
-        "Arm Lift": 5200,
-        "Thigh Lift": 5200
-      }
-    }
-  },
+
   "Dr. Elbayer": {
     "Location": "New York",
     "Procedures": {
-      "Face": {
-        "Facelift": 10000
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Buccal Fat Removal": "$3,500",
+          "Male Dimpleplasty Procedure Alone": "$1,250",
+          "Male Renuvion/JPlasma (Chin)": "$900"
+        },
+        "Female": {
+          "Buccal Fat Removal": "$3,500",
+          "Dimpleplasty Procedure Alone": "$1,250",
+          "Renuvion/JPlasma (Chin)": "$900"
+        }
       },
       "Breast": {
-        "Breast Augmentation (Saline)": 4300,
-        "Breast Augmentation (Gel)": 4800,
-        "Breast Lift (No implant)": 5300,
-        "Breast Reduction (No implant)": 6300
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$5,400"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,300",
+          "Breast Augmentation (Gel)": "$4,800",
+          "Breast Lift (No implant)": "$5,300",
+          "Breast Lift (Saline)": "$5,800",
+          "Breast Lift (Gel)": "$6,300",
+          "Breast Reduction (No implant)": "$6,300",
+          "Fat Transfer to Breast": "$6,000"
+        }
       },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 5400,
-        "Tummy Tuck": 5300,
-        "Liposuction": 4800,
-        "Arm Lift": 5950,
-        "Thigh Lift": 5950,
-        "Labiaplasty": 5000
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$6,450",
+          "Male Arm Lift (Long scar)": "$5,950",
+          "Male Renuvion/JPlasma (Arms)": "$1,700"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$6,450",
+          "Arm Lift (Long scar)": "$5,950",
+          "Renuvion/JPlasma (Arms)": "$1,700"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$6,450",
+          "Male Thigh Lift (Long scar)": "$5,950"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$6,450",
+          "Thigh Lift (Long scar)": "$5,950"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,300",
+          "Male Tummy Tuck (Extended)": "$5,800",
+          "Male Liposuction Up to 12 areas": "$4,800",
+          "Male Renuvion/JPlasma (Full Abdomen)": "$3,200",
+          "Male Renuvion/JPlasma (Inner thighs)": "$1,700"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,300",
+          "Tummy Tuck (Extended)": "$5,800",
+          "Liposuction Up to 12 areas": "$4,800",
+          "Labiaplasty": "$5,000",
+          "Renuvion/JPlasma (Full Abdomen)": "$3,200",
+          "Renuvion/JPlasma (Inner thighs)": "$1,700"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Back Lift": "$5,000",
+          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        },
+        "Female": {
+          "Back Lift": "$5,000",
+          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        }
+      },
+      "Buttocks": {
+        "Male": {
+          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,400"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,400"
+        }
+      }
+    }
+  },
+
+  "Dr. Fasusi": {
+    "Location": "Atlanta",
+    "Procedures": {
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$5,000",
+          "Male Eyelid Lift Upper": "$5,000",
+          "Male Earlobe Repair (Both)": "$3,500",
+          "Male Earlobe Repair (Single)": "$2,000",
+          "Male Renuvion/JPlasma (Chin)": "$900"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$5,000",
+          "Eyelid Lift Upper": "$5,000",
+          "Earlobe Repair (Both)": "$3,500",
+          "Earlobe Repair (Single)": "$2,000",
+          "Renuvion/JPlasma (Chin)": "$900"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$7,850"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$5,150",
+          "Breast Augmentation (Gel)": "$5,650",
+          "Breast Lift (No implant)": "$7,350",
+          "Breast Lift (Saline)": "$7,650",
+          "Breast Lift (Gel)": "$8,150",
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$8,950"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$7,250",
+          "Male Arm Lift (Long scar)": "$7,750",
+          "Male Renuvion/JPlasma (Arms)": "$1,700"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$7,250",
+          "Arm Lift (Long scar)": "$7,750",
+          "Renuvion/JPlasma (Arms)": "$1,700"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$7,250",
+          "Male Thigh Lift (Long scar)": "$7,750"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$7,250",
+          "Thigh Lift (Long scar)": "$7,750"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Abdominal Etching w/ Liposuction 12 Areas": "$9,750",
+          "Male Tummy Tuck (Standard)": "$7,300",
+          "Male Tummy Tuck (Extended)": "$7,800",
+          "Male Tummy Tuck Fleur De Lise": "$12,250",
+          "Male Liposuction Up to 12 areas": "$7,950"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$7,300",
+          "Tummy Tuck (Extended)": "$7,800",
+          "Tummy Tuck Fleur De Lise": "$12,250",
+          "Liposuction Up to 12 areas": "$7,950",
+          "Abdominal Etching w/ Liposuction 12 Areas": "$9,750",
+          "Labiaplasty": "$6,000",
+          "Renuvion/JPlasma (Full Abdomen)": "$3,200",
+          "Renuvion/JPlasma (Inner thighs)": "$1,700"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Back Lift": "$8,300",
+          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        },
+        "Female": {
+          "Back Lift": "$8,300",
+          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        }
+      },
+      "Buttocks": {
+        "Male": {
+          "Male Gluteal Implant REMOVAL": "$6,750"
+        },
+        "Female": {
+          "Gluteal Implant REMOVAL": "$6,750"
+        }
       }
     }
   },
   "Dr. Filstein": {
     "Location": "New York",
     "Procedures": {
-      "Face": {
-        "Facelift": 9800
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$3,700",
+          "Male Eyelid Lift Upper": "$3,500",
+          "Male Chin Implant": "$4,000",
+          "Male Earlobe Repair (Both)": "$2,000",
+          "Male Earlobe Repair (Single)": "$1,500",
+          "Male Ear Pinning": "$5,000",
+          "Male Neck Rejuvenation": "$9,000",
+          "Male Face Lift/Neck": "$12,000",
+          "Male Rhinoplasty": "$5,000",
+          "Male Buccal Fat Removal": "$3,500",
+          "Male Renuvion/JPlasma (Chin)": "$900"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$3,700",
+          "Eyelid Lift Upper": "$3,500",
+          "Chin Implant": "$4,000",
+          "Earlobe Repair (Both)": "$2,000",
+          "Earlobe Repair (Single)": "$1,500",
+          "Ear Pinning": "$5,000",
+          "Neck Rejuvenation": "$9,000",
+          "Face Lift/Neck": "$12,000",
+          "Rhinoplasty": "$5,000",
+          "Buccal Fat Removal": "$3,500",
+          "Renuvion/JPlasma (Chin)": "$900"
+        }
       },
       "Breast": {
-        "Breast Augmentation (Saline)": 4150,
-        "Breast Augmentation (Gel)": 4650,
-        "Breast Lift (No implant)": 5150,
-        "Breast Reduction (No implant)": 6150
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,400"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,150",
+          "Breast Augmentation (Gel)": "$4,650",
+          "Breast Lift (No implant)": "$5,150",
+          "Breast Lift (Saline)": "$5,650",
+          "Breast Lift (Gel)": "$6,150",
+          "Breast Reduction (No implant)": "$6,150",
+          "Fat Transfer to Breast": "$5,350"
+        }
       },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 5300,
-        "Tummy Tuck": 5200,
-        "Liposuction": 4600,
-        "Arm Lift": 5950,
-        "Thigh Lift": 5950,
-        "Labiaplasty": 5000
-      }
-    }
-  },
-  "Dr. Horowitz": {
-    "Location": "New York",
-    "Procedures": {
-      "Face": {
-        "Facelift": 10200
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$6,450",
+          "Male Arm Lift (Long scar)": "$5,950",
+          "Male Renuvion/JPlasma (Arms)": "$1,700"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$6,450",
+          "Arm Lift (Long scar)": "$5,950",
+          "Renuvion/JPlasma (Arms)": "$1,700"
+        }
       },
-      "Breast": {
-        "Breast Augmentation (Saline)": 5100,
-        "Breast Augmentation (Gel)": 5600,
-        "Breast Lift (No implant)": 6100,
-        "Breast Reduction (No implant)": 7100
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$6,450",
+          "Male Thigh Lift (Long scar)": "$5,950"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$6,450",
+          "Thigh Lift (Long scar)": "$5,950"
+        }
       },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 6300,
-        "Tummy Tuck": 6100,
-        "Liposuction": 5600,
-        "Arm Lift": 6450,
-        "Thigh Lift": 6450
-      }
-    }
-  },
-  "Dr. Orlando": {
-    "Location": "Phoenix",
-    "Procedures": {
-      "Face": {
-        "Facelift": 10100
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,200",
+          "Male Tummy Tuck (Extended)": "$5,700",
+          "Male Tummy Tuck Fleur De Lise": "$7,700",
+          "Male Liposuction Up to 12 areas": "$4,600",
+          "Male Renuvion/JPlasma (Full Abdomen)": "$3,200",
+          "Male Renuvion/JPlasma (Inner thighs)": "$1,700"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,200",
+          "Tummy Tuck (Extended)": "$5,700",
+          "Tummy Tuck Fleur De Lise": "$7,700",
+          "Liposuction Up to 12 areas": "$4,600",
+          "Labiaplasty": "$5,000",
+          "Renuvion/JPlasma (Full Abdomen)": "$3,200",
+          "Renuvion/JPlasma (Inner thighs)": "$1,700"
+        }
       },
-      "Breast": {
-        "Breast Augmentation (Saline)": 4650,
-        "Breast Augmentation (Gel)": 5150,
-        "Breast Lift (No implant)": 6150,
-        "Breast Reduction (No implant)": 7150
+      "Back": {
+        "Male": {
+          "Male Back Lift": "$6,200",
+          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        },
+        "Female": {
+          "Back Lift": "$6,200",
+          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        }
       },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 6000,
-        "Tummy Tuck": 5800,
-        "Liposuction": 5500,
-        "Arm Lift": 5000,
-        "Thigh Lift": 6500,
-        "Labiaplasty": 5000
-      }
-    }
-  },
-  "Dr. Scroggins": {
-    "Location": "Tampa",
-    "Procedures": {
-      "Face": {
-        "Facelift": 9200
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 3200,
-        "Breast Augmentation (Gel)": 3700,
-        "Breast Lift (No implant)": 4200,
-        "Breast Reduction (No implant)": 5200
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 4199,
-        "Tummy Tuck": 4399,
-        "Liposuction": 3999,
-        "Arm Lift": 4700,
-        "Thigh Lift": 4700
-      }
-    }
-  },
-  "Dr. Valauri": {
-    "Location": "Tampa",
-    "Procedures": {
-      "Face": {
-        "Facelift": 9300
-      },
-      "Breast": {
-        "Breast Augmentation (Saline)": 3250,
-        "Breast Augmentation (Gel)": 3750,
-        "Breast Lift (No implant)": 4250,
-        "Breast Reduction (No implant)": 5250
-      },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 4200,
-        "Tummy Tuck": 4500,
-        "Liposuction": 3950,
-        "Arm Lift": 5350,
-        "Thigh Lift": 5350
+      "Buttocks": {
+        "Male": {
+          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,300"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,300"
+        }
       }
     }
   },
   "Dr. Garner": {
     "Location": "Tampa",
     "Procedures": {
-      "Face": {
-        "Facelift": 9100
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$2,500",
+          "Male Eyelid Lift Upper": "$2,700",
+          "Male Chin Implant": "$2,500",
+          "Male Earlobe Repair (Both)": "$1,000",
+          "Male Earlobe Repair (Single)": "$550",
+          "Male Ear Pinning": "$3,500",
+          "Male Buccal Fat Removal": "$2,000"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$2,500",
+          "Eyelid Lift Upper": "$2,700",
+          "Chin Implant": "$2,500",
+          "Earlobe Repair (Both)": "$1,000",
+          "Earlobe Repair (Single)": "$550",
+          "Ear Pinning": "$3,500",
+          "Buccal Fat Removal": "$2,000"
+        }
       },
       "Breast": {
-        "Breast Augmentation (Saline)": 3150,
-        "Breast Augmentation (Gel)": 3650,
-        "Breast Lift (No implant)": 4150,
-        "Breast Reduction (No implant)": 5150
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$4,550"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$3,150",
+          "Breast Augmentation (Gel)": "$3,650",
+          "Breast Lift (No implant)": "$4,150",
+          "Breast Lift (Saline)": "$4,650",
+          "Breast Lift (Gel)": "$5,150",
+          "Breast Reduction (No implant)": "$5,150",
+          "Fat Transfer to Breast": "$4,100"
+        }
       },
-      "Body": {
-        "Brazilian Butt Lift (BBL)": 4099,
-        "Tummy Tuck": 4299,
-        "Liposuction": 3899,
-        "Arm Lift": 4700,
-        "Thigh Lift": 4700,
-        "Labiaplasty": 3500
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$4,200",
+          "Male Arm Lift (Long scar)": "$4,700"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$4,200",
+          "Arm Lift (Long scar)": "$4,700"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$4,200",
+          "Male Thigh Lift (Long scar)": "$4,700"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$4,200",
+          "Thigh Lift (Long scar)": "$4,700"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$4,299",
+          "Male Tummy Tuck (Extended)": "$4,799",
+          "Male Tummy Tuck Fleur De Lise": "$7,749",
+          "Male Liposuction Up to 12 areas": "$3,899"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$4,299",
+          "Tummy Tuck (Extended)": "$4,799",
+          "Tummy Tuck Fleur De Lise": "$7,749",
+          "Liposuction Up to 12 areas": "$3,899",
+          "Labiaplasty": "$3,500"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        },
+        "Female": {
+          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        }
+      },
+      "Buttocks": {
+        "Male": {
+          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$4,099"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$4,099"
+        }
+      }
+    }
+  },
+  "Dr. Giorgis": {
+    "Location": "Miami",
+    "Procedures": {
+      "Face/Neck/Eyes": {
+        "Male": {},
+        "Female": {}
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$4,099"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$3,150",
+          "Breast Augmentation (Gel)": "$3,650",
+          "Breast Lift (No implant)": "$4,150",
+          "Breast Lift (Saline)": "$4,650",
+          "Breast Lift (Gel)": "$5,150",
+          "Breast Reduction (No implant)": "$5,150",
+          "Fat Transfer to Breast": "$4,850"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$4,700",
+          "Male Arm Lift (Long scar)": "$5,200"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$4,700",
+          "Arm Lift (Long scar)": "$5,200"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$4,700",
+          "Male Thigh Lift (Long scar)": "$5,200"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$4,700",
+          "Thigh Lift (Long scar)": "$5,200"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$4,349",
+          "Male Tummy Tuck (Extended)": "$4,849",
+          "Male Liposuction Up to 12 areas": "$3,500"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$4,349",
+          "Tummy Tuck (Extended)": "$4,849",
+          "Liposuction Up to 12 areas": "$3,500"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Back Lift": "$4,500",
+          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        },
+        "Female": {
+          "Back Lift": "$4,500",
+          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        }
+      },
+      "Buttocks": {
+        "Male": {
+          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$4,099"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$4,099"
+        }
+      }
+    }
+  },
+  "Dr. Gray": {
+    "Location": "Atlanta",
+    "Procedures": {
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$3,900",
+          "Male Eyelid Lift Upper": "$4,100",
+          "Male Earlobe Repair (Both)": "$2,200",
+          "Male Earlobe Repair (Single)": "$1,700",
+          "Male Ear Pinning": "$5,200",
+          "Male Neck Rejuvenation": "$8,700",
+          "Male Face Lift/Neck": "$10,700",
+          "Male Rhinoplasty": "$8,000",
+          "Male Buccal Fat Removal": "$6,000"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$3,900",
+          "Eyelid Lift Upper": "$4,100",
+          "Earlobe Repair (Both)": "$2,200",
+          "Earlobe Repair (Single)": "$1,700",
+          "Ear Pinning": "$5,200",
+          "Neck Rejuvenation": "$8,700",
+          "Face Lift/Neck": "$10,700",
+          "Rhinoplasty": "$8,000",
+          "Buccal Fat Removal": "$6,000"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$5,850"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,850",
+          "Breast Augmentation (Gel)": "$5,350",
+          "Breast Lift (No implant)": "$5,850",
+          "Breast Lift (Saline)": "$6,350",
+          "Breast Lift (Gel)": "$6,850",
+          "Breast Reduction (No implant)": "$6,850",
+          "Fat Transfer to Breast": "$6,500"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,950",
+          "Male Arm Lift (Long scar)": "$6,450"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,950",
+          "Arm Lift (Long scar)": "$6,450"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$6,450",
+          "Male Thigh Lift (Long scar)": "$6,950"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$6,450",
+          "Thigh Lift (Long scar)": "$6,950"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$6,300",
+          "Male Tummy Tuck (Extended)": "$6,800",
+          "Male Tummy Tuck Fleur De Lise": "$10,300",
+          "Male Liposuction Up to 12 areas": "$5,050"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$6,300",
+          "Tummy Tuck (Extended)": "$6,800",
+          "Tummy Tuck Fleur De Lise": "$10,300",
+          "Liposuction Up to 12 areas": "$5,050",
+          "Labiaplasty": "$5,200"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Back Lift": "$6,100",
+          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        },
+        "Female": {
+          "Back Lift": "$6,100",
+          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        }
+      },
+      "Buttocks": {
+        "Male": {
+          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$6,300"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$6,300"
+        }
+      }
+    }
+  },
+
+  "Dr. Gross": {
+    "Location": "Atlanta",
+    "Procedures": {
+      "Face/Neck/Eyes": {
+        "Male": {},
+        "Female": {}
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$5,950"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,700",
+          "Breast Augmentation (Gel)": "$5,200",
+          "Breast Lift (No implant)": "$5,700",
+          "Breast Lift (Saline)": "$6,200",
+          "Breast Lift (Gel)": "$6,700",
+          "Breast Reduction (No implant)": "$6,700",
+          "Fat Transfer to Breast": "$5,350"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$4,950",
+          "Male Arm Lift (Long scar)": "$5,450"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$4,950",
+          "Arm Lift (Long scar)": "$5,450"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,450",
+          "Male Thigh Lift (Long scar)": "$5,950"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,450",
+          "Thigh Lift (Long scar)": "$5,950"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,200",
+          "Male Tummy Tuck (Extended)": "$5,700",
+          "Male Liposuction Up to 12 areas": "$5,150"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,200",
+          "Tummy Tuck (Extended)": "$5,700",
+          "Liposuction Up to 12 areas": "$5,150"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        },
+        "Female": {
+          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        }
+      },
+      "Buttocks": {
+        "Male": {
+          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,350"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,350"
+        }
+      }
+    }
+  },
+  "Dr. Horowitz": {
+    "Location": "New York",
+    "Procedures": {
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$3,700",
+          "Male Eyelid Lift Upper": "$3,500",
+          "Male Chin Implant": "$4,000",
+          "Male Earlobe Repair (Both)": "$2,000",
+          "Male Earlobe Repair (Single)": "$1,500",
+          "Male Ear Pinning": "$5,000",
+          "Male Neck Rejuvenation": "$9,000",
+          "Male Face Lift/Neck": "$12,000",
+          "Male Rhinoplasty": "$7,000",
+          "Male Buccal Fat Removal": "$4,500",
+          "Male Renuvion/JPlasma (Chin)": "$900"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$3,700",
+          "Eyelid Lift Upper": "$3,500",
+          "Chin Implant": "$4,000",
+          "Earlobe Repair (Both)": "$2,000",
+          "Earlobe Repair (Single)": "$1,500",
+          "Ear Pinning": "$5,000",
+          "Neck Rejuvenation": "$9,000",
+          "Face Lift/Neck": "$12,000",
+          "Rhinoplasty": "$7,000",
+          "Buccal Fat Removal": "$4,500",
+          "Renuvion/JPlasma (Chin)": "$900"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,950"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$5,100",
+          "Breast Augmentation (Gel)": "$5,600",
+          "Breast Lift (No implant)": "$6,100",
+          "Breast Lift (Saline)": "$6,600",
+          "Breast Lift (Gel)": "$7,100",
+          "Breast Reduction (No implant)": "$7,100",
+          "Fat Transfer to Breast": "$6,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,950",
+          "Male Arm Lift (Long scar)": "$6,450",
+          "Male Renuvion/JPlasma (Arms)": "$1,700"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,950",
+          "Arm Lift (Long scar)": "$6,450",
+          "Renuvion/JPlasma (Arms)": "$1,700"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$6,450",
+          "Male Thigh Lift (Long scar)": "$6,950"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$6,450",
+          "Thigh Lift (Long scar)": "$6,950"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$6,300",
+          "Male Tummy Tuck (Extended)": "$6,800",
+          "Male Tummy Tuck Fleur De Lise": "$10,300",
+          "Male Liposuction Up to 12 areas": "$5,050"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$6,300",
+          "Tummy Tuck (Extended)": "$6,800",
+          "Tummy Tuck Fleur De Lise": "$10,300",
+          "Liposuction Up to 12 areas": "$5,050",
+          "Labiaplasty": "$5,200"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        },
+        "Female": {
+          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+        }
+      },
+      "Buttocks": {
+        "Male": {
+          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$6,300"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$6,300"
+        }
+      }
+    }
+  },
+  "Dr. Kashyap": {
+    "Location": "Austin",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,600"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,600"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Kramer": {
+    "Location": "Baltimore",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,200"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,200"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Kumar": {
+    "Location": "Baltimore",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,850"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,850"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Mehio": {
+    "Location": "Dallas",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Morse": {
+    "Location": "Las Vegas",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Orlando": {
+    "Location": "Phoenix",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Patino": {
+    "Location": "Houston",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Rozentsvit": {
+    "Location": "Chicago",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Sarcia": {
+    "Location": "Houston",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Scroggins": {
+    "Location": "Tampa",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Shaikh": {
+    "Location": "Dallas",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Sisto": {
+    "Location": "Chicago",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$6,550"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$6,550"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Towle": {
+    "Location": "Las Vegas",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Valauri": {
+    "Location": "Tampa",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Wright": {
+    "Location": "Miami",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Xu": {
+    "Location": "Miami",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
+      }
+    }
+  },
+  "Dr. Ziakas": {
+    "Location": "Houston",
+    "Procedures": {
+      "Buttocks": {
+        "Male": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        },
+        "Female": {
+          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+        }
+      },
+      "Face/Neck/Eyes": {
+        "Male": {
+          "Male Eyelid Lift Lower": "$4,000",
+          "Male Eyelid Lift Upper": "$4,300",
+          "Male Chin Implant": "$4,500"
+        },
+        "Female": {
+          "Eyelid Lift Lower": "$4,000",
+          "Eyelid Lift Upper": "$4,300",
+          "Chin Implant": "$4,500"
+        }
+      },
+      "Breast": {
+        "Male": {
+          "Male Breast Reduction (Gynecomastia)": "$6,500"
+        },
+        "Female": {
+          "Breast Augmentation (Saline)": "$4,800",
+          "Breast Augmentation (Gel)": "$5,300"
+        }
+      },
+      "Arms": {
+        "Male": {
+          "Male Arm Lift (Short scar)": "$5,500",
+          "Male Arm Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Arm Lift (Short scar)": "$5,500",
+          "Arm Lift (Long scar)": "$6,000"
+        }
+      },
+      "Legs": {
+        "Male": {
+          "Male Thigh Lift (Short scar)": "$5,500",
+          "Male Thigh Lift (Long scar)": "$6,000"
+        },
+        "Female": {
+          "Thigh Lift (Short scar)": "$5,500",
+          "Thigh Lift (Long scar)": "$6,000"
+        }
+      },
+      "Stomach/Waist": {
+        "Male": {
+          "Male Tummy Tuck (Standard)": "$5,850",
+          "Male Tummy Tuck (Extended)": "$6,350"
+        },
+        "Female": {
+          "Tummy Tuck (Standard)": "$5,850",
+          "Tummy Tuck (Extended)": "$6,350"
+        }
+      },
+      "Back": {
+        "Male": {
+          "Male Circumferential Lift": "$10,300"
+        },
+        "Female": {
+          "Circumferential Lift": "$10,300"
+        }
       }
     }
   }
