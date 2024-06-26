@@ -1,6 +1,3 @@
-/* Your existing styles */
-
-/* Custom styles for form fields */
 .custom-form-field {
   .MuiOutlinedInput-root {
     & fieldset {
@@ -23,5 +20,54 @@
     }
   }
 }
+.doctor-procedures {
+  .doctor-card {
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-/* Add any other custom styles you need */
+    .doctor-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .doctor-image {
+        width: 200px;
+        height: 200px;
+        margin-right: 1.5rem;
+        border-radius: 4px;
+      }
+
+      .doctor-details {
+        flex-grow: 1;
+      }
+    }
+
+    .procedure-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+      .procedure-title {
+        background-color: #1976d2; // You can replace this with your theme's primary color
+        color: white;
+        padding: 0.5rem 1rem;
+      }
+
+      .procedure-list {
+        flex-grow: 1;
+        padding: 1rem;
+
+        .procedure-item {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.5rem;
+
+          strong {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
