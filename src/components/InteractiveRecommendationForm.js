@@ -19,6 +19,7 @@ const InteractiveRecommendationForm = ({ data }) => {
   const [gender, setGender] = useState('');
   const [bodyAreas, setBodyAreas] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
+  const [showGenderError, setShowGenderError] = useState(false);
   const [showResults, setShowResults] = useState(false);
 
   const bodyAreaOptions = ['Face/Neck/Eyes', 'Breast', 'Arms', 'Legs', 'Stomach/Waist', 'Back', 'Buttocks'];
@@ -74,6 +75,7 @@ const InteractiveRecommendationForm = ({ data }) => {
 
   const handleGenderChange = (event) => {
     setGender(event.target.value);
+    setShowGenderError(false);
   };
 
   const handleBodyAreaChange = (event) => {
@@ -91,6 +93,10 @@ const InteractiveRecommendationForm = ({ data }) => {
   };
 
   const handleSubmit = () => {
+    if (!gender) {
+      setShowGenderError(true);
+      return;
+    }
     setShowResults(true);
   };
 
@@ -114,7 +120,12 @@ const InteractiveRecommendationForm = ({ data }) => {
               <MenuItem value='Female'>Female</MenuItem>
             </Select>
           </FormControl>
-          <FormControl variant='outlined' fullWidth sx={{ mb: 2 }}>
+          {showGenderError && (
+            <Alert severity='error' sx={{ mb: 2 }}>
+              Please select a gender before proceeding.
+            </Alert>
+          )}
+          <FormControl variant='outlined' fullWidth sx={{ mb: 2 }} disabled={!gender}>
             <InputLabel id='body-area-select-label'>Body Area (Max 3)</InputLabel>
             <Select
               labelId='body-area-select-label'

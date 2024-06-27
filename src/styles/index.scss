@@ -20,25 +20,68 @@
     }
   }
 }
+
 .doctor-procedures {
+  .cheapest-surgeries {
+    margin-bottom: 2rem;
+
+    .MuiTableContainer-root {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .MuiTable-root {
+      background-color: #fff;
+    }
+
+    .MuiTableHead-root {
+      background-color: #f5f5f5;
+
+      .MuiTableCell-head {
+        font-weight: 600;
+        color: #333;
+      }
+    }
+
+    .MuiTableBody-root {
+      .MuiTableRow-root {
+        &:nth-of-type(even) {
+          background-color: #fafafa;
+        }
+
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+
+      .MuiTableCell-body {
+        border-bottom: 1px solid #e0e0e0;
+      }
+    }
+  }
+
   .doctor-card {
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     .doctor-info {
       display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
+      flex-direction: column;
+      height: 100%;
 
       .doctor-image {
-        width: 200px;
-        height: 200px;
-        margin-right: 1.5rem;
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+        max-height: 200px;
+        margin-bottom: 1rem;
         border-radius: 4px;
       }
 
       .doctor-details {
         flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
     }
 
@@ -66,6 +109,23 @@
           strong {
             font-weight: 600;
           }
+        }
+      }
+    }
+  }
+}
+
+// New styles for improved responsiveness
+@media (min-width: 960px) {
+  .doctor-procedures {
+    .doctor-card {
+      .doctor-info {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .doctor-image {
+          margin-right: 0;
+          margin-bottom: 1rem;
         }
       }
     }
