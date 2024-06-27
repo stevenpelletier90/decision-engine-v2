@@ -12,6 +12,7 @@ import {
   Chip,
   Button,
   Alert,
+  Container,
 } from '@mui/material';
 import DoctorProcedures from './DoctorProcedures';
 
@@ -101,9 +102,12 @@ const InteractiveRecommendationForm = ({ data }) => {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, p: 3 }}>
-      <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+    <Box sx={{ maxWidth: '1140px', margin: '0 auto', padding: '24px' }}>
+      <Typography variant='h4' gutterBottom align='center' sx={{ mb: 4 }}>
+        Find Your Ideal Procedure
+      </Typography>
+      <Grid container spacing={3} justifyContent='center'>
+        <Grid item xs={12} md={8}>
           <Typography variant='h6' gutterBottom>
             Select Options
           </Typography>
@@ -154,9 +158,6 @@ const InteractiveRecommendationForm = ({ data }) => {
               You can select a maximum of 3 body areas.
             </Alert>
           )}
-        </Grid>
-
-        <Grid item xs={12} md={6}>
           <Typography variant='h6' gutterBottom>
             Price Range
           </Typography>
@@ -171,23 +172,21 @@ const InteractiveRecommendationForm = ({ data }) => {
           <Typography>
             ${priceRange[0]} - ${priceRange[1]}
           </Typography>
+
+          <Box mt={3}>
+            <Button variant='contained' color='primary' onClick={handleSubmit} fullWidth size='large'>
+              Find Matching Procedures
+            </Button>
+          </Box>
         </Grid>
       </Grid>
-
-      <Box mt={3} display='flex' justifyContent='center'>
-        <Button variant='contained' color='primary' onClick={handleSubmit}>
-          Submit
-        </Button>
-      </Box>
 
       {showResults && (
         <Box mt={4}>
           {Object.keys(filteredData).length > 0 ? (
             <DoctorProcedures data={filteredData} selectedAreas={bodyAreas} priceRange={priceRange} gender={gender} />
           ) : (
-            <Alert severity='info' sx={{ mt: 3 }}>
-              No doctors available for the selected criteria.
-            </Alert>
+            <Alert severity='info'>No doctors available for the selected criteria.</Alert>
           )}
         </Box>
       )}
