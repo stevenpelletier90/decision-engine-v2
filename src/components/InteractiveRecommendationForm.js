@@ -1,20 +1,34 @@
 import React, { useState, useMemo } from 'react';
 import {
   Box,
-  Grid,
+  Container,
   Typography,
-  Slider,
-  Select,
-  MenuItem,
+  Grid,
   FormControl,
   InputLabel,
-  OutlinedInput,
+  Select,
+  MenuItem,
   Chip,
+  Slider,
   Button,
   Alert,
-  Container,
+  Paper,
 } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import DoctorProcedures from './DoctorProcedures';
+
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  padding: theme.spacing(3),
+  marginBottom: theme.spacing(3),
+}));
+
+const StyledFormControl = styled(FormControl)(({ theme }) => ({
+  marginBottom: theme.spacing(2),
+}));
+
+const StyledChip = styled(Chip)(({ theme }) => ({
+  margin: theme.spacing(0.5),
+}));
 
 const InteractiveRecommendationForm = ({ data }) => {
   const [gender, setGender] = useState('');
@@ -102,87 +116,91 @@ const InteractiveRecommendationForm = ({ data }) => {
   };
 
   return (
-    <Box sx={{ maxWidth: '1140px', margin: '0 auto', padding: '24px' }}>
-      <Typography variant='h4' gutterBottom align='center' sx={{ mb: 4 }}>
+    <Container maxWidth='lg'>
+      <Typography variant='h4' gutterBottom align='center' sx={{ my: 4 }}>
         Find Your Ideal Procedure
       </Typography>
-      <Grid container spacing={3} justifyContent='center'>
-        <Grid item xs={12} md={8}>
-          <Typography variant='h6' gutterBottom>
-            Select Options
-          </Typography>
-          <FormControl variant='outlined' fullWidth sx={{ mb: 2 }}>
-            <InputLabel id='gender-select-label'>Gender</InputLabel>
-            <Select
-              labelId='gender-select-label'
-              id='gender-select'
-              value={gender}
-              onChange={handleGenderChange}
-              input={<OutlinedInput label='Gender' />}
-            >
-              <MenuItem value='Male'>Male</MenuItem>
-              <MenuItem value='Female'>Female</MenuItem>
-            </Select>
-          </FormControl>
-          {showGenderError && (
-            <Alert severity='error' sx={{ mb: 2 }}>
-              Please select a gender before proceeding.
-            </Alert>
-          )}
-          <FormControl variant='outlined' fullWidth sx={{ mb: 2 }} disabled={!gender}>
-            <InputLabel id='body-area-select-label'>Body Area (Max 3)</InputLabel>
-            <Select
-              labelId='body-area-select-label'
-              id='body-area-select'
-              multiple
-              value={bodyAreas}
-              onChange={handleBodyAreaChange}
-              input={<OutlinedInput label='Body Area (Max 3)' />}
-              renderValue={(selected) => (
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                  {selected.map((value) => (
-                    <Chip key={value} label={value} />
-                  ))}
-                </Box>
-              )}
-            >
-              {bodyAreaOptions.map((area) => (
-                <MenuItem key={area} value={area}>
-                  {area}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-          {showWarning && (
-            <Alert severity='warning' sx={{ mb: 2 }}>
-              You can select a maximum of 3 body areas.
-            </Alert>
-          )}
-          <Typography variant='h6' gutterBottom>
-            Price Range
-          </Typography>
-          <Slider
-            value={priceRange}
-            onChange={handlePriceRangeChange}
-            valueLabelDisplay='auto'
-            min={minPrice}
-            max={maxPrice}
-            step={100}
-          />
-          <Typography>
-            ${priceRange[0]} - ${priceRange[1]}
-          </Typography>
-
-          <Box mt={3}>
-            <Button variant='contained' color='primary' onClick={handleSubmit} fullWidth size='large'>
+      <StyledPaper elevation={3}>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={6}>
+            <StyledFormControl fullWidth>
+              <InputLabel id='gender-select-label'>Gender</InputLabel>
+              <Select
+                labelId='gender-select-label'
+                id='gender-select'
+                value={gender}
+                onChange={handleGenderChange}
+                label='Gender'
+              >
+                <MenuItem value='Male'>Male</MenuItem>
+                <MenuItem value='Female'>Female</MenuItem>
+              </Select>
+            </StyledFormControl>
+            {showGenderError && (
+              <Alert severity='error' sx={{ mb: 2 }}>
+                Please select a gender before proceeding.
+              </Alert>
+            )}
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <StyledFormControl fullWidth>
+              <InputLabel id='body-area-select-label'>Body Area (Max 3)</InputLabel>
+              <Select
+                labelId='body-area-select-label'
+                id='body-area-select'
+                multiple
+                value={bodyAreas}
+                onChange={handleBodyAreaChange}
+                label='Body Area (Max 3)'
+                renderValue={(selected) => (
+                  <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                    {selected.map((value) => (
+                      <StyledChip key={value} label={value} />
+                    ))}
+                  </Box>
+                )}
+              >
+                {bodyAreaOptions.map((area) => (
+                  <MenuItem key={area} value={area}>
+                    {area}
+                  </MenuItem>
+                ))}
+              </Select>
+            </StyledFormControl>
+            {showWarning && (
+              <Alert severity='warning' sx={{ mb: 2 }}>
+                You can select a maximum of 3 body areas.
+              </Alert>
+            )}
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant='h6' gutterBottom>
+              Ideal Budget
+            </Typography>
+            <Slider
+              value={priceRange}
+              onChange={handlePriceRangeChange}
+              valueLabelDisplay='auto'
+              min={minPrice}
+              max={maxPrice}
+              step={100}
+              valueLabelFormat={(value) => `$${value}`}
+            />
+            <Box sx={{ mt: 2, display: 'flex', justifyContent: 'space-between' }}>
+              <Typography variant='body2'>${priceRange[0]}</Typography>
+              <Typography variant='body2'>${priceRange[1]}</Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12}>
+            <Button variant='contained' color='primary' onClick={handleSubmit} fullWidth>
               Find Matching Procedures
             </Button>
-          </Box>
+          </Grid>
         </Grid>
-      </Grid>
+      </StyledPaper>
 
       {showResults && (
-        <Box mt={4}>
+        <Box sx={{ mt: 4 }}>
           {Object.keys(filteredData).length > 0 ? (
             <DoctorProcedures data={filteredData} selectedAreas={bodyAreas} priceRange={priceRange} gender={gender} />
           ) : (
@@ -190,7 +208,7 @@ const InteractiveRecommendationForm = ({ data }) => {
           )}
         </Box>
       )}
-    </Box>
+    </Container>
   );
 };
 

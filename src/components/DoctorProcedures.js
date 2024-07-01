@@ -15,7 +15,48 @@ import {
   TableRow,
   Paper,
   TableSortLabel,
+  Button,
 } from '@mui/material';
+import { styled } from '@mui/material/styles';
+
+const StyledCard = styled(Card)(({ theme }) => ({
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  marginBottom: theme.spacing(4),
+}));
+
+const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
+  paddingTop: '75%', // 4:3 aspect ratio
+  borderRadius: '50%',
+  margin: theme.spacing(2),
+}));
+
+const ProcedureCard = styled(Card)(({ theme }) => ({
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+}));
+
+const ProcedureTitle = styled(Typography)(({ theme }) => ({
+  backgroundColor: theme.palette.primary.main,
+  color: theme.palette.primary.contrastText,
+  padding: theme.spacing(1),
+}));
+
+const ProcedureList = styled(Box)(({ theme }) => ({
+  flexGrow: 1,
+  padding: theme.spacing(2),
+}));
+
+const ProcedureItem = styled(Typography)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  marginBottom: theme.spacing(1),
+  '&:last-child': {
+    marginBottom: 0,
+  },
+}));
 
 const formatPrice = (price) => {
   const numericPrice = typeof price === 'number' ? price : parseFloat(price.replace('$', '').replace(',', ''));
@@ -75,9 +116,9 @@ const CheapestSurgeries = ({ surgeries }) => {
   }, [surgeries, order, orderBy]);
 
   return (
-    <Box className='cheapest-surgeries' mb={4}>
+    <Box sx={{ mb: 4 }}>
       <Typography variant='h5' gutterBottom>
-        Cheapest Surgeries
+        Your Procedure Results
       </Typography>
       <TableContainer component={Paper}>
         <Table size='small'>
@@ -103,15 +144,6 @@ const CheapestSurgeries = ({ surgeries }) => {
               </TableCell>
               <TableCell>
                 <TableSortLabel
-                  active={orderBy === 'price'}
-                  direction={orderBy === 'price' ? order : 'asc'}
-                  onClick={() => handleRequestSort('price')}
-                >
-                  Price
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel
                   active={orderBy === 'procedure'}
                   direction={orderBy === 'procedure' ? order : 'asc'}
                   onClick={() => handleRequestSort('procedure')}
@@ -119,6 +151,7 @@ const CheapestSurgeries = ({ surgeries }) => {
                   Procedure
                 </TableSortLabel>
               </TableCell>
+              <TableCell>Price</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -126,8 +159,19 @@ const CheapestSurgeries = ({ surgeries }) => {
               <TableRow key={index}>
                 <TableCell>{surgery.location}</TableCell>
                 <TableCell>{surgery.doctor}</TableCell>
-                <TableCell>{formatPrice(surgery.price)}</TableCell>
                 <TableCell>{surgery.procedure}</TableCell>
+                <TableCell>
+                  <Button
+                    variant='contained'
+                    size='small'
+                    onClick={() => {
+                      // Placeholder for future popup functionality
+                      console.log(`Show price details for ${surgery.procedure}`);
+                    }}
+                  >
+                    View Price
+                  </Button>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -141,77 +185,62 @@ const DoctorProcedures = ({ data, selectedAreas, priceRange, gender }) => {
   const cheapestSurgeries = findCheapestSurgeries(data);
 
   return (
-    <Box className='doctor-procedures' sx={{ maxWidth: '1140px', margin: '0 auto', padding: '24px' }}>
+    <Box>
       <CheapestSurgeries surgeries={cheapestSurgeries} />
-      <Typography variant='h4' gutterBottom sx={{ mt: 4, mb: 3 }}>
+      <Typography variant='h4' gutterBottom>
         Available Doctors
       </Typography>
-      {Object.entries(data).map(([doctorName, doctorData]) => (
-        <Card key={doctorName} className='doctor-card' sx={{ mb: 4 }}>
-          <CardContent>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={3}>
-                <Box className='doctor-info'>
-                  <CardMedia
-                    component='img'
-                    image='https://placehold.co/200x200'
-                    alt={`${doctorName} placeholder`}
-                    className='doctor-image'
-                    sx={{ width: '100%', height: 'auto', maxWidth: 200, maxHeight: 200, borderRadius: 1 }}
-                  />
-                  <Box className='doctor-details' sx={{ mt: 2 }}>
-                    <Typography variant='h6' gutterBottom>
-                      {doctorName}
-                    </Typography>
-                    <Typography variant='body2' color='text.secondary' gutterBottom>
-                      Location: {doctorData.Location}
-                    </Typography>
-                    <Link href='#' underline='hover'>
-                      View Bio
-                    </Link>
-                  </Box>
-                </Box>
-              </Grid>
-              <Grid item xs={12} md={9}>
-                <Grid container spacing={2}>
-                  {selectedAreas.map((area) => (
-                    <Grid item xs={12} sm={6} md={4} key={area}>
-                      <Card className='procedure-card' sx={{ height: '100%' }}>
-                        <Typography
-                          variant='h6'
-                          className='procedure-title'
-                          sx={{ p: 1, bgcolor: 'primary.main', color: 'white' }}
-                        >
-                          {area}
-                        </Typography>
-                        <Box className='procedure-list' sx={{ p: 2 }}>
-                          {doctorData.Procedures[area] && Object.entries(doctorData.Procedures[area]).length > 0 ? (
-                            Object.entries(doctorData.Procedures[area]).map(([procedure, price]) => (
-                              <Typography
-                                key={procedure}
-                                variant='body2'
-                                className='procedure-item'
-                                sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}
-                              >
-                                <span>{procedure}</span>
-                                <strong>{formatPrice(price)}</strong>
-                              </Typography>
-                            ))
-                          ) : (
-                            <Typography variant='body2' color='text.secondary'>
-                              No procedures available in this price range.
-                            </Typography>
-                          )}
-                        </Box>
-                      </Card>
+      <Grid container spacing={4}>
+        {Object.entries(data).map(([doctorName, doctorData]) => (
+          <Grid item xs={12} key={doctorName}>
+            <StyledCard>
+              <CardContent>
+                <Grid container spacing={3}>
+                  <Grid item xs={12} md={3}>
+                    <Box sx={{ textAlign: 'center' }}>
+                      <StyledCardMedia image='https://placehold.co/200x200' title={`${doctorName} placeholder`} />
+                      <Typography variant='h6' gutterBottom>
+                        {doctorName}
+                      </Typography>
+                      <Typography variant='body2' color='text.secondary' gutterBottom>
+                        Location: {doctorData.Location}
+                      </Typography>
+                      <Link href='#' underline='hover'>
+                        View Bio
+                      </Link>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} md={9}>
+                    <Grid container spacing={2}>
+                      {selectedAreas.map((area) => (
+                        <Grid item xs={12} sm={6} md={4} key={area}>
+                          <ProcedureCard>
+                            <ProcedureTitle variant='h6'>{area}</ProcedureTitle>
+                            <ProcedureList>
+                              {doctorData.Procedures[area] && Object.entries(doctorData.Procedures[area]).length > 0 ? (
+                                Object.entries(doctorData.Procedures[area]).map(([procedure, price]) => (
+                                  <ProcedureItem key={procedure} variant='body2'>
+                                    <span>{procedure}</span>
+                                    <strong>{formatPrice(price)}</strong>
+                                  </ProcedureItem>
+                                ))
+                              ) : (
+                                <Typography variant='body2' color='text.secondary'>
+                                  No procedures available in this price range.
+                                </Typography>
+                              )}
+                            </ProcedureList>
+                          </ProcedureCard>
+                        </Grid>
+                      ))}
                     </Grid>
-                  ))}
+                  </Grid>
                 </Grid>
-              </Grid>
-            </Grid>
-          </CardContent>
-        </Card>
-      ))}
+              </CardContent>
+            </StyledCard>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 };
