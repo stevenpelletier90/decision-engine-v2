@@ -42,12 +42,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/data'),
-          to: path.resolve(__dirname, 'dist/data'),
-        },
-        {
-          from: path.resolve(__dirname, 'public/doctors_procedures.json'),
-          to: path.resolve(__dirname, 'dist/doctors_procedures.json'),
+          from: path.resolve(__dirname, 'public/doctor_procedures.json'),
+          to: path.resolve(__dirname, 'dist/doctor_procedures.json'),
         },
       ],
     }),
