@@ -9,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     assetModuleFilename: 'images/[hash][ext][query]',
+    publicPath: '/decision-engine-v2/',
   },
   module: {
     rules: [
@@ -45,6 +46,7 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: ['.js', '.jsx'],
