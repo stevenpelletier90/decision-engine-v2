@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    assetModuleFilename: 'images/[hash][ext][query]',
   },
   module: {
     rules: [
@@ -19,6 +20,10 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
