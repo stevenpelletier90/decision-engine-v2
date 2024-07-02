@@ -30,12 +30,31 @@ const StyledChip = styled(Chip)(({ theme }) => ({
   margin: theme.spacing(0.5),
 }));
 
+const StyledSVG = styled('svg')({
+  width: '100%',
+  height: '120px',
+  margin: '20px 0',
+});
+
+const InteractiveCircle = styled('circle')(({ theme, isActive }) => ({
+  cursor: 'pointer',
+  transition: 'fill 0.3s',
+  fill: isActive ? theme.palette.primary.light : 'white',
+  stroke: theme.palette.primary.main,
+  strokeWidth: 2,
+  '&:hover': {
+    fill: theme.palette.primary.light,
+  },
+}));
+
 const InteractiveRecommendationForm = ({ data }) => {
   const [gender, setGender] = useState('');
   const [bodyAreas, setBodyAreas] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
   const [showGenderError, setShowGenderError] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [hoveredArea, setHoveredArea] = useState(null);
+  const [priceRange, setPriceRange] = useState([0, 100000]);
 
   const bodyAreaOptions = ['Face/Neck/Eyes', 'Breast', 'Arms', 'Legs', 'Stomach/Waist', 'Back', 'Buttocks'];
 
@@ -58,8 +77,6 @@ const InteractiveRecommendationForm = ({ data }) => {
       minPrice: Math.floor(min / 1000) * 1000,
     };
   }, [data]);
-
-  const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
 
   const filteredData = useMemo(() => {
     if (!showResults || !gender || bodyAreas.length === 0) return {};
@@ -115,11 +132,49 @@ const InteractiveRecommendationForm = ({ data }) => {
     setShowResults(true);
   };
 
+  const handleAreaClick = (area) => {
+    setBodyAreas((prev) => {
+      if (prev.includes(area)) {
+        return prev.filter((a) => a !== area);
+      }
+      if (prev.length < 3) {
+        return [...prev, area];
+      }
+      setShowWarning(true);
+      return prev;
+    });
+  };
+
   return (
     <Container maxWidth='lg'>
       <Typography variant='h4' gutterBottom align='center' sx={{ my: 4 }}>
         Find Your Ideal Procedure
       </Typography>
+
+      <StyledSVG viewBox='0 0 600 100'>
+        {bodyAreaOptions.map((area, index) => (
+          <g key={area}>
+            <InteractiveCircle
+              cx={100 * (index + 1)}
+              cy='50'
+              r='40'
+              isActive={bodyAreas.includes(area)}
+              onMouseEnter={() => setHoveredArea(area)}
+              onMouseLeave={() => setHoveredArea(null)}
+              onClick={() => handleAreaClick(area)}
+            />
+            <text x={100 * (index + 1)} y='110' textAnchor='middle' fontSize='14'>
+              {area}
+            </text>
+          </g>
+        ))}
+      </StyledSVG>
+      {hoveredArea && (
+        <Typography align='center' sx={{ mt: -2, mb: 2 }}>
+          {hoveredArea}
+        </Typography>
+      )}
+
       <StyledPaper elevation={3}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
