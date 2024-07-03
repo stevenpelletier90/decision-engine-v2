@@ -12,7 +12,10 @@ const App = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('/doctor_procedures.json')
+    const fetchUrl =
+      process.env.NODE_ENV === 'production' ? '/decision-engine-v2/doctor_procedures.json' : '/doctor_procedures.json';
+
+    fetch(fetchUrl)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
