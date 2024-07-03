@@ -1,23 +1,26 @@
 {
-  "name": "decision-engine",
+  "name": "decision-engine-v2",
   "version": "1.0.0",
+  "description": "Decision Engine Application",
+  "main": "src/index.js",
   "homepage": "https://stevenpelletier90.github.io/decision-engine-v2",
-  "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    "start": "webpack serve --mode development --open",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "decision engine",
+    "react"
+  ],
+  "author": "Steven Pelletier",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mui/material": "^5.15.20",
+    "@mui/material": "^5.15.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -38,5 +41,17 @@
     "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
