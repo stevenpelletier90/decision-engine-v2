@@ -48,16 +48,6 @@ const InteractiveCircle = styled('circle')(({ theme, isActive }) => ({
 }));
 
 const InteractiveRecommendationForm = ({ data }) => {
-  const [gender, setGender] = useState('');
-  const [bodyAreas, setBodyAreas] = useState([]);
-  const [showWarning, setShowWarning] = useState(false);
-  const [showGenderError, setShowGenderError] = useState(false);
-  const [showResults, setShowResults] = useState(false);
-  const [hoveredArea, setHoveredArea] = useState(null);
-  const [priceRange, setPriceRange] = useState([0, 100000]);
-
-  const bodyAreaOptions = ['Face/Neck/Eyes', 'Breast', 'Arms', 'Legs', 'Stomach/Waist', 'Back', 'Buttocks'];
-
   const { maxPrice, minPrice } = useMemo(() => {
     let max = 0;
     let min = Infinity;
@@ -77,6 +67,16 @@ const InteractiveRecommendationForm = ({ data }) => {
       minPrice: Math.floor(min / 1000) * 1000,
     };
   }, [data]);
+
+  const [gender, setGender] = useState('');
+  const [bodyAreas, setBodyAreas] = useState([]);
+  const [showWarning, setShowWarning] = useState(false);
+  const [showGenderError, setShowGenderError] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+  const [hoveredArea, setHoveredArea] = useState(null);
+  const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
+
+  const bodyAreaOptions = ['Face/Neck/Eyes', 'Breast', 'Arms', 'Legs', 'Stomach/Waist', 'Back', 'Buttocks'];
 
   const filteredData = useMemo(() => {
     if (!showResults || !gender || bodyAreas.length === 0) return {};
