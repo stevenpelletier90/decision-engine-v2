@@ -13,13 +13,40 @@ import {
   Button,
   Alert,
   Paper,
+  ThemeProvider,
+  createTheme,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import DoctorProcedures from './DoctorProcedures';
+import '../styles/index.css';
+
+// Create a custom theme
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Montserrat, Arial, sans-serif',
+    h4: {
+      fontWeight: 700,
+      textTransform: 'uppercase',
+    },
+    h6: {
+      fontWeight: 700,
+      textTransform: 'uppercase',
+    },
+  },
+  palette: {
+    primary: {
+      main: '#1b1b1b',
+    },
+    secondary: {
+      main: '#c8b273',
+    },
+  },
+});
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(3),
   marginBottom: theme.spacing(3),
+  backgroundColor: '#f5f5f5',
 }));
 
 const StyledFormControl = styled(FormControl)(({ theme }) => ({
@@ -28,6 +55,8 @@ const StyledFormControl = styled(FormControl)(({ theme }) => ({
 
 const StyledChip = styled(Chip)(({ theme }) => ({
   margin: theme.spacing(0.5),
+  backgroundColor: theme.palette.secondary.main,
+  color: theme.palette.primary.main,
 }));
 
 const StyledSVG = styled('svg')({
@@ -39,11 +68,19 @@ const StyledSVG = styled('svg')({
 const InteractiveCircle = styled('circle')(({ theme, isActive }) => ({
   cursor: 'pointer',
   transition: 'fill 0.3s',
-  fill: isActive ? theme.palette.primary.light : 'white',
+  fill: isActive ? theme.palette.secondary.main : 'white',
   stroke: theme.palette.primary.main,
   strokeWidth: 2,
   '&:hover': {
-    fill: theme.palette.primary.light,
+    fill: theme.palette.secondary.light,
+  },
+}));
+
+const StyledButton = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.secondary.main,
+  color: theme.palette.primary.main,
+  '&:hover': {
+    backgroundColor: theme.palette.secondary.dark,
   },
 }));
 
@@ -146,124 +183,126 @@ const InteractiveRecommendationForm = ({ data }) => {
   };
 
   return (
-    <Container maxWidth='lg'>
-      <Typography variant='h4' gutterBottom align='center' sx={{ my: 4 }}>
-        Find Your Ideal Procedure
-      </Typography>
-
-      <StyledSVG viewBox='0 0 600 100'>
-        {bodyAreaOptions.map((area, index) => (
-          <g key={area}>
-            <InteractiveCircle
-              cx={100 * (index + 1)}
-              cy='50'
-              r='40'
-              isActive={bodyAreas.includes(area)}
-              onMouseEnter={() => setHoveredArea(area)}
-              onMouseLeave={() => setHoveredArea(null)}
-              onClick={() => handleAreaClick(area)}
-            />
-            <text x={100 * (index + 1)} y='110' textAnchor='middle' fontSize='14'>
-              {area}
-            </text>
-          </g>
-        ))}
-      </StyledSVG>
-      {hoveredArea && (
-        <Typography align='center' sx={{ mt: -2, mb: 2 }}>
-          {hoveredArea}
+    <ThemeProvider theme={theme}>
+      <Container maxWidth='lg'>
+        <Typography variant='h4' gutterBottom align='center' sx={{ my: 4, color: theme.palette.primary.main }}>
+          Find Your Ideal Procedure
         </Typography>
-      )}
 
-      <StyledPaper elevation={3}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
-            <StyledFormControl fullWidth>
-              <InputLabel id='gender-select-label'>Gender</InputLabel>
-              <Select
-                labelId='gender-select-label'
-                id='gender-select'
-                value={gender}
-                onChange={handleGenderChange}
-                label='Gender'
-              >
-                <MenuItem value='Male'>Male</MenuItem>
-                <MenuItem value='Female'>Female</MenuItem>
-              </Select>
-            </StyledFormControl>
-            {showGenderError && (
-              <Alert severity='error' sx={{ mb: 2 }}>
-                Please select a gender before proceeding.
-              </Alert>
-            )}
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <StyledFormControl fullWidth>
-              <InputLabel id='body-area-select-label'>Body Area (Max 3)</InputLabel>
-              <Select
-                labelId='body-area-select-label'
-                id='body-area-select'
-                multiple
-                value={bodyAreas}
-                onChange={handleBodyAreaChange}
-                label='Body Area (Max 3)'
-                renderValue={(selected) => (
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-                    {selected.map((value) => (
-                      <StyledChip key={value} label={value} />
-                    ))}
-                  </Box>
-                )}
-              >
-                {bodyAreaOptions.map((area) => (
-                  <MenuItem key={area} value={area}>
-                    {area}
-                  </MenuItem>
-                ))}
-              </Select>
-            </StyledFormControl>
-            {showWarning && (
-              <Alert severity='warning' sx={{ mb: 2 }}>
-                You can select a maximum of 3 body areas.
-              </Alert>
-            )}
-          </Grid>
-          <Grid item xs={12}>
-            <Typography variant='h6' gutterBottom>
-              Ideal Budget
-            </Typography>
-            <Slider
-              value={priceRange}
-              onChange={handlePriceRangeChange}
-              valueLabelDisplay='auto'
-              min={minPrice}
-              max={maxPrice}
-              step={100}
-              valueLabelFormat={(value) => `$${value}`}
-            />
-            <Box sx={{ mt: 2, display: 'flex', justifyContent: 'space-between' }}>
-              <Typography variant='body2'>${priceRange[0]}</Typography>
-              <Typography variant='body2'>${priceRange[1]}</Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12}>
-            <Button variant='contained' color='primary' onClick={handleSubmit} fullWidth>
-              Find Matching Procedures
-            </Button>
-          </Grid>
-        </Grid>
-      </StyledPaper>
+        <StyledSVG viewBox='0 0 600 100'>
+          {bodyAreaOptions.map((area, index) => (
+            <g key={area}>
+              <InteractiveCircle
+                cx={100 * (index + 1)}
+                cy='50'
+                r='40'
+                isActive={bodyAreas.includes(area)}
+                onMouseEnter={() => setHoveredArea(area)}
+                onMouseLeave={() => setHoveredArea(null)}
+                onClick={() => handleAreaClick(area)}
+              />
+              <text x={100 * (index + 1)} y='110' textAnchor='middle' fontSize='14'>
+                {area}
+              </text>
+            </g>
+          ))}
+        </StyledSVG>
+        {hoveredArea && (
+          <Typography align='center' sx={{ mt: -2, mb: 2 }}>
+            {hoveredArea}
+          </Typography>
+        )}
 
-      {showResults && (
-        <Box sx={{ mt: 4 }}>
-          {Object.keys(filteredData).length > 0 ? (
-            <DoctorProcedures data={filteredData} selectedAreas={bodyAreas} priceRange={priceRange} gender={gender} />
-          ) : (
-            <Alert severity='info'>No doctors available for the selected criteria.</Alert>
-          )}
-        </Box>
-      )}
-    </Container>
+        <StyledPaper elevation={3}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6}>
+              <StyledFormControl fullWidth>
+                <InputLabel id='gender-select-label'>Gender</InputLabel>
+                <Select
+                  labelId='gender-select-label'
+                  id='gender-select'
+                  value={gender}
+                  onChange={handleGenderChange}
+                  label='Gender'
+                >
+                  <MenuItem value='Male'>Male</MenuItem>
+                  <MenuItem value='Female'>Female</MenuItem>
+                </Select>
+              </StyledFormControl>
+              {showGenderError && (
+                <Alert severity='error' sx={{ mb: 2 }}>
+                  Please select a gender before proceeding.
+                </Alert>
+              )}
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <StyledFormControl fullWidth>
+                <InputLabel id='body-area-select-label'>Body Area (Max 3)</InputLabel>
+                <Select
+                  labelId='body-area-select-label'
+                  id='body-area-select'
+                  multiple
+                  value={bodyAreas}
+                  onChange={handleBodyAreaChange}
+                  label='Body Area (Max 3)'
+                  renderValue={(selected) => (
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                      {selected.map((value) => (
+                        <StyledChip key={value} label={value} />
+                      ))}
+                    </Box>
+                  )}
+                >
+                  {bodyAreaOptions.map((area) => (
+                    <MenuItem key={area} value={area}>
+                      {area}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </StyledFormControl>
+              {showWarning && (
+                <Alert severity='warning' sx={{ mb: 2 }}>
+                  You can select a maximum of 3 body areas.
+                </Alert>
+              )}
+            </Grid>
+            <Grid item xs={12}>
+              <Typography variant='h6' gutterBottom>
+                Ideal Budget
+              </Typography>
+              <Slider
+                value={priceRange}
+                onChange={handlePriceRangeChange}
+                valueLabelDisplay='auto'
+                min={minPrice}
+                max={maxPrice}
+                step={100}
+                valueLabelFormat={(value) => `$${value}`}
+              />
+              <Box sx={{ mt: 2, display: 'flex', justifyContent: 'space-between' }}>
+                <Typography variant='body2'>${priceRange[0]}</Typography>
+                <Typography variant='body2'>${priceRange[1]}</Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12}>
+              <StyledButton variant='contained' onClick={handleSubmit} fullWidth>
+                Find Matching Procedures
+              </StyledButton>
+            </Grid>
+          </Grid>
+        </StyledPaper>
+
+        {showResults && (
+          <Box sx={{ mt: 4 }}>
+            {Object.keys(filteredData).length > 0 ? (
+              <DoctorProcedures data={filteredData} selectedAreas={bodyAreas} priceRange={priceRange} gender={gender} />
+            ) : (
+              <Alert severity='info'>No doctors available for the selected criteria.</Alert>
+            )}
+          </Box>
+        )}
+      </Container>
+    </ThemeProvider>
   );
 };
 

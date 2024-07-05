@@ -16,18 +16,49 @@ import {
   Paper,
   TableSortLabel,
   Button,
+  ThemeProvider,
+  createTheme,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import '../styles/index.css';
+
+// Create a custom theme
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Montserrat, Arial, sans-serif',
+    h4: {
+      fontWeight: 700,
+      textTransform: 'uppercase',
+    },
+    h5: {
+      fontWeight: 700,
+      textTransform: 'uppercase',
+    },
+    h6: {
+      fontWeight: 700,
+      textTransform: 'uppercase',
+    },
+  },
+  palette: {
+    primary: {
+      main: '#1b1b1b',
+    },
+    secondary: {
+      main: '#c8b273',
+    },
+  },
+});
 
 const StyledCard = styled(Card)(({ theme }) => ({
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
   marginBottom: theme.spacing(4),
+  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
 }));
 
 const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
-  paddingTop: '75%', // 4:3 aspect ratio
+  paddingTop: '75%',
   borderRadius: '50%',
   margin: theme.spacing(2),
 }));
@@ -36,11 +67,12 @@ const ProcedureCard = styled(Card)(({ theme }) => ({
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
+  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)',
 }));
 
 const ProcedureTitle = styled(Typography)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
-  color: theme.palette.primary.contrastText,
+  color: theme.palette.common.white,
   padding: theme.spacing(1),
 }));
 
@@ -55,6 +87,14 @@ const ProcedureItem = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(1),
   '&:last-child': {
     marginBottom: 0,
+  },
+}));
+
+const StyledButton = styled(Button)(({ theme }) => ({
+  backgroundColor: theme.palette.secondary.main,
+  color: theme.palette.primary.main,
+  '&:hover': {
+    backgroundColor: theme.palette.secondary.dark,
   },
 }));
 
@@ -161,7 +201,7 @@ const CheapestSurgeries = ({ surgeries }) => {
                 <TableCell>{surgery.doctor}</TableCell>
                 <TableCell>{surgery.procedure}</TableCell>
                 <TableCell>
-                  <Button
+                  <StyledButton
                     variant='contained'
                     size='small'
                     onClick={() => {
@@ -170,7 +210,7 @@ const CheapestSurgeries = ({ surgeries }) => {
                     }}
                   >
                     View Price
-                  </Button>
+                  </StyledButton>
                 </TableCell>
               </TableRow>
             ))}
@@ -185,63 +225,66 @@ const DoctorProcedures = ({ data, selectedAreas, priceRange, gender }) => {
   const cheapestSurgeries = findCheapestSurgeries(data);
 
   return (
-    <Box>
-      <CheapestSurgeries surgeries={cheapestSurgeries} />
-      <Typography variant='h4' gutterBottom>
-        Available Doctors
-      </Typography>
-      <Grid container spacing={4}>
-        {Object.entries(data).map(([doctorName, doctorData]) => (
-          <Grid item xs={12} key={doctorName}>
-            <StyledCard>
-              <CardContent>
-                <Grid container spacing={3}>
-                  <Grid item xs={12} md={3}>
-                    <Box sx={{ textAlign: 'center' }}>
-                      <StyledCardMedia image='https://placehold.co/200x200' title={`${doctorName} placeholder`} />
-                      <Typography variant='h6' gutterBottom>
-                        {doctorName}
-                      </Typography>
-                      <Typography variant='body2' color='text.secondary' gutterBottom>
-                        Location: {doctorData.Location}
-                      </Typography>
-                      <Link href='#' underline='hover'>
-                        View Bio
-                      </Link>
-                    </Box>
-                  </Grid>
-                  <Grid item xs={12} md={9}>
-                    <Grid container spacing={2}>
-                      {selectedAreas.map((area) => (
-                        <Grid item xs={12} sm={6} md={4} key={area}>
-                          <ProcedureCard>
-                            <ProcedureTitle variant='h6'>{area}</ProcedureTitle>
-                            <ProcedureList>
-                              {doctorData.Procedures[area] && Object.entries(doctorData.Procedures[area]).length > 0 ? (
-                                Object.entries(doctorData.Procedures[area]).map(([procedure, price]) => (
-                                  <ProcedureItem key={procedure} variant='body2'>
-                                    <span>{procedure}</span>
-                                    <strong>{formatPrice(price)}</strong>
-                                  </ProcedureItem>
-                                ))
-                              ) : (
-                                <Typography variant='body2' color='text.secondary'>
-                                  No procedures available in this price range.
-                                </Typography>
-                              )}
-                            </ProcedureList>
-                          </ProcedureCard>
-                        </Grid>
-                      ))}
+    <ThemeProvider theme={theme}>
+      <Box>
+        <CheapestSurgeries surgeries={cheapestSurgeries} />
+        <Typography variant='h4' gutterBottom sx={{ color: theme.palette.primary.main }}>
+          Available Doctors
+        </Typography>
+        <Grid container spacing={4}>
+          {Object.entries(data).map(([doctorName, doctorData]) => (
+            <Grid item xs={12} key={doctorName}>
+              <StyledCard>
+                <CardContent>
+                  <Grid container spacing={3}>
+                    <Grid item xs={12} md={3}>
+                      <Box sx={{ textAlign: 'center' }}>
+                        <StyledCardMedia image='https://placehold.co/200x200' title={`${doctorName} placeholder`} />
+                        <Typography variant='h6' gutterBottom>
+                          {doctorName}
+                        </Typography>
+                        <Typography variant='body2' color='text.secondary' gutterBottom>
+                          Location: {doctorData.Location}
+                        </Typography>
+                        <Link href='#' underline='hover'>
+                          View Bio
+                        </Link>
+                      </Box>
+                    </Grid>
+                    <Grid item xs={12} md={9}>
+                      <Grid container spacing={2}>
+                        {selectedAreas.map((area) => (
+                          <Grid item xs={12} sm={6} md={4} key={area}>
+                            <ProcedureCard>
+                              <ProcedureTitle variant='h6'>{area}</ProcedureTitle>
+                              <ProcedureList>
+                                {doctorData.Procedures[area] &&
+                                Object.entries(doctorData.Procedures[area]).length > 0 ? (
+                                  Object.entries(doctorData.Procedures[area]).map(([procedure, price]) => (
+                                    <ProcedureItem key={procedure} variant='body2'>
+                                      <span>{procedure}</span>
+                                      <strong>{formatPrice(price)}</strong>
+                                    </ProcedureItem>
+                                  ))
+                                ) : (
+                                  <Typography variant='body2' color='text.secondary'>
+                                    No procedures available in this price range.
+                                  </Typography>
+                                )}
+                              </ProcedureList>
+                            </ProcedureCard>
+                          </Grid>
+                        ))}
+                      </Grid>
                     </Grid>
                   </Grid>
-                </Grid>
-              </CardContent>
-            </StyledCard>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+                </CardContent>
+              </StyledCard>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+    </ThemeProvider>
   );
 };
 
