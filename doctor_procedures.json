@@ -1,6 +1,9 @@
 {
   "Dr. Bronstein": {
     "Location": "Chicago",
+    "Image": "Bronstein-CHI.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-bronstein/",
+    "LocationUrl": "https://miaaesthetics.com/locations/chicago/",
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {
@@ -96,6 +99,9 @@
 
   "Dr. Charepoo": {
     "Location": "Austin",
+    "Image": "Charepoo-AUS.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-charepoo/",
+    "LocationUrl": "https://miaaesthetics.com/locations/austin/",
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {
@@ -183,6 +189,9 @@
 
   "Dr. Cooper": {
     "Location": "Dallas",
+    "Image": "Cooper-DAL.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-cooper/",
+    "LocationUrl": "https://miaaesthetics.com/locations/dallas-tx/",
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {
@@ -281,6 +290,9 @@
 
   "Dr. Elbayer": {
     "Location": "New York",
+    "Image": "Elbayer-NYC.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-elbayer/",
+    "LocationUrl": "https://miaaesthetics.com/locations/nyc/",
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {
@@ -370,6 +382,9 @@
 
   "Dr. Fasusi": {
     "Location": "Atlanta",
+    "Image": "Fasusi-ATL.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-fasusi/",
+    "LocationUrl": "https://miaaesthetics.com/locations/atlanta-ga/",
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {
@@ -463,6 +478,9 @@
   },
   "Dr. Filstein": {
     "Location": "New York",
+    "Image": "Filstein-NYC.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-filstein/",
+    "LocationUrl": "https://miaaesthetics.com/locations/nyc/",
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {
@@ -569,6 +587,9 @@
   },
   "Dr. Garner": {
     "Location": "Tampa",
+    "Image": "Garner-TPA.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-garner/",
+    "LocationUrl": "https://miaaesthetics.com/locations/tampa/",
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {
@@ -659,6 +680,9 @@
   },
   "Dr. Giorgis": {
     "Location": "Miami",
+    "Image": "Giorgis-MIA.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-giorgis/",
+    "LocationUrl": "https://miaaesthetics.com/locations/miami/",
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {},
@@ -732,6 +756,9 @@
   },
   "Dr. Gray": {
     "Location": "Atlanta",
+    "Image": "Gray-ATL.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-gray/",
+    "LocationUrl": "https://miaaesthetics.com/locations/atlanta-ga/",
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {
@@ -829,6 +856,9 @@
 
   "Dr. Gross": {
     "Location": "Atlanta",
+    "Image": "Gross-ATL.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-gross/",
+    "LocationUrl": "https://miaaesthetics.com/locations/atlanta-ga/",
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {},
@@ -900,6 +930,9 @@
   },
   "Dr. Horowitz": {
     "Location": "New York",
+    "Image": "Horowitz-NYC.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-horowitz/",
+    "LocationUrl": "https://miaaesthetics.com/locations/nyc/",
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {
@@ -1000,6 +1033,9 @@
   },
   "Dr. Kashyap": {
     "Location": "Austin",
+    "Image": "Kashyap-AUS.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-kahyap/",
+    "LocationUrl": "https://miaaesthetics.com/locations/austin/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1072,6 +1108,9 @@
   },
   "Dr. Kramer": {
     "Location": "Baltimore",
+    "Image": "Kramer-BAL.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-kramer/",
+    "LocationUrl": "https://miaaesthetics.com/locations/baltimore/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1144,6 +1183,9 @@
   },
   "Dr. Kumar": {
     "Location": "Baltimore",
+    "Image": "Kumar-BAL.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-kumar/",
+    "LocationUrl": "https://miaaesthetics.com/locations/baltimore/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1216,6 +1258,9 @@
   },
   "Dr. Mehio": {
     "Location": "Dallas",
+    "Image": "Mehio-DAL.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-mehio/",
+    "LocationUrl": "https://miaaesthetics.com/locations/dallas-tx/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1288,6 +1333,9 @@
   },
   "Dr. Morse": {
     "Location": "Las Vegas",
+    "Image": "Morse-LAS.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-morse/",
+    "LocationUrl": "https://miaaesthetics.com/locations/las-vegas-nv/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1360,6 +1408,9 @@
   },
   "Dr. Orlando": {
     "Location": "Phoenix",
+    "Image": "Orlando-PHO.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-orlando/",
+    "LocationUrl": "https://miaaesthetics.com/locations/phoenix-az/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1432,6 +1483,9 @@
   },
   "Dr. Patino": {
     "Location": "Houston",
+    "Image": "Patino-HOU.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-patino/",
+    "LocationUrl": "https://miaaesthetics.com/locations/houston/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1504,6 +1558,9 @@
   },
   "Dr. Rozentsvit": {
     "Location": "Chicago",
+    "Image": "Rozentsvit-CHI.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-rozentsvit/",
+    "LocationUrl": "https://miaaesthetics.com/locations/chicago/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1576,6 +1633,9 @@
   },
   "Dr. Sarcia": {
     "Location": "Houston",
+    "Image": "Sarcia-HOU.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-sarcia/",
+    "LocationUrl": "https://miaaesthetics.com/locations/houston/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1648,6 +1708,9 @@
   },
   "Dr. Scroggins": {
     "Location": "Tampa",
+    "Image": "Scroggins-TPA.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-scroggins/",
+    "LocationUrl": "https://miaaesthetics.com/locations/tampa/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1720,6 +1783,9 @@
   },
   "Dr. Shaikh": {
     "Location": "Dallas",
+    "Image": "Shaikh-DAL.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-shaikh/",
+    "LocationUrl": "https://miaaesthetics.com/locations/dallas-tx/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1792,6 +1858,9 @@
   },
   "Dr. Sisto": {
     "Location": "Chicago",
+    "Image": "Sisto-CHI.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-sisto/",
+    "LocationUrl": "https://miaaesthetics.com/locations/chicago/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1864,6 +1933,9 @@
   },
   "Dr. Towle": {
     "Location": "Las Vegas",
+    "Image": "Sarcia-HOU.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-towle/",
+    "LocationUrl": "https://miaaesthetics.com/locations/las-vegas-nv/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -1936,6 +2008,9 @@
   },
   "Dr. Valauri": {
     "Location": "Tampa",
+    "Image": "Valauri-TPA.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-valauri/",
+    "LocationUrl": "https://miaaesthetics.com/locations/tampa/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -2008,6 +2083,9 @@
   },
   "Dr. Wright": {
     "Location": "Miami",
+    "Image": "Wright-MIA.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-wright/",
+    "LocationUrl": "https://miaaesthetics.com/locations/miami/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -2080,6 +2158,9 @@
   },
   "Dr. Xu": {
     "Location": "Miami",
+    "Image": "Xu-MIA.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-xu/",
+    "LocationUrl": "https://miaaesthetics.com/locations/miami/",
     "Procedures": {
       "Buttocks": {
         "Male": {
@@ -2152,6 +2233,9 @@
   },
   "Dr. Ziakas": {
     "Location": "Houston",
+    "Image": "Ziakas-HOU.jpg",
+    "BioUrl": "https://miaaesthetics.com/plastic-surgeons/dr-ziakas/",
+    "LocationUrl": "https://miaaesthetics.com/locations/houston/",
     "Procedures": {
       "Buttocks": {
         "Male": {
