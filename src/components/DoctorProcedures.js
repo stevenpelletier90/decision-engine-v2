@@ -224,6 +224,13 @@ const CheapestSurgeries = ({ surgeries }) => {
 const DoctorProcedures = ({ data, selectedAreas, priceRange, gender }) => {
   const cheapestSurgeries = findCheapestSurgeries(data);
 
+  const getDoctorImage = (doctorData) => {
+    if (doctorData.Image) {
+      return require(`../assets/images/${doctorData.Image}`);
+    }
+    return 'https://placehold.co/200x200';
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <Box>
@@ -239,16 +246,32 @@ const DoctorProcedures = ({ data, selectedAreas, priceRange, gender }) => {
                   <Grid container spacing={3}>
                     <Grid item xs={12} md={3}>
                       <Box sx={{ textAlign: 'center' }}>
-                        <StyledCardMedia image='https://placehold.co/200x200' title={`${doctorName} placeholder`} />
+                        <StyledCardMedia
+                          image={getDoctorImage(doctorData)}
+                          title={doctorName}
+                          onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = 'https://placehold.co/200x200';
+                          }}
+                        />
                         <Typography variant='h6' gutterBottom>
                           {doctorName}
                         </Typography>
                         <Typography variant='body2' color='text.secondary' gutterBottom>
-                          Location: {doctorData.Location}
+                          Location:{' '}
+                          {doctorData.LocationUrl ? (
+                            <Link href={doctorData.LocationUrl} target='_blank' rel='noopener noreferrer'>
+                              {doctorData.Location}
+                            </Link>
+                          ) : (
+                            doctorData.Location
+                          )}
                         </Typography>
-                        <Link href='#' underline='hover'>
-                          View Bio
-                        </Link>
+                        {doctorData.BioUrl && (
+                          <Link href={doctorData.BioUrl} target='_blank' rel='noopener noreferrer'>
+                            View Bio
+                          </Link>
+                        )}
                       </Box>
                     </Grid>
                     <Grid item xs={12} md={9}>
