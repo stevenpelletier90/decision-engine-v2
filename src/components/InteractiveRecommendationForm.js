@@ -4,21 +4,61 @@ import {
   Container,
   Typography,
   Grid,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  Chip,
   Slider,
   Button,
   Alert,
   Paper,
   ThemeProvider,
   createTheme,
+  Tooltip,
+  CircularProgress,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import DoctorProcedures from './DoctorProcedures';
+import FemaleSVG from '../assets/images/female.svg';
+import MaleSVG from '../assets/images/male.svg';
+
+// Male SVGs
+import MaleArmsSVG from '../assets/images/Male-Arms.svg';
+import MaleBackSVG from '../assets/images/Male-Back.svg';
+import MaleButtocksSVG from '../assets/images/Male-Buttocks.svg';
+import MaleChestSVG from '../assets/images/Male-Chest.svg';
+import MaleFaceSVG from '../assets/images/Male-Face.svg';
+import MaleLegsSVG from '../assets/images/Male-Legs.svg';
+import MaleStomachSVG from '../assets/images/Male-Stomach.svg';
+
+// Female SVGs
+import FemaleArmsSVG from '../assets/images/Female-Arms.svg';
+import FemaleBackSVG from '../assets/images/Female-Back.svg';
+import FemaleBreastSVG from '../assets/images/Female-Breast.svg';
+import FemaleButtocksSVG from '../assets/images/Female-Buttocks.svg';
+import FemaleFaceSVG from '../assets/images/Female-Face.svg';
+import FemaleLegsSVG from '../assets/images/Female-Legs.svg';
+import FemaleStomachSVG from '../assets/images/Female-Stomach.svg';
+
 import '../styles/index.css';
+
+// Create a mapping for body areas
+const bodyAreaSVGs = {
+  Male: {
+    Arms: MaleArmsSVG,
+    Back: MaleBackSVG,
+    Buttocks: MaleButtocksSVG,
+    Chest: MaleChestSVG,
+    Face: MaleFaceSVG,
+    Legs: MaleLegsSVG,
+    Stomach: MaleStomachSVG,
+  },
+  Female: {
+    Arms: FemaleArmsSVG,
+    Back: FemaleBackSVG,
+    Breast: FemaleBreastSVG,
+    Buttocks: FemaleButtocksSVG,
+    Face: FemaleFaceSVG,
+    Legs: FemaleLegsSVG,
+    Stomach: FemaleStomachSVG,
+  },
+};
 
 // Create a custom theme
 const theme = createTheme({
@@ -49,40 +89,35 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   backgroundColor: '#f5f5f5',
 }));
 
-const StyledFormControl = styled(FormControl)(({ theme }) => ({
-  marginBottom: theme.spacing(2),
-}));
-
-const StyledChip = styled(Chip)(({ theme }) => ({
-  margin: theme.spacing(0.5),
-  backgroundColor: theme.palette.secondary.main,
-  color: theme.palette.primary.main,
-}));
-
-const StyledSVG = styled('svg')({
-  width: '100%',
-  height: '120px',
-  margin: '20px 0',
-});
-
-const InteractiveCircle = styled('circle')(({ theme, isActive }) => ({
-  cursor: 'pointer',
-  transition: 'fill 0.3s',
-  fill: isActive ? theme.palette.secondary.main : 'white',
-  stroke: theme.palette.primary.main,
-  strokeWidth: 2,
-  '&:hover': {
-    fill: theme.palette.secondary.light,
-  },
-}));
-
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
   color: theme.palette.primary.main,
   '&:hover': {
     backgroundColor: theme.palette.secondary.dark,
   },
+  margin: theme.spacing(1),
 }));
+
+const bodyAreaPositions = {
+  Male: {
+    Arms: { top: '20%', left: '5%', width: '90%', height: '40%' },
+    Back: { top: '15%', left: '25%', width: '50%', height: '50%' },
+    Buttocks: { top: '45%', left: '30%', width: '40%', height: '20%' },
+    Chest: { top: '20%', left: '30%', width: '40%', height: '20%' },
+    Face: { top: '2%', left: '35%', width: '30%', height: '15%' },
+    Legs: { top: '50%', left: '25%', width: '50%', height: '48%' },
+    Stomach: { top: '35%', left: '30%', width: '40%', height: '20%' },
+  },
+  Female: {
+    Arms: { top: '20%', left: '5%', width: '90%', height: '40%' },
+    Back: { top: '15%', left: '25%', width: '50%', height: '50%' },
+    Breast: { top: '25%', left: '30%', width: '40%', height: '15%' },
+    Buttocks: { top: '45%', left: '30%', width: '40%', height: '20%' },
+    Face: { top: '2%', left: '35%', width: '30%', height: '15%' },
+    Legs: { top: '50%', left: '25%', width: '50%', height: '48%' },
+    Stomach: { top: '35%', left: '30%', width: '40%', height: '20%' },
+  },
+};
 
 const InteractiveRecommendationForm = ({ data }) => {
   const { maxPrice, minPrice } = useMemo(() => {
@@ -107,13 +142,16 @@ const InteractiveRecommendationForm = ({ data }) => {
 
   const [gender, setGender] = useState('');
   const [bodyAreas, setBodyAreas] = useState([]);
-  const [showWarning, setShowWarning] = useState(false);
-  const [showGenderError, setShowGenderError] = useState(false);
+  const [showMaxSelectionWarning, setShowMaxSelectionWarning] = useState(false);
   const [showResults, setShowResults] = useState(false);
-  const [hoveredArea, setHoveredArea] = useState(null);
   const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const bodyAreaOptions = ['Face/Neck/Eyes', 'Breast', 'Arms', 'Legs', 'Stomach/Waist', 'Back', 'Buttocks'];
+  const bodyAreaOptions =
+    gender === 'Female'
+      ? ['Arms', 'Back', 'Breast', 'Buttocks', 'Face', 'Legs', 'Stomach']
+      : ['Arms', 'Back', 'Buttocks', 'Chest', 'Face', 'Legs', 'Stomach'];
 
   const filteredData = useMemo(() => {
     if (!showResults || !gender || bodyAreas.length === 0) return {};
@@ -142,19 +180,24 @@ const InteractiveRecommendationForm = ({ data }) => {
     }, {});
   }, [data, gender, bodyAreas, priceRange, showResults]);
 
-  const handleGenderChange = (event) => {
-    setGender(event.target.value);
-    setShowGenderError(false);
+  const handleGenderSelect = (selectedGender) => {
+    setGender(selectedGender);
+    setBodyAreas([]);
   };
 
-  const handleBodyAreaChange = (event) => {
-    const selectedAreas = event.target.value;
-    if (selectedAreas.length <= 3) {
-      setBodyAreas(selectedAreas);
-      setShowWarning(false);
-    } else {
-      setShowWarning(true);
-    }
+  const handleAreaClick = (area) => {
+    setBodyAreas((prev) => {
+      if (prev.includes(area)) {
+        setShowMaxSelectionWarning(false);
+        return prev.filter((a) => a !== area);
+      }
+      if (prev.length < 3) {
+        setShowMaxSelectionWarning(false);
+        return [...prev, area];
+      }
+      setShowMaxSelectionWarning(true);
+      return prev;
+    });
   };
 
   const handlePriceRangeChange = (event, newValue) => {
@@ -162,24 +205,15 @@ const InteractiveRecommendationForm = ({ data }) => {
   };
 
   const handleSubmit = () => {
-    if (!gender) {
-      setShowGenderError(true);
-      return;
+    if (gender && bodyAreas.length > 0) {
+      setLoading(true);
+      setError(null);
+      // Simulating an API call
+      setTimeout(() => {
+        setShowResults(true);
+        setLoading(false);
+      }, 1000);
     }
-    setShowResults(true);
-  };
-
-  const handleAreaClick = (area) => {
-    setBodyAreas((prev) => {
-      if (prev.includes(area)) {
-        return prev.filter((a) => a !== area);
-      }
-      if (prev.length < 3) {
-        return [...prev, area];
-      }
-      setShowWarning(true);
-      return prev;
-    });
   };
 
   return (
@@ -189,83 +223,57 @@ const InteractiveRecommendationForm = ({ data }) => {
           Find Your Ideal Procedure
         </Typography>
 
-        <StyledSVG viewBox='0 0 600 100'>
-          {bodyAreaOptions.map((area, index) => (
-            <g key={area}>
-              <InteractiveCircle
-                cx={100 * (index + 1)}
-                cy='50'
-                r='40'
-                isActive={bodyAreas.includes(area)}
-                onMouseEnter={() => setHoveredArea(area)}
-                onMouseLeave={() => setHoveredArea(null)}
-                onClick={() => handleAreaClick(area)}
-              />
-              <text x={100 * (index + 1)} y='110' textAnchor='middle' fontSize='14'>
-                {area}
-              </text>
-            </g>
-          ))}
-        </StyledSVG>
-        {hoveredArea && (
-          <Typography align='center' sx={{ mt: -2, mb: 2 }}>
-            {hoveredArea}
-          </Typography>
-        )}
-
         <StyledPaper elevation={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
-              <StyledFormControl fullWidth>
-                <InputLabel id='gender-select-label'>Gender</InputLabel>
-                <Select
-                  labelId='gender-select-label'
-                  id='gender-select'
-                  value={gender}
-                  onChange={handleGenderChange}
-                  label='Gender'
+            <Grid item xs={12}>
+              <Typography variant='h6' gutterBottom>
+                Select Your Gender
+              </Typography>
+              <Box display='flex' justifyContent='center'>
+                <StyledButton
+                  onClick={() => handleGenderSelect('Male')}
+                  variant={gender === 'Male' ? 'contained' : 'outlined'}
                 >
-                  <MenuItem value='Male'>Male</MenuItem>
-                  <MenuItem value='Female'>Female</MenuItem>
-                </Select>
-              </StyledFormControl>
-              {showGenderError && (
-                <Alert severity='error' sx={{ mb: 2 }}>
-                  Please select a gender before proceeding.
-                </Alert>
-              )}
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <StyledFormControl fullWidth>
-                <InputLabel id='body-area-select-label'>Body Area (Max 3)</InputLabel>
-                <Select
-                  labelId='body-area-select-label'
-                  id='body-area-select'
-                  multiple
-                  value={bodyAreas}
-                  onChange={handleBodyAreaChange}
-                  label='Body Area (Max 3)'
-                  renderValue={(selected) => (
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-                      {selected.map((value) => (
-                        <StyledChip key={value} label={value} />
-                      ))}
-                    </Box>
-                  )}
+                  Male
+                </StyledButton>
+                <StyledButton
+                  onClick={() => handleGenderSelect('Female')}
+                  variant={gender === 'Female' ? 'contained' : 'outlined'}
                 >
-                  {bodyAreaOptions.map((area) => (
-                    <MenuItem key={area} value={area}>
-                      {area}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </StyledFormControl>
-              {showWarning && (
-                <Alert severity='warning' sx={{ mb: 2 }}>
-                  You can select a maximum of 3 body areas.
-                </Alert>
-              )}
+                  Female
+                </StyledButton>
+              </Box>
             </Grid>
+            {gender && (
+              <Grid item xs={12}>
+                <Typography variant='h6' gutterBottom>
+                  Select Body Areas (Max 3)
+                </Typography>
+                <Box
+                  sx={{
+                    height: 500,
+                    border: '1px solid #ccc',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    position: 'relative',
+                  }}
+                >
+                  <InteractiveSVG
+                    svg={gender === 'Female' ? FemaleSVG : MaleSVG}
+                    selectedAreas={bodyAreas}
+                    onAreaClick={handleAreaClick}
+                    bodyAreaOptions={bodyAreaOptions}
+                    gender={gender}
+                  />
+                </Box>
+                {showMaxSelectionWarning && (
+                  <Alert severity='warning' sx={{ mt: 2 }}>
+                    You can select a maximum of 3 body areas.
+                  </Alert>
+                )}
+              </Grid>
+            )}
             <Grid item xs={12}>
               <Typography variant='h6' gutterBottom>
                 Ideal Budget
@@ -285,12 +293,23 @@ const InteractiveRecommendationForm = ({ data }) => {
               </Box>
             </Grid>
             <Grid item xs={12}>
-              <StyledButton variant='contained' onClick={handleSubmit} fullWidth>
-                Find Matching Procedures
+              <StyledButton
+                variant='contained'
+                onClick={handleSubmit}
+                fullWidth
+                disabled={!gender || bodyAreas.length === 0 || loading}
+              >
+                {loading ? <CircularProgress size={24} color='inherit' /> : 'Find Matching Procedures'}
               </StyledButton>
             </Grid>
           </Grid>
         </StyledPaper>
+
+        {error && (
+          <Alert severity='error' sx={{ mt: 2 }}>
+            {error}
+          </Alert>
+        )}
 
         {showResults && (
           <Box sx={{ mt: 4 }}>
@@ -303,6 +322,75 @@ const InteractiveRecommendationForm = ({ data }) => {
         )}
       </Container>
     </ThemeProvider>
+  );
+};
+
+const InteractiveSVG = ({ svg, selectedAreas, onAreaClick, bodyAreaOptions, gender }) => {
+  return (
+    <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
+      <Box
+        component='img'
+        src={svg}
+        alt={`${gender} body outline`}
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'contain',
+          userSelect: 'none',
+        }}
+      />
+      {bodyAreaOptions.map((area) => {
+        const areaSVG = bodyAreaSVGs[gender][area];
+        const position = bodyAreaPositions[gender][area];
+        if (!areaSVG || !position) return null;
+
+        return (
+          <Tooltip key={area} title={area} arrow>
+            <Box
+              sx={{
+                position: 'absolute',
+                ...position,
+                cursor: 'pointer',
+              }}
+              onClick={() => onAreaClick(area)}
+            >
+              <Box
+                component='img'
+                src={areaSVG}
+                alt={area}
+                sx={{
+                  width: '100%',
+                  height: '100%',
+                  opacity: selectedAreas.includes(area) ? 1 : 0.3,
+                  transition: 'opacity 0.3s, transform 0.3s',
+                  '&:hover': {
+                    opacity: 0.7,
+                    transform: 'scale(1.05)',
+                  },
+                }}
+              />
+            </Box>
+          </Tooltip>
+        );
+      })}
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          color: 'white',
+          padding: '8px',
+          textAlign: 'center',
+        }}
+      >
+        Selected Areas: {selectedAreas.join(', ')}
+      </Box>
+    </Box>
   );
 };
 
