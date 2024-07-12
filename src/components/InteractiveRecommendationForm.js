@@ -4,34 +4,20 @@ import {
   Container,
   Typography,
   Grid,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  Chip,
   Slider,
   Button,
   Alert,
   Paper,
   ThemeProvider,
   createTheme,
-  Tooltip,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import DoctorProcedures from './DoctorProcedures';
+
+// SVG imports
+import MaleSVG from '../assets/images/male-body.svg';
+import MaleBodyGoldSVG from '../assets/images/male-body-gold.svg';
 import FemaleSVG from '../assets/images/female.svg';
-import MaleSVG from '../assets/images/male.svg';
-
-// Male SVGs
-import MaleArmsSVG from '../assets/images/Male-Arms.svg';
-import MaleBackSVG from '../assets/images/Male-Back.svg';
-import MaleButtocksSVG from '../assets/images/Male-Buttocks.svg';
-import MaleBreastSVG from '../assets/images/Male-Chest.svg';
-import MaleFaceSVG from '../assets/images/Male-Face.svg';
-import MaleLegsSVG from '../assets/images/Male-Legs.svg';
-import MaleStomachSVG from '../assets/images/Male-Stomach.svg';
-
-// Female SVGs
 import FemaleArmsSVG from '../assets/images/Female-Arms.svg';
 import FemaleBackSVG from '../assets/images/Female-Back.svg';
 import FemaleBreastSVG from '../assets/images/Female-Breast.svg';
@@ -42,17 +28,7 @@ import FemaleStomachSVG from '../assets/images/Female-Stomach.svg';
 
 import '../styles/index.css';
 
-// Create a mapping for body areas
 const bodyAreaSVGs = {
-  Male: {
-    Arms: MaleArmsSVG,
-    Back: MaleBackSVG,
-    Buttocks: MaleButtocksSVG,
-    Breast: MaleBreastSVG,
-    Face: MaleFaceSVG,
-    Legs: MaleLegsSVG,
-    Stomach: MaleStomachSVG,
-  },
   Female: {
     Arms: FemaleArmsSVG,
     Back: FemaleBackSVG,
@@ -64,26 +40,15 @@ const bodyAreaSVGs = {
   },
 };
 
-// Create a custom theme
 const theme = createTheme({
   typography: {
     fontFamily: 'Montserrat, Arial, sans-serif',
-    h4: {
-      fontWeight: 700,
-      textTransform: 'uppercase',
-    },
-    h6: {
-      fontWeight: 700,
-      textTransform: 'uppercase',
-    },
+    h4: { fontWeight: 700, textTransform: 'uppercase' },
+    h6: { fontWeight: 700, textTransform: 'uppercase' },
   },
   palette: {
-    primary: {
-      main: '#1b1b1b',
-    },
-    secondary: {
-      main: '#c8b273',
-    },
+    primary: { main: '#1b1b1b' },
+    secondary: { main: '#c8b273' },
   },
 });
 
@@ -93,57 +58,24 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   backgroundColor: '#f5f5f5',
 }));
 
-const StyledFormControl = styled(FormControl)(({ theme }) => ({
-  marginBottom: theme.spacing(2),
-}));
-
-const StyledChip = styled(Chip)(({ theme }) => ({
-  margin: theme.spacing(0.5),
-  backgroundColor: theme.palette.secondary.main,
-  color: theme.palette.primary.main,
-}));
-
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
   color: theme.palette.primary.main,
-  '&:hover': {
-    backgroundColor: theme.palette.secondary.dark,
-  },
+  '&:hover': { backgroundColor: theme.palette.secondary.dark },
   margin: theme.spacing(1),
 }));
 
-const bodyAreaPositions = {
-  Male: {
-    Arms: { top: '20%', left: '5%', width: '90%', height: '40%' },
-    Back: { top: '15%', left: '25%', width: '50%', height: '50%' },
-    Buttocks: { top: '45%', left: '30%', width: '40%', height: '20%' },
-    Breast: { top: '20%', left: '30%', width: '40%', height: '20%' },
-    Face: { top: '2%', left: '35%', width: '30%', height: '15%' },
-    Legs: { top: '50%', left: '25%', width: '50%', height: '48%' },
-    Stomach: { top: '35%', left: '30%', width: '40%', height: '20%' },
-  },
-  Female: {
-    Arms: { top: '20%', left: '5%', width: '90%', height: '40%' },
-    Back: { top: '15%', left: '25%', width: '50%', height: '50%' },
-    Breast: { top: '25%', left: '30%', width: '40%', height: '15%' },
-    Buttocks: { top: '45%', left: '30%', width: '40%', height: '20%' },
-    Face: { top: '2%', left: '35%', width: '30%', height: '15%' },
-    Legs: { top: '50%', left: '25%', width: '50%', height: '48%' },
-    Stomach: { top: '35%', left: '30%', width: '40%', height: '20%' },
-  },
-};
-
 const InteractiveRecommendationForm = ({ data }) => {
   const { maxPrice, minPrice } = useMemo(() => {
-    let max = 0;
-    let min = Infinity;
+    let max = 0,
+      min = Infinity;
     Object.values(data).forEach((doctor) => {
       Object.values(doctor.Procedures).forEach((bodyArea) => {
         Object.values(bodyArea).forEach((genderProcedures) => {
           Object.values(genderProcedures).forEach((price) => {
             const numericPrice = parseFloat(price.replace('$', '').replace(',', ''));
-            if (numericPrice > max) max = numericPrice;
-            if (numericPrice < min) min = numericPrice;
+            max = Math.max(max, numericPrice);
+            min = Math.min(min, numericPrice);
           });
         });
       });
@@ -157,9 +89,7 @@ const InteractiveRecommendationForm = ({ data }) => {
   const [gender, setGender] = useState('');
   const [bodyAreas, setBodyAreas] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
-  const [showGenderError, setShowGenderError] = useState(false);
   const [showResults, setShowResults] = useState(false);
-  const [hoveredArea, setHoveredArea] = useState(null);
   const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
 
   const bodyAreaOptions = ['Face/Neck/Eyes', 'Breast', 'Arms', 'Legs', 'Stomach/Waist', 'Back', 'Buttocks'];
@@ -175,58 +105,25 @@ const InteractiveRecommendationForm = ({ data }) => {
               const numericPrice = parseFloat(price.replace('$', '').replace(',', ''));
               return numericPrice >= priceRange[0] && numericPrice <= priceRange[1];
             })
-            .reduce((obj, [procedure, price]) => {
-              obj[procedure] = price;
-              return obj;
-            }, {});
+            .reduce((obj, [procedure, price]) => ({ ...obj, [procedure]: price }), {});
         }
       });
       if (Object.keys(relevantProcedures).length > 0) {
-        acc[doctorName] = {
-          ...doctorData,
-          Procedures: relevantProcedures,
-        };
+        acc[doctorName] = { ...doctorData, Procedures: relevantProcedures };
       }
       return acc;
     }, {});
   }, [data, gender, bodyAreas, priceRange, showResults]);
 
-  const handleGenderChange = (event) => {
-    setGender(event.target.value);
-    setShowGenderError(false);
+  const handleGenderChange = (selectedGender) => {
+    setGender(selectedGender);
     setBodyAreas([]);
-  };
-
-  const handleBodyAreaChange = (event) => {
-    const selectedAreas = event.target.value;
-    if (selectedAreas.length <= 3) {
-      setBodyAreas(selectedAreas);
-      setShowWarning(false);
-    } else {
-      setShowWarning(true);
-    }
-  };
-
-  const handlePriceRangeChange = (event, newValue) => {
-    setPriceRange(newValue);
-  };
-
-  const handleSubmit = () => {
-    if (!gender) {
-      setShowGenderError(true);
-      return;
-    }
-    setShowResults(true);
   };
 
   const handleAreaClick = (area) => {
     setBodyAreas((prev) => {
-      if (prev.includes(area)) {
-        return prev.filter((a) => a !== area);
-      }
-      if (prev.length < 3) {
-        return [...prev, area];
-      }
+      if (prev.includes(area)) return prev.filter((a) => a !== area);
+      if (prev.length < 3) return [...prev, area];
       setShowWarning(true);
       return prev;
     });
@@ -235,7 +132,7 @@ const InteractiveRecommendationForm = ({ data }) => {
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth='lg'>
-        <Typography variant='h4' gutterBottom align='center' sx={{ my: 4, color: theme.palette.primary.main }}>
+        <Typography variant='h4' gutterBottom align='center' className='page-title'>
           Find Your Ideal Procedure
         </Typography>
 
@@ -247,13 +144,13 @@ const InteractiveRecommendationForm = ({ data }) => {
               </Typography>
               <Box display='flex' justifyContent='center'>
                 <StyledButton
-                  onClick={() => handleGenderChange({ target: { value: 'Male' } })}
+                  onClick={() => handleGenderChange('Male')}
                   variant={gender === 'Male' ? 'contained' : 'outlined'}
                 >
                   Male
                 </StyledButton>
                 <StyledButton
-                  onClick={() => handleGenderChange({ target: { value: 'Female' } })}
+                  onClick={() => handleGenderChange('Female')}
                   variant={gender === 'Female' ? 'contained' : 'outlined'}
                 >
                   Female
@@ -265,22 +162,12 @@ const InteractiveRecommendationForm = ({ data }) => {
                 <Typography variant='h6' gutterBottom>
                   Select Body Areas (Max 3)
                 </Typography>
-                <Box
-                  sx={{
-                    height: 500,
-                    border: '1px solid #ccc',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    position: 'relative',
-                  }}
-                >
+                <Box className='svg-container'>
                   <InteractiveSVG
-                    svg={gender === 'Female' ? FemaleSVG : MaleSVG}
+                    gender={gender}
                     selectedAreas={bodyAreas}
                     onAreaClick={handleAreaClick}
                     bodyAreaOptions={bodyAreaOptions}
-                    gender={gender}
                   />
                 </Box>
                 {showWarning && (
@@ -296,7 +183,7 @@ const InteractiveRecommendationForm = ({ data }) => {
               </Typography>
               <Slider
                 value={priceRange}
-                onChange={handlePriceRangeChange}
+                onChange={(_, newValue) => setPriceRange(newValue)}
                 valueLabelDisplay='auto'
                 min={minPrice}
                 max={maxPrice}
@@ -309,7 +196,11 @@ const InteractiveRecommendationForm = ({ data }) => {
               </Box>
             </Grid>
             <Grid item xs={12}>
-              <StyledButton variant='contained' onClick={handleSubmit} fullWidth>
+              <StyledButton
+                variant='contained'
+                onClick={() => gender && bodyAreas.length > 0 && setShowResults(true)}
+                fullWidth
+              >
                 Find Matching Procedures
               </StyledButton>
             </Grid>
@@ -330,72 +221,75 @@ const InteractiveRecommendationForm = ({ data }) => {
   );
 };
 
-const InteractiveSVG = ({ svg, selectedAreas, onAreaClick, bodyAreaOptions, gender }) => {
-  return (
-    <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
-      <Box
-        component='img'
-        src={svg}
-        alt={`${gender} body outline`}
-        sx={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'contain',
-          userSelect: 'none',
-        }}
-      />
-      {bodyAreaOptions.map((area) => {
-        const areaSVG =
-          bodyAreaSVGs[gender][area === 'Face/Neck/Eyes' ? 'Face' : area === 'Stomach/Waist' ? 'Stomach' : area];
-        const position =
-          bodyAreaPositions[gender][area === 'Face/Neck/Eyes' ? 'Face' : area === 'Stomach/Waist' ? 'Stomach' : area];
-        if (!areaSVG || !position) return null;
+const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, bodyAreaOptions }) => {
+  const baseSVG = gender === 'Female' ? FemaleSVG : MaleSVG;
+  const goldSVG = gender === 'Female' ? null : MaleBodyGoldSVG;
 
-        return (
-          <Tooltip key={area} title={area} arrow>
-            <Box
-              sx={{
-                position: 'absolute',
-                ...position,
-                cursor: 'pointer',
-              }}
-              onClick={() => onAreaClick(area)}
-            >
-              <Box
-                component='img'
-                src={areaSVG}
-                alt={area}
-                sx={{
-                  width: '100%',
-                  height: '100%',
+  const getAreaId = (area) => {
+    switch (area) {
+      case 'Face/Neck/Eyes':
+        return 'Head';
+      case 'Breast':
+        return 'Chest';
+      case 'Stomach/Waist':
+        return 'Stomach';
+      default:
+        return area;
+    }
+  };
+
+  return (
+    <Box className='svg-wrapper'>
+      <svg width='100%' height='100%' viewBox='0 0 238 509.1'>
+        <image href={baseSVG} width='100%' height='100%' />
+        {gender === 'Male' ? (
+          <g>
+            <image href={goldSVG} width='100%' height='100%' />
+            {bodyAreaOptions.map((area) => (
+              <use
+                key={area}
+                href={`${goldSVG}#${getAreaId(area)}`}
+                className={`area-use ${selectedAreas.includes(area) ? 'selected' : ''}`}
+                style={{
+                  opacity: selectedAreas.includes(area) ? 1 : 0,
+                  transition: 'opacity 0.3s',
+                  cursor: 'pointer',
+                }}
+                onClick={() => onAreaClick(area)}
+              />
+            ))}
+          </g>
+        ) : (
+          bodyAreaOptions.map((area) => {
+            const areaSVG =
+              bodyAreaSVGs[gender][area === 'Face/Neck/Eyes' ? 'Face' : area === 'Stomach/Waist' ? 'Stomach' : area];
+            if (!areaSVG) return null;
+            return (
+              <image
+                key={area}
+                href={areaSVG}
+                className={`area-svg ${selectedAreas.includes(area) ? 'selected' : ''}`}
+                style={{
                   opacity: selectedAreas.includes(area) ? 1 : 0.3,
                   transition: 'opacity 0.3s, transform 0.3s',
-                  '&:hover': {
-                    opacity: 0.7,
-                    transform: 'scale(1.05)',
-                  },
+                  cursor: 'pointer',
                 }}
+                onClick={() => onAreaClick(area)}
               />
+            );
+          })
+        )}
+      </svg>
+      <Box className='selected-areas'>
+        {selectedAreas.length > 0 ? (
+          selectedAreas.map((area) => (
+            <Box key={area} className='selected-area-tag'>
+              {area}
             </Box>
-          </Tooltip>
-        );
-      })}
-      <Box
-        sx={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          color: 'white',
-          padding: '8px',
-          textAlign: 'center',
-        }}
-      >
-        Selected Areas: {selectedAreas.join(', ')}
+          ))
+        ) : (
+          <Typography variant='body2'>No areas selected</Typography>
+        )}
       </Box>
     </Box>
   );
