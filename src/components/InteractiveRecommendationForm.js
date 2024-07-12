@@ -244,17 +244,11 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, bodyAreaOptions })
         <image href={baseSVG} width='100%' height='100%' />
         {gender === 'Male' ? (
           <g>
-            <image href={goldSVG} width='100%' height='100%' />
             {bodyAreaOptions.map((area) => (
               <use
                 key={area}
                 href={`${goldSVG}#${getAreaId(area)}`}
                 className={`area-use ${selectedAreas.includes(area) ? 'selected' : ''}`}
-                style={{
-                  opacity: selectedAreas.includes(area) ? 1 : 0,
-                  transition: 'opacity 0.3s',
-                  cursor: 'pointer',
-                }}
                 onClick={() => onAreaClick(area)}
               />
             ))}
@@ -269,11 +263,6 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, bodyAreaOptions })
                 key={area}
                 href={areaSVG}
                 className={`area-svg ${selectedAreas.includes(area) ? 'selected' : ''}`}
-                style={{
-                  opacity: selectedAreas.includes(area) ? 1 : 0.3,
-                  transition: 'opacity 0.3s, transform 0.3s',
-                  cursor: 'pointer',
-                }}
                 onClick={() => onAreaClick(area)}
               />
             );
