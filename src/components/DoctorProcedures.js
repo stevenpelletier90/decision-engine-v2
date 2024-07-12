@@ -1,11 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import {
   Typography,
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  Link,
   Box,
   Table,
   TableBody,
@@ -16,87 +11,9 @@ import {
   Paper,
   TableSortLabel,
   Button,
-  ThemeProvider,
-  createTheme,
+  Avatar,
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
 import '../styles/index.css';
-
-// Create a custom theme
-const theme = createTheme({
-  typography: {
-    fontFamily: 'Montserrat, Arial, sans-serif',
-    h4: {
-      fontWeight: 700,
-      textTransform: 'uppercase',
-    },
-    h5: {
-      fontWeight: 700,
-      textTransform: 'uppercase',
-    },
-    h6: {
-      fontWeight: 700,
-      textTransform: 'uppercase',
-    },
-  },
-  palette: {
-    primary: {
-      main: '#1b1b1b',
-    },
-    secondary: {
-      main: '#c8b273',
-    },
-  },
-});
-
-const StyledCard = styled(Card)(({ theme }) => ({
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  marginBottom: theme.spacing(4),
-  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-}));
-
-const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
-  paddingTop: '75%',
-  borderRadius: '50%',
-  margin: theme.spacing(2),
-}));
-
-const ProcedureCard = styled(Card)(({ theme }) => ({
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)',
-}));
-
-const ProcedureTitle = styled(Typography)(({ theme }) => ({
-  backgroundColor: theme.palette.primary.main,
-  color: theme.palette.common.white,
-  padding: theme.spacing(1),
-}));
-
-const ProcedureList = styled(Box)(({ theme }) => ({
-  flexGrow: 1,
-  padding: theme.spacing(2),
-}));
-
-const ProcedureItem = styled(Typography)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'space-between',
-  marginBottom: theme.spacing(1),
-  '&:last-child': {
-    marginBottom: 0,
-  },
-}));
-
-const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: theme.palette.secondary.main,
-  color: theme.palette.primary.main,
-  '&:hover': {
-    backgroundColor: theme.palette.secondary.dark,
-  },
-}));
 
 const formatPrice = (price) => {
   const numericPrice = typeof price === 'number' ? price : parseFloat(price.replace('$', '').replace(',', ''));
@@ -112,10 +29,11 @@ const findCheapestSurgeries = (data) => {
         const existingIndex = cheapestSurgeries.findIndex((s) => s.procedure === procedure);
         if (existingIndex === -1 || numericPrice < cheapestSurgeries[existingIndex].price) {
           const surgeryInfo = {
-            location: doctorData.Location,
             doctor: doctorName,
-            price: numericPrice,
             procedure: procedure,
+            location: doctorData.Location,
+            price: numericPrice,
+            image: doctorData.Image,
           };
           if (existingIndex === -1) {
             cheapestSurgeries.push(surgeryInfo);
@@ -155,24 +73,22 @@ const CheapestSurgeries = ({ surgeries }) => {
     });
   }, [surgeries, order, orderBy]);
 
+  const getDoctorImage = (imageName) => {
+    if (imageName) {
+      return require(`../assets/images/${imageName}`);
+    }
+    return 'https://placehold.co/40x40';
+  };
+
   return (
-    <Box sx={{ mb: 4 }}>
-      <Typography variant='h5' gutterBottom>
+    <Box className='cheapest-surgeries'>
+      <Typography variant='h5' gutterBottom className='doctors-title'>
         Your Procedure Results
       </Typography>
       <TableContainer component={Paper}>
-        <Table size='small'>
+        <Table size='small' className='cheapest-surgeries-table'>
           <TableHead>
             <TableRow>
-              <TableCell>
-                <TableSortLabel
-                  active={orderBy === 'location'}
-                  direction={orderBy === 'location' ? order : 'asc'}
-                  onClick={() => handleRequestSort('location')}
-                >
-                  Location
-                </TableSortLabel>
-              </TableCell>
               <TableCell>
                 <TableSortLabel
                   active={orderBy === 'doctor'}
@@ -191,26 +107,53 @@ const CheapestSurgeries = ({ surgeries }) => {
                   Procedure
                 </TableSortLabel>
               </TableCell>
-              <TableCell>Price</TableCell>
+              <TableCell>
+                <TableSortLabel
+                  active={orderBy === 'location'}
+                  direction={orderBy === 'location' ? order : 'asc'}
+                  onClick={() => handleRequestSort('location')}
+                >
+                  Location
+                </TableSortLabel>
+              </TableCell>
+              <TableCell>
+                <TableSortLabel
+                  active={orderBy === 'price'}
+                  direction={orderBy === 'price' ? order : 'asc'}
+                  onClick={() => handleRequestSort('price')}
+                >
+                  Price
+                </TableSortLabel>
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {sortedSurgeries.map((surgery, index) => (
               <TableRow key={index}>
-                <TableCell>{surgery.location}</TableCell>
-                <TableCell>{surgery.doctor}</TableCell>
-                <TableCell>{surgery.procedure}</TableCell>
                 <TableCell>
-                  <StyledButton
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Avatar
+                      src={getDoctorImage(surgery.image)}
+                      alt={surgery.doctor}
+                      sx={{ width: 40, height: 40, marginRight: 2 }}
+                    />
+                    {surgery.doctor}
+                  </Box>
+                </TableCell>
+                <TableCell>{surgery.procedure}</TableCell>
+                <TableCell>{surgery.location}</TableCell>
+                <TableCell>
+                  <Button
                     variant='contained'
                     size='small'
+                    className='view-price-button'
                     onClick={() => {
                       // Placeholder for future popup functionality
-                      console.log(`Show price details for ${surgery.procedure}`);
+                      console.log(`Show price details for ${surgery.procedure}: ${formatPrice(surgery.price)}`);
                     }}
                   >
                     View Price
-                  </StyledButton>
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}
@@ -221,93 +164,13 @@ const CheapestSurgeries = ({ surgeries }) => {
   );
 };
 
-const DoctorProcedures = ({ data, selectedAreas, priceRange, gender }) => {
+const DoctorProcedures = ({ data }) => {
   const cheapestSurgeries = findCheapestSurgeries(data);
 
-  const getDoctorImage = (doctorData) => {
-    if (doctorData.Image) {
-      return require(`../assets/images/${doctorData.Image}`);
-    }
-    return 'https://placehold.co/200x200';
-  };
-
   return (
-    <ThemeProvider theme={theme}>
-      <Box>
-        <CheapestSurgeries surgeries={cheapestSurgeries} />
-        <Typography variant='h4' gutterBottom sx={{ color: theme.palette.primary.main }}>
-          Available Doctors
-        </Typography>
-        <Grid container spacing={4}>
-          {Object.entries(data).map(([doctorName, doctorData]) => (
-            <Grid item xs={12} key={doctorName}>
-              <StyledCard>
-                <CardContent>
-                  <Grid container spacing={3}>
-                    <Grid item xs={12} md={3}>
-                      <Box sx={{ textAlign: 'center' }}>
-                        <StyledCardMedia
-                          image={getDoctorImage(doctorData)}
-                          title={doctorName}
-                          onError={(e) => {
-                            e.target.onerror = null;
-                            e.target.src = 'https://placehold.co/200x200';
-                          }}
-                        />
-                        <Typography variant='h6' gutterBottom>
-                          {doctorName}
-                        </Typography>
-                        <Typography variant='body2' color='text.secondary' gutterBottom>
-                          Location:{' '}
-                          {doctorData.LocationUrl ? (
-                            <Link href={doctorData.LocationUrl} target='_blank' rel='noopener noreferrer'>
-                              {doctorData.Location}
-                            </Link>
-                          ) : (
-                            doctorData.Location
-                          )}
-                        </Typography>
-                        {doctorData.BioUrl && (
-                          <Link href={doctorData.BioUrl} target='_blank' rel='noopener noreferrer'>
-                            View Bio
-                          </Link>
-                        )}
-                      </Box>
-                    </Grid>
-                    <Grid item xs={12} md={9}>
-                      <Grid container spacing={2}>
-                        {selectedAreas.map((area) => (
-                          <Grid item xs={12} sm={6} md={4} key={area}>
-                            <ProcedureCard>
-                              <ProcedureTitle variant='h6'>{area}</ProcedureTitle>
-                              <ProcedureList>
-                                {doctorData.Procedures[area] &&
-                                Object.entries(doctorData.Procedures[area]).length > 0 ? (
-                                  Object.entries(doctorData.Procedures[area]).map(([procedure, price]) => (
-                                    <ProcedureItem key={procedure} variant='body2'>
-                                      <span>{procedure}</span>
-                                      <strong>{formatPrice(price)}</strong>
-                                    </ProcedureItem>
-                                  ))
-                                ) : (
-                                  <Typography variant='body2' color='text.secondary'>
-                                    No procedures available in this price range.
-                                  </Typography>
-                                )}
-                              </ProcedureList>
-                            </ProcedureCard>
-                          </Grid>
-                        ))}
-                      </Grid>
-                    </Grid>
-                  </Grid>
-                </CardContent>
-              </StyledCard>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-    </ThemeProvider>
+    <Box>
+      <CheapestSurgeries surgeries={cheapestSurgeries} />
+    </Box>
   );
 };
 
