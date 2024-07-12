@@ -13,8 +13,6 @@
       .cls-2 {
         fill: #c8b275;
         stroke-width: 0px;
-        opacity: 0.6;
-        
       }
     </style>
   </defs>

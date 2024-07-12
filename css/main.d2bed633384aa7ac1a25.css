@@ -30,15 +30,24 @@
   height: 100%;
 }
 
+/* Hide gold sections by default */
 .area-use,
 .area-svg {
-  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  transition: opacity 0.3s ease;
   cursor: pointer;
 }
 
+/* Show individual gold section on hover with 60% opacity */
+.area-use:hover,
 .area-svg:hover {
-  opacity: 0.7 !important;
-  transform: scale(1.02);
+  opacity: 0.6;
+}
+
+/* Style for selected areas */
+.area-use.selected,
+.area-svg.selected {
+  opacity: 1 !important; /* Override hover state */
 }
 
 .selected-areas {
@@ -66,4 +75,4 @@
 }
 
 
-/*# sourceMappingURL=main.54b79a00645f1b4d5537.css.map*/
+/*# sourceMappingURL=main.d2bed633384aa7ac1a25.css.map*/
