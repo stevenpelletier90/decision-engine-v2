@@ -123,6 +123,11 @@ const CheapestSurgeries = ({ surgeries }) => {
                   onClick={() => handleRequestSort('price')}
                 >
                   Price
+                  {orderBy === 'price' && (
+                    <Typography component='span' variant='caption' sx={{ marginLeft: 1 }}>
+                      ({order === 'asc' ? 'Lowest to Highest' : 'Highest to Lowest'})
+                    </Typography>
+                  )}
                 </TableSortLabel>
               </TableCell>
             </TableRow>
