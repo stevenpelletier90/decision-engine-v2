@@ -14,31 +14,7 @@ import {
   Avatar,
   Button,
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
 import '../styles/index.scss';
-
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  borderBottom: '1px solid #e0e0e0',
-  padding: '12px 16px',
-  '&.MuiTableCell-head': {
-    fontWeight: 'bold',
-    backgroundColor: '#f5f5f5',
-  },
-}));
-
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  '&:nth-of-type(even)': {
-    backgroundColor: '#f9f9f9',
-  },
-}));
-
-const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: '#c8b273',
-  color: '#1b1b1b',
-  '&:hover': {
-    backgroundColor: '#b09a5f',
-  },
-}));
 
 const formatPrice = (price) => {
   const numericPrice = typeof price === 'number' ? price : parseFloat(price.replace('$', '').replace(',', ''));
@@ -108,11 +84,11 @@ const AllSurgeries = ({ surgeries }) => {
       <Typography variant='h5' gutterBottom className='doctors-title'>
         Your Procedure Results
       </Typography>
-      <TableContainer component={Paper} elevation={0}>
-        <Table size='small' className='all-surgeries-table'>
+      <TableContainer component={Paper}>
+        <Table size='small'>
           <TableHead>
             <TableRow>
-              <StyledTableCell>
+              <TableCell>
                 <TableSortLabel
                   active={orderBy === 'doctor'}
                   direction={orderBy === 'doctor' ? order : 'asc'}
@@ -120,8 +96,8 @@ const AllSurgeries = ({ surgeries }) => {
                 >
                   Doctor
                 </TableSortLabel>
-              </StyledTableCell>
-              <StyledTableCell>
+              </TableCell>
+              <TableCell>
                 <TableSortLabel
                   active={orderBy === 'procedure'}
                   direction={orderBy === 'procedure' ? order : 'asc'}
@@ -129,8 +105,8 @@ const AllSurgeries = ({ surgeries }) => {
                 >
                   Procedure
                 </TableSortLabel>
-              </StyledTableCell>
-              <StyledTableCell>
+              </TableCell>
+              <TableCell>
                 <TableSortLabel
                   active={orderBy === 'location'}
                   direction={orderBy === 'location' ? order : 'asc'}
@@ -138,8 +114,8 @@ const AllSurgeries = ({ surgeries }) => {
                 >
                   Location
                 </TableSortLabel>
-              </StyledTableCell>
-              <StyledTableCell>
+              </TableCell>
+              <TableCell>
                 <TableSortLabel
                   active={orderBy === 'price'}
                   direction={orderBy === 'price' ? order : 'asc'}
@@ -147,42 +123,42 @@ const AllSurgeries = ({ surgeries }) => {
                 >
                   Price
                 </TableSortLabel>
-              </StyledTableCell>
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
+            <TableRow className='affordable-row'>
+              <TableCell colSpan={4}>Most Affordable</TableCell>
+            </TableRow>
             {sortedSurgeries.map((surgery, index) => (
-              <StyledTableRow key={index}>
-                <StyledTableCell>
+              <TableRow key={index} className={index < 3 ? 'highlighted' : ''}>
+                <TableCell>
                   <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <Avatar
-                      src={getDoctorImage(surgery.image)}
-                      alt={surgery.doctor}
-                      sx={{ width: 40, height: 40, marginRight: 2 }}
-                    />
+                    <Avatar src={getDoctorImage(surgery.image)} alt={surgery.doctor} />
                     <Link href={surgery.bioURL} target='_blank' rel='noopener noreferrer'>
                       {surgery.doctor}
                     </Link>
                   </Box>
-                </StyledTableCell>
-                <StyledTableCell>{surgery.procedure}</StyledTableCell>
-                <StyledTableCell>
+                </TableCell>
+                <TableCell>{surgery.procedure}</TableCell>
+                <TableCell>
                   <Link href={surgery.locationURL} target='_blank' rel='noopener noreferrer'>
                     {surgery.location}
                   </Link>
-                </StyledTableCell>
-                <StyledTableCell>
-                  <StyledButton
+                </TableCell>
+                <TableCell>
+                  <Button
                     variant='contained'
                     size='small'
+                    className='view-price-button'
                     onClick={() => {
                       console.log(`Show price details for ${surgery.procedure}: ${formatPrice(surgery.price)}`);
                     }}
                   >
                     View Price
-                  </StyledButton>
-                </StyledTableCell>
-              </StyledTableRow>
+                  </Button>
+                </TableCell>
+              </TableRow>
             ))}
           </TableBody>
         </Table>

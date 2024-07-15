@@ -12,18 +12,22 @@ body {
   min-height: 100vh;
 }
 
-/* Main Title Styles */
+/* Typography Styles */
 .main-title,
-h1.MuiTypography-h2 {
-  font-family: 'Montserrat', Arial, sans-serif;
+h1.MuiTypography-h2,
+.doctors-title {
   font-weight: 700;
   text-transform: uppercase;
   color: #1b1b1b;
   margin-bottom: 2rem;
   text-align: center;
-  font-size: 2.5rem;
   letter-spacing: 0.05em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-title,
+h1.MuiTypography-h2 {
+  font-size: 2.5rem;
 }
 
 /* Loading Spinner Styles */
@@ -54,14 +58,14 @@ h1.MuiTypography-h2 {
   position: relative;
   width: 100%;
   height: 100%;
-}
 
-.svg-wrapper svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .area-use,
@@ -69,16 +73,14 @@ h1.MuiTypography-h2 {
   opacity: 0;
   transition: opacity 0.3s ease;
   cursor: pointer;
-}
 
-.area-use:hover,
-.area-svg:hover {
-  opacity: 0.6;
-}
+  &:hover {
+    opacity: 0.6;
+  }
 
-.area-use.selected,
-.area-svg.selected {
-  opacity: 1 !important;
+  &.selected {
+    opacity: 1 !important;
+  }
 }
 
 .selected-areas {
@@ -105,68 +107,123 @@ h1.MuiTypography-h2 {
   font-size: 0.9rem;
 }
 
-/* Cheapest Surgeries Styles */
-.cheapest-surgeries {
+/* All Surgeries Styles */
+.all-surgeries {
   margin-bottom: 2rem;
+
+  .MuiTableHead-root {
+    .MuiTableCell-head {
+      font-weight: bold;
+      background-color: #f5f5f5;
+    }
+  }
+
+  .MuiTableBody-root {
+    .MuiTableRow-root {
+      &:nth-of-type(even) {
+        background-color: #f9f9f9;
+      }
+
+      &.highlighted {
+        border-left: 2px solid #c8b273;
+        border-right: 2px solid #c8b273;
+      }
+
+      &.highlighted:nth-child(4) {
+        border-bottom: 2px solid #c8b273;
+      }
+    }
+
+    .MuiTableCell-root {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 12px 16px;
+    }
+  }
+
+  .affordable-row {
+    background-color: #c8b273;
+    color: #1b1b1b;
+    font-weight: bold;
+    border: 2px solid #c8b273;
+
+    .MuiTableCell-root {
+      border-bottom: none;
+      padding: 8px 16px;
+    }
+  }
+
+  .MuiAvatar-root {
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .view-price-button {
+    background-color: #c8b273;
+    color: #1b1b1b;
+    min-width: 100px;
+
+    &:hover {
+      background-color: #b09a5f;
+    }
+  }
 }
 
-.cheapest-surgeries-table {
-  width: 100%;
+/* New Flex Layout Styles */
+.MuiPaper-root {
+  overflow: hidden;
 }
 
-.cheapest-surgeries-table .MuiTableCell-root {
-  padding: 12px 16px;
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
 }
 
-.cheapest-surgeries-table .MuiAvatar-root {
-  margin-right: 12px;
-  width: 40px;
-  height: 40px;
-}
+.flex-item {
+  flex: 1;
+  min-width: 0;
 
-.doctors-title {
-  color: #1b1b1b;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.view-price-button {
-  background-color: #c8b273 !important;
-  color: #1b1b1b !important;
-  min-width: 100px;
-}
-
-.view-price-button:hover {
-  background-color: #b09a5f !important;
+  &:first-child {
+    @media (min-width: 961px) {
+      max-width: 50%;
+    }
+  }
 }
 
 /* Responsive Styles */
-@media (max-width: 600px) {
+@media (max-width: 960px) {
+  .svg-container {
+    height: 400px;
+  }
+
   .main-title,
   h1.MuiTypography-h2 {
     font-size: 2rem;
   }
 
-  .cheapest-surgeries-table {
+  .all-surgeries {
     font-size: 0.875rem;
-  }
 
-  .cheapest-surgeries-table .MuiTableCell-root {
-    padding: 8px;
-  }
+    .MuiTableCell-root {
+      padding: 8px;
+    }
 
-  .cheapest-surgeries-table .MuiAvatar-root {
-    width: 30px;
-    height: 30px;
-    margin-right: 8px;
-  }
+    .MuiAvatar-root {
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+    }
 
-  .view-price-button {
-    font-size: 0.75rem;
-    padding: 4px 8px;
-    min-width: 80px;
+    .view-price-button {
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      min-width: 80px;
+    }
   }
 }
 

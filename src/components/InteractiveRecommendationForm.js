@@ -65,6 +65,19 @@ const StyledButton = styled(Button)(({ theme }) => ({
   margin: theme.spacing(1),
 }));
 
+const FlexContainer = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'row',
+  [theme.breakpoints.down('md')]: {
+    flexDirection: 'column',
+  },
+}));
+
+const FlexItem = styled(Box)(({ theme }) => ({
+  flex: 1,
+  padding: theme.spacing(2),
+}));
+
 const InteractiveRecommendationForm = ({ data }) => {
   const { maxPrice, minPrice } = useMemo(() => {
     let max = 0,
@@ -137,31 +150,9 @@ const InteractiveRecommendationForm = ({ data }) => {
         </Typography>
 
         <StyledPaper elevation={3}>
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <Typography variant='h6' gutterBottom>
-                Select Your Gender
-              </Typography>
-              <Box display='flex' justifyContent='center'>
-                <StyledButton
-                  onClick={() => handleGenderChange('Male')}
-                  variant={gender === 'Male' ? 'contained' : 'outlined'}
-                >
-                  Male
-                </StyledButton>
-                <StyledButton
-                  onClick={() => handleGenderChange('Female')}
-                  variant={gender === 'Female' ? 'contained' : 'outlined'}
-                >
-                  Female
-                </StyledButton>
-              </Box>
-            </Grid>
-            {gender && (
-              <Grid item xs={12}>
-                <Typography variant='h6' gutterBottom>
-                  Select Body Areas (Max 3)
-                </Typography>
+          <FlexContainer>
+            <FlexItem>
+              {gender && (
                 <Box className='svg-container'>
                   <InteractiveSVG
                     gender={gender}
@@ -170,41 +161,71 @@ const InteractiveRecommendationForm = ({ data }) => {
                     bodyAreaOptions={bodyAreaOptions}
                   />
                 </Box>
-                {showWarning && (
-                  <Alert severity='warning' sx={{ mt: 2 }}>
-                    You can select a maximum of 3 body areas.
-                  </Alert>
+              )}
+            </FlexItem>
+            <FlexItem>
+              <Grid container spacing={3}>
+                <Grid item xs={12}>
+                  <Typography variant='h6' gutterBottom>
+                    Select Your Gender
+                  </Typography>
+                  <Box display='flex' justifyContent='center'>
+                    <StyledButton
+                      onClick={() => handleGenderChange('Male')}
+                      variant={gender === 'Male' ? 'contained' : 'outlined'}
+                    >
+                      Male
+                    </StyledButton>
+                    <StyledButton
+                      onClick={() => handleGenderChange('Female')}
+                      variant={gender === 'Female' ? 'contained' : 'outlined'}
+                    >
+                      Female
+                    </StyledButton>
+                  </Box>
+                </Grid>
+                {gender && (
+                  <Grid item xs={12}>
+                    <Typography variant='h6' gutterBottom>
+                      Select Body Areas (Max 3)
+                    </Typography>
+                    {showWarning && (
+                      <Alert severity='warning' sx={{ mt: 2 }}>
+                        You can select a maximum of 3 body areas.
+                      </Alert>
+                    )}
+                  </Grid>
                 )}
+                <Grid item xs={12}>
+                  <Typography variant='h6' gutterBottom>
+                    Ideal Budget
+                  </Typography>
+                  <Slider
+                    value={priceRange}
+                    onChange={(_, newValue) => setPriceRange(newValue)}
+                    valueLabelDisplay='auto'
+                    min={minPrice}
+                    max={maxPrice}
+                    step={100}
+                    valueLabelFormat={(value) => `$${value}`}
+                  />
+                  <Box sx={{ mt: 2, display: 'flex', justifyContent: 'space-between' }}>
+                    <Typography variant='body2'>${priceRange[0]}</Typography>
+                    <Typography variant='body2'>${priceRange[1]}</Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={12}>
+                  <StyledButton
+                    variant='contained'
+                    onClick={() => gender && bodyAreas.length > 0 && setShowResults(true)}
+                    fullWidth
+                  >
+                    Find Matching Procedures
+                  </StyledButton>
+                </Grid>
               </Grid>
-            )}
-            <Grid item xs={12}>
-              <Typography variant='h6' gutterBottom>
-                Ideal Budget
-              </Typography>
-              <Slider
-                value={priceRange}
-                onChange={(_, newValue) => setPriceRange(newValue)}
-                valueLabelDisplay='auto'
-                min={minPrice}
-                max={maxPrice}
-                step={100}
-                valueLabelFormat={(value) => `$${value}`}
-              />
-              <Box sx={{ mt: 2, display: 'flex', justifyContent: 'space-between' }}>
-                <Typography variant='body2'>${priceRange[0]}</Typography>
-                <Typography variant='body2'>${priceRange[1]}</Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12}>
-              <StyledButton
-                variant='contained'
-                onClick={() => gender && bodyAreas.length > 0 && setShowResults(true)}
-                fullWidth
-              >
-                Find Matching Procedures
-              </StyledButton>
-            </Grid>
-          </Grid>
+            </FlexItem>
+          </FlexContainer>
         </StyledPaper>
 
         {showResults && (
