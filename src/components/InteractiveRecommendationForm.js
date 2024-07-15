@@ -43,12 +43,23 @@ const bodyAreaSVGs = {
 const theme = createTheme({
   typography: {
     fontFamily: 'Montserrat, Arial, sans-serif',
-    h4: { fontWeight: 700, textTransform: 'uppercase' },
-    h6: { fontWeight: 700, textTransform: 'uppercase' },
+    h4: { fontWeight: 700 },
+    h6: { fontWeight: 700 },
   },
   palette: {
     primary: { main: '#1b1b1b' },
     secondary: { main: '#c8b273' },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontWeight: 600,
+          letterSpacing: '1px',
+          borderRadius: 0,
+        },
+      },
+    },
   },
 });
 
@@ -166,9 +177,6 @@ const InteractiveRecommendationForm = ({ data }) => {
             <FlexItem>
               <Grid container spacing={3}>
                 <Grid item xs={12}>
-                  <Typography variant='h6' gutterBottom>
-                    Select Your Gender
-                  </Typography>
                   <Box display='flex' justifyContent='center'>
                     <StyledButton
                       onClick={() => handleGenderChange('Male')}

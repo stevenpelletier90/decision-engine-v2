@@ -38,9 +38,6 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth='lg'>
-        <Typography variant='h2' component='h1' gutterBottom align='center' sx={{ mt: 4 }}>
-          Interactive Procedure Finder
-        </Typography>
         {loading ? (
           <CircularProgress />
         ) : error ? (

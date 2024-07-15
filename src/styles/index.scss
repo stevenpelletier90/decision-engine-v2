@@ -6,6 +6,10 @@ body {
   background-color: #f5f5f5;
 }
 
+.page-title {
+  text-transform: capitalize;
+}
+
 /* App Container Styles */
 .app-container {
   padding: 2rem 0;
@@ -13,21 +17,25 @@ body {
 }
 
 /* Typography Styles */
-.main-title,
-h1.MuiTypography-h2,
-.doctors-title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
   font-weight: 700;
-  text-transform: uppercase;
   color: #1b1b1b;
-  margin-bottom: 2rem;
-  text-align: center;
+  margin-bottom: 1rem;
   letter-spacing: 0.05em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .main-title,
-h1.MuiTypography-h2 {
+h1.MuiTypography-h2,
+.doctors-title {
   font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Loading Spinner Styles */
@@ -238,4 +246,34 @@ h1.MuiTypography-h2 {
 
 .mt-2 {
   margin-top: 2rem;
+}
+
+/* Button Styles */
+.MuiButton-root {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0;
+
+  &.MuiButton-contained {
+    background-color: #c8b273;
+    color: #1b1b1b;
+
+    &:hover {
+      background-color: #1b1b1b;
+      color: #c8b273;
+    }
+  }
+
+  &.MuiButton-outlined {
+    border-color: #c8b273;
+    color: #1b1b1b;
+
+    &:hover {
+      background-color: #1b1b1b;
+      border-color: #1b1b1b;
+      color: #c8b273;
+    }
+  }
 }
