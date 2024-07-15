@@ -26,7 +26,7 @@ import FemaleFaceSVG from '../assets/images/Female-Face.svg';
 import FemaleLegsSVG from '../assets/images/Female-Legs.svg';
 import FemaleStomachSVG from '../assets/images/Female-Stomach.svg';
 
-import '../styles/index.css';
+import '../styles/index.scss';
 
 const bodyAreaSVGs = {
   Female: {
