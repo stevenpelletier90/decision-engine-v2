@@ -15,30 +15,16 @@ import { styled } from '@mui/material/styles';
 import DoctorProcedures from './DoctorProcedures';
 
 // SVG imports
-import MaleSVG from '../assets/images/male-body.svg';
-import MaleBodyGoldSVG from '../assets/images/male-body-gold.svg';
-import FemaleSVG from '../assets/images/female.svg';
-import FemaleArmsSVG from '../assets/images/Female-Arms.svg';
-import FemaleBackSVG from '../assets/images/Female-Back.svg';
-import FemaleBreastSVG from '../assets/images/Female-Breast.svg';
-import FemaleButtocksSVG from '../assets/images/Female-Buttocks.svg';
-import FemaleFaceSVG from '../assets/images/Female-Face.svg';
-import FemaleLegsSVG from '../assets/images/Female-Legs.svg';
-import FemaleStomachSVG from '../assets/images/Female-Stomach.svg';
+import MaleFrontSVG from '../assets/images/male-front.svg';
+import MaleBackSVG from '../assets/images/male-back.svg';
+import MaleGoldFrontSVG from '../assets/images/male-gold-front.svg';
+import MaleGoldBackSVG from '../assets/images/male-gold-back.svg';
+import FemaleFrontSVG from '../assets/images/female-front.svg';
+import FemaleBackSVG from '../assets/images/female-back.svg';
+import FemaleGoldFrontSVG from '../assets/images/female-gold-front.svg';
+import FemaleGoldBackSVG from '../assets/images/female-gold-back.svg';
 
 import '../styles/index.scss';
-
-const bodyAreaSVGs = {
-  Female: {
-    Arms: FemaleArmsSVG,
-    Back: FemaleBackSVG,
-    Breast: FemaleBreastSVG,
-    Buttocks: FemaleButtocksSVG,
-    Face: FemaleFaceSVG,
-    Legs: FemaleLegsSVG,
-    Stomach: FemaleStomachSVG,
-  },
-};
 
 const theme = createTheme({
   typography: {
@@ -89,6 +75,17 @@ const FlexItem = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
+const bodyAreaOptions = {
+  front: {
+    Male: ['Face/Neck/Eyes', 'Chest', 'Arms', 'Stomach/Waist', 'Legs'],
+    Female: ['Face/Neck/Eyes', 'Breast', 'Arms', 'Stomach/Waist', 'Legs'],
+  },
+  back: {
+    Male: ['Back', 'Buttocks', 'Arms', 'Legs'],
+    Female: ['Back', 'Buttocks', 'Arms', 'Legs'],
+  },
+};
+
 const InteractiveRecommendationForm = ({ data }) => {
   const { maxPrice, minPrice } = useMemo(() => {
     let max = 0,
@@ -115,8 +112,7 @@ const InteractiveRecommendationForm = ({ data }) => {
   const [showWarning, setShowWarning] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
-
-  const bodyAreaOptions = ['Face/Neck/Eyes', 'Breast', 'Arms', 'Legs', 'Stomach/Waist', 'Back', 'Buttocks'];
+  const [view, setView] = useState('front');
 
   const filteredData = useMemo(() => {
     if (!showResults || !gender || bodyAreas.length === 0) return {};
@@ -164,14 +160,27 @@ const InteractiveRecommendationForm = ({ data }) => {
           <FlexContainer>
             <FlexItem>
               {gender && (
-                <Box className='svg-container'>
-                  <InteractiveSVG
-                    gender={gender}
-                    selectedAreas={bodyAreas}
-                    onAreaClick={handleAreaClick}
-                    bodyAreaOptions={bodyAreaOptions}
-                  />
-                </Box>
+                <>
+                  <Box className='svg-container'>
+                    <InteractiveSVG
+                      gender={gender}
+                      selectedAreas={bodyAreas}
+                      onAreaClick={handleAreaClick}
+                      view={view}
+                    />
+                  </Box>
+                  <Box display='flex' justifyContent='center' mt={2}>
+                    <StyledButton
+                      onClick={() => setView('front')}
+                      variant={view === 'front' ? 'contained' : 'outlined'}
+                    >
+                      Front View
+                    </StyledButton>
+                    <StyledButton onClick={() => setView('back')} variant={view === 'back' ? 'contained' : 'outlined'}>
+                      Back View
+                    </StyledButton>
+                  </Box>
+                </>
               )}
             </FlexItem>
             <FlexItem>
@@ -192,16 +201,11 @@ const InteractiveRecommendationForm = ({ data }) => {
                     </StyledButton>
                   </Box>
                 </Grid>
-                {gender && (
+                {showWarning && (
                   <Grid item xs={12}>
-                    <Typography variant='h6' gutterBottom>
-                      Select Body Areas (Max 3)
-                    </Typography>
-                    {showWarning && (
-                      <Alert severity='warning' sx={{ mt: 2 }}>
-                        You can select a maximum of 3 body areas.
-                      </Alert>
-                    )}
+                    <Alert severity='warning' sx={{ mt: 2 }}>
+                      You can select a maximum of 3 body areas.
+                    </Alert>
                   </Grid>
                 )}
                 <Grid item xs={12}>
@@ -250,18 +254,35 @@ const InteractiveRecommendationForm = ({ data }) => {
   );
 };
 
-const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, bodyAreaOptions }) => {
-  const baseSVG = gender === 'Female' ? FemaleSVG : MaleSVG;
-  const goldSVG = gender === 'Female' ? null : MaleBodyGoldSVG;
+const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, view }) => {
+  const baseSVG =
+    gender === 'Female'
+      ? view === 'front'
+        ? FemaleFrontSVG
+        : FemaleBackSVG
+      : view === 'front'
+      ? MaleFrontSVG
+      : MaleBackSVG;
+
+  const goldSVG =
+    gender === 'Female'
+      ? view === 'front'
+        ? FemaleGoldFrontSVG
+        : FemaleGoldBackSVG
+      : view === 'front'
+      ? MaleGoldFrontSVG
+      : MaleGoldBackSVG;
 
   const getAreaId = (area) => {
     switch (area) {
       case 'Face/Neck/Eyes':
         return 'Head';
+      case 'Chest':
+        return gender === 'Male' ? 'Chest' : 'Breast';
       case 'Breast':
-        return 'Chest';
+        return 'Breast';
       case 'Stomach/Waist':
-        return 'Stomach';
+        return 'Abdomen';
       default:
         return area;
     }
@@ -269,34 +290,18 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, bodyAreaOptions })
 
   return (
     <Box className='svg-wrapper'>
-      <svg width='100%' height='100%' viewBox='0 0 238 509.1'>
+      <svg width='100%' height='100%' viewBox='0 0 524.4 840'>
         <image href={baseSVG} width='100%' height='100%' />
-        {gender === 'Male' ? (
-          <g>
-            {bodyAreaOptions.map((area) => (
-              <use
-                key={area}
-                href={`${goldSVG}#${getAreaId(area)}`}
-                className={`area-use ${selectedAreas.includes(area) ? 'selected' : ''}`}
-                onClick={() => onAreaClick(area)}
-              />
-            ))}
-          </g>
-        ) : (
-          bodyAreaOptions.map((area) => {
-            const areaSVG =
-              bodyAreaSVGs[gender][area === 'Face/Neck/Eyes' ? 'Face' : area === 'Stomach/Waist' ? 'Stomach' : area];
-            if (!areaSVG) return null;
-            return (
-              <image
-                key={area}
-                href={areaSVG}
-                className={`area-svg ${selectedAreas.includes(area) ? 'selected' : ''}`}
-                onClick={() => onAreaClick(area)}
-              />
-            );
-          })
-        )}
+        <g>
+          {bodyAreaOptions[view][gender].map((area) => (
+            <use
+              key={area}
+              href={`${goldSVG}#${getAreaId(area)}`}
+              className={`area-use ${selectedAreas.includes(area) ? 'selected' : ''}`}
+              onClick={() => onAreaClick(area)}
+            />
+          ))}
+        </g>
       </svg>
       <Box className='selected-areas'>
         {selectedAreas.length > 0 ? (

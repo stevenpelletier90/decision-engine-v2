@@ -76,18 +76,19 @@ h1.MuiTypography-h2,
   }
 }
 
-.area-use,
-.area-svg {
+.area-use {
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, fill 0.3s ease;
   cursor: pointer;
+  fill: rgba(200, 178, 117, 0.6); /* #c8b273 with 60% opacity */
 
   &:hover {
-    opacity: 0.6;
+    opacity: 1;
   }
 
   &.selected {
-    opacity: 1 !important;
+    opacity: 1;
+    fill: rgba(200, 178, 117, 1); /* #c8b273 with 100% opacity */
   }
 }
 
