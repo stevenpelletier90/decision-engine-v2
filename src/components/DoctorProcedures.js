@@ -1,20 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import {
-  Typography,
-  Box,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
-  TableSortLabel,
-  Link,
-  Avatar,
-  Button,
-} from '@mui/material';
-import '../styles/index.scss';
+import '../styles/index.css';
 
 const formatPrice = (price) => {
   const numericPrice = typeof price === 'number' ? price : parseFloat(price.replace('$', '').replace(',', ''));
@@ -80,90 +65,72 @@ const AllSurgeries = ({ surgeries }) => {
   };
 
   return (
-    <Box className='all-surgeries'>
-      <Typography variant='h5' gutterBottom className='doctors-title'>
-        Your Procedure Results
-      </Typography>
-      <TableContainer component={Paper}>
-        <Table size='small'>
-          <TableHead>
-            <TableRow>
-              <TableCell>
-                <TableSortLabel
-                  active={orderBy === 'doctor'}
-                  direction={orderBy === 'doctor' ? order : 'asc'}
-                  onClick={() => handleRequestSort('doctor')}
+    <div className='all-surgeries'>
+      <h2 className='doctors-title'>Your Procedure Results</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <button onClick={() => handleRequestSort('doctor')}>
+                Doctor
+                {orderBy === 'doctor' && <span className='sort-indicator'>{order === 'asc' ? '▲' : '▼'}</span>}
+              </button>
+            </th>
+            <th>
+              <button onClick={() => handleRequestSort('procedure')}>
+                Procedure
+                {orderBy === 'procedure' && <span className='sort-indicator'>{order === 'asc' ? '▲' : '▼'}</span>}
+              </button>
+            </th>
+            <th>
+              <button onClick={() => handleRequestSort('location')}>
+                Location
+                {orderBy === 'location' && <span className='sort-indicator'>{order === 'asc' ? '▲' : '▼'}</span>}
+              </button>
+            </th>
+            <th>
+              <button onClick={() => handleRequestSort('price')}>
+                Price
+                {orderBy === 'price' && <span className='sort-indicator'>{order === 'asc' ? '▲' : '▼'}</span>}
+              </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className='affordable-row'>
+            <td colSpan='4'>Most Affordable</td>
+          </tr>
+          {sortedSurgeries.map((surgery, index) => (
+            <tr key={index} className={index < 3 ? 'highlighted' : ''}>
+              <td>
+                <div className='doctor-info'>
+                  <img src={getDoctorImage(surgery.image)} alt={surgery.doctor} className='doctor-avatar' />
+                  <a href={surgery.bioURL} target='_blank' rel='noopener noreferrer'>
+                    {surgery.doctor}
+                  </a>
+                </div>
+              </td>
+              <td>{surgery.procedure}</td>
+              <td>
+                <a href={surgery.locationURL} target='_blank' rel='noopener noreferrer'>
+                  {surgery.location}
+                </a>
+              </td>
+              <td>
+                <button
+                  className='view-price-button'
+                  onClick={() => {
+                    console.log(`Show price details for ${surgery.procedure}: ${formatPrice(surgery.price)}`);
+                  }}
                 >
-                  Doctor
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel
-                  active={orderBy === 'procedure'}
-                  direction={orderBy === 'procedure' ? order : 'asc'}
-                  onClick={() => handleRequestSort('procedure')}
-                >
-                  Procedure
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel
-                  active={orderBy === 'location'}
-                  direction={orderBy === 'location' ? order : 'asc'}
-                  onClick={() => handleRequestSort('location')}
-                >
-                  Location
-                </TableSortLabel>
-              </TableCell>
-              <TableCell>
-                <TableSortLabel
-                  active={orderBy === 'price'}
-                  direction={orderBy === 'price' ? order : 'asc'}
-                  onClick={() => handleRequestSort('price')}
-                >
-                  Price
-                </TableSortLabel>
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow className='affordable-row'>
-              <TableCell colSpan={4}>Most Affordable</TableCell>
-            </TableRow>
-            {sortedSurgeries.map((surgery, index) => (
-              <TableRow key={index} className={index < 3 ? 'highlighted' : ''}>
-                <TableCell>
-                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <Avatar src={getDoctorImage(surgery.image)} alt={surgery.doctor} />
-                    <Link href={surgery.bioURL} target='_blank' rel='noopener noreferrer'>
-                      {surgery.doctor}
-                    </Link>
-                  </Box>
-                </TableCell>
-                <TableCell>{surgery.procedure}</TableCell>
-                <TableCell>
-                  <Link href={surgery.locationURL} target='_blank' rel='noopener noreferrer'>
-                    {surgery.location}
-                  </Link>
-                </TableCell>
-                <TableCell>
-                  <Button
-                    variant='contained'
-                    size='small'
-                    className='view-price-button'
-                    onClick={() => {
-                      console.log(`Show price details for ${surgery.procedure}: ${formatPrice(surgery.price)}`);
-                    }}
-                  >
-                    View Price
-                  </Button>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </Box>
+                  View Price
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
@@ -171,9 +138,9 @@ const DoctorProcedures = ({ data, selectedAreas, priceRange }) => {
   const allSurgeries = findAllSurgeries(data, selectedAreas, priceRange);
 
   return (
-    <Box>
+    <div className='doctor-procedures'>
       <AllSurgeries surgeries={allSurgeries} />
-    </Box>
+    </div>
   );
 };
 

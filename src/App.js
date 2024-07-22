@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Typography, CircularProgress, Alert } from '@mui/material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 import InteractiveRecommendationForm from './components/InteractiveRecommendationForm';
-
-const theme = createTheme();
+import './styles/index.css';
 
 const App = () => {
   const [data, setData] = useState({});
@@ -35,18 +31,22 @@ const App = () => {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container maxWidth='lg'>
+    <div className='app'>
+      <div className='container'>
         {loading ? (
-          <CircularProgress />
+          <div className='loading'>
+            <div className='spinner'></div>
+            <p>Loading...</p>
+          </div>
         ) : error ? (
-          <Alert severity='error'>Error fetching data: {error.message}</Alert>
+          <div className='error'>
+            <p>Error fetching data: {error.message}</p>
+          </div>
         ) : (
           <InteractiveRecommendationForm data={data} />
         )}
-      </Container>
-    </ThemeProvider>
+      </div>
+    </div>
   );
 };
 

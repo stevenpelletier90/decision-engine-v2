@@ -18,10 +18,6 @@
   "author": "Steven Pelletier",
   "license": "ISC",
   "dependencies": {
-    "@createjs/easeljs": "^2.0.0-beta.4",
-    "@emotion/react": "^11.13.0",
-    "@emotion/styled": "^11.13.0",
-    "@mui/material": "^5.16.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
