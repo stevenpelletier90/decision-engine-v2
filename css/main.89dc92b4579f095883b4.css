@@ -1,0 +1,420 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);
+/* Global Styles */
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* App Styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+/* Interactive Recommendation Form Styles */
+.interactive-recommendation-form {
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1b1b1b;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.svg-container {
+  height: 500px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.svg-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.svg-wrapper svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.area-use {
+  opacity: 0;
+  transition: opacity 0.3s ease, fill 0.3s ease;
+  cursor: pointer;
+  fill: rgba(200, 178, 117, 0.6);
+}
+
+.area-use:hover {
+  opacity: 1;
+}
+
+.area-use.selected {
+  opacity: 1;
+  fill: rgba(200, 178, 117, 1);
+}
+
+.selected-areas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selected-area-tag {
+  background-color: #c8b273;
+  color: #1b1b1b;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.view-buttons,
+.gender-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.view-buttons button,
+.gender-buttons button {
+  background-color: #f5f5f5;
+  border: 1px solid #c8b273;
+  color: #1b1b1b;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.view-buttons button.active,
+.gender-buttons button.active {
+  background-color: #c8b273;
+  color: #1b1b1b;
+}
+
+.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.price-range {
+  margin-top: 2rem;
+}
+
+.price-range h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.price-range-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-input {
+  flex: 0 0 auto;
+}
+
+.price-input input {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.price-slider {
+  flex: 1;
+  position: relative;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.price-slider input[type='range'] {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+}
+
+.price-slider input[type='range']::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #c8b273;
+  cursor: pointer;
+  pointer-events: auto;
+  -webkit-appearance: none;
+}
+
+.price-slider input[type='range']::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #c8b273;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.find-procedures {
+  display: block;
+  width: 100%;
+  background-color: #c8b273;
+  color: #1b1b1b;
+  border: none;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.find-procedures:hover {
+  background-color: #b09a5f;
+}
+
+.results {
+  margin-top: 2rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 4px;
+}
+
+/* Doctor Procedures Styles */
+.doctor-procedures {
+  margin-top: 2rem;
+}
+
+.all-surgeries {
+  margin-bottom: 2rem;
+}
+
+.doctors-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1b1b1b;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.all-surgeries table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.all-surgeries th,
+.all-surgeries td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.all-surgeries th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.all-surgeries th button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.all-surgeries th button:hover {
+  text-decoration: underline;
+}
+
+.sort-indicator {
+  margin-left: 5px;
+}
+
+.affordable-row {
+  background-color: #c8b273;
+  color: #1b1b1b;
+  font-weight: bold;
+}
+
+.affordable-row td {
+  padding: 8px 16px;
+}
+
+.highlighted {
+  border-left: 2px solid #c8b273;
+  border-right: 2px solid #c8b273;
+}
+
+.highlighted:nth-child(4) {
+  border-bottom: 2px solid #c8b273;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+}
+
+.doctor-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.view-price-button {
+  background-color: #c8b273;
+  color: #1b1b1b;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.view-price-button:hover {
+  background-color: #b09a5f;
+}
+
+/* Responsive Styles */
+@media (max-width: 960px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .form-container {
+    flex-direction: column;
+  }
+
+  .svg-container {
+    height: 400px;
+  }
+
+  .page-title,
+  .doctors-title {
+    font-size: 2rem;
+  }
+
+  .all-surgeries {
+    font-size: 0.875rem;
+  }
+
+  .all-surgeries th,
+  .all-surgeries td {
+    padding: 8px;
+  }
+
+  .doctor-avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+
+  .view-price-button {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
+
+
+/*# sourceMappingURL=main.89dc92b4579f095883b4.css.map*/
