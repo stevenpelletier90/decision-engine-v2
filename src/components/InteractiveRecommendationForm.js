@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import DoctorProcedures from './DoctorProcedures';
 
 // SVG imports
@@ -19,8 +19,8 @@ const bodyAreaOptions = {
     Female: ['Face/Neck/Eyes', 'Breast', 'Arms', 'Stomach/Waist', 'Legs'],
   },
   back: {
-    Male: ['Back', 'Buttocks', 'Arms', 'Legs'],
-    Female: ['Back', 'Buttocks', 'Arms', 'Legs'],
+    Male: ['Face/Neck/Eyes', 'Back', 'Buttocks', 'Arms', 'Legs'],
+    Female: ['Face/Neck/Eyes', 'Back', 'Buttocks', 'Arms', 'Legs'],
   },
 };
 
@@ -50,7 +50,10 @@ const InteractiveRecommendationForm = ({ data }) => {
   const [showWarning, setShowWarning] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
-  const [view, setView] = useState('front');
+
+  useEffect(() => {
+    setPriceRange([minPrice, maxPrice]);
+  }, [minPrice, maxPrice]);
 
   const filteredData = useMemo(() => {
     if (!showResults || !gender || bodyAreas.length === 0) return {};
@@ -75,7 +78,8 @@ const InteractiveRecommendationForm = ({ data }) => {
 
   const handleGenderChange = (selectedGender) => {
     setGender(selectedGender);
-    setBodyAreas([]);
+    setBodyAreas([]); // Clear selected body areas when gender changes
+    setShowWarning(false); // Reset warning state
   };
 
   const handleAreaClick = (area) => {
@@ -87,76 +91,92 @@ const InteractiveRecommendationForm = ({ data }) => {
     });
   };
 
-  const handlePriceRangeChange = (e) => {
-    const value = parseInt(e.target.value);
-    const [min, max] = priceRange;
-    if (e.target.id === 'minPrice') {
-      setPriceRange([Math.min(value, max), max]);
-    } else {
-      setPriceRange([min, Math.max(value, min)]);
-    }
+  const handlePriceRangeChange = (index, value) => {
+    setPriceRange((prev) => {
+      const newRange = [...prev];
+      newRange[index] = value;
+      return [Math.min(newRange[0], newRange[1]), Math.max(newRange[0], newRange[1])];
+    });
   };
 
   return (
     <div className='interactive-recommendation-form'>
       <h1 className='page-title'>Find Your Ideal Procedure</h1>
 
+      <div className='gender-buttons'>
+        <button onClick={() => handleGenderChange('Male')} className={gender === 'Male' ? 'active' : ''}>
+          Male
+        </button>
+        <button onClick={() => handleGenderChange('Female')} className={gender === 'Female' ? 'active' : ''}>
+          Female
+        </button>
+      </div>
+
+      {gender && (
+        <div className='models-container'>
+          <div className='model-view'>
+            <h3>Front View</h3>
+            <InteractiveSVG gender={gender} selectedAreas={bodyAreas} onAreaClick={handleAreaClick} view='front' />
+          </div>
+          <div className='model-view'>
+            <h3>Back View</h3>
+            <InteractiveSVG gender={gender} selectedAreas={bodyAreas} onAreaClick={handleAreaClick} view='back' />
+          </div>
+        </div>
+      )}
+
       <div className='form-container'>
         <div className='form-section'>
-          {gender && (
-            <>
-              <div className='svg-container'>
-                <InteractiveSVG gender={gender} selectedAreas={bodyAreas} onAreaClick={handleAreaClick} view={view} />
-              </div>
-              <div className='view-buttons'>
-                <button onClick={() => setView('front')} className={view === 'front' ? 'active' : ''}>
-                  Front View
-                </button>
-                <button onClick={() => setView('back')} className={view === 'back' ? 'active' : ''}>
-                  Back View
-                </button>
-              </div>
-            </>
-          )}
-        </div>
-        <div className='form-section'>
-          <div className='gender-buttons'>
-            <button onClick={() => handleGenderChange('Male')} className={gender === 'Male' ? 'active' : ''}>
-              Male
-            </button>
-            <button onClick={() => handleGenderChange('Female')} className={gender === 'Female' ? 'active' : ''}>
-              Female
-            </button>
-          </div>
           {showWarning && <div className='warning'>You can select a maximum of 3 body areas.</div>}
-          <div className='price-range'>
-            <h2>Ideal Budget</h2>
-            <div className='price-inputs'>
+          <div className='selected-areas'>
+            {bodyAreas.length > 0 ? (
+              bodyAreas.map((area) => (
+                <div key={area} className='selected-area-tag'>
+                  {area}
+                </div>
+              ))
+            ) : (
+              <p>No areas selected</p>
+            )}
+          </div>
+
+          <div className='price-range-container'>
+            <div className='price-input'>
               <input
-                type='number'
-                id='minPrice'
-                value={priceRange[0]}
-                onChange={handlePriceRangeChange}
-                min={minPrice}
-                max={priceRange[1]}
-              />
-              <input
-                type='number'
-                id='maxPrice'
-                value={priceRange[1]}
-                onChange={handlePriceRangeChange}
-                min={priceRange[0]}
-                max={maxPrice}
+                type='text'
+                value={priceRange[0] === minPrice ? 'No Min' : `$${priceRange[0].toLocaleString()}`}
+                onChange={(e) => {
+                  const value = e.target.value.replace(/\D/g, '');
+                  handlePriceRangeChange(0, value ? parseInt(value) : minPrice);
+                }}
               />
             </div>
-            <input
-              type='range'
-              min={minPrice}
-              max={maxPrice}
-              value={priceRange[1]}
-              onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-              className='price-slider'
-            />
+            <div className='price-slider'>
+              <input
+                type='range'
+                min={minPrice}
+                max={maxPrice}
+                value={priceRange[0]}
+                onChange={(e) => handlePriceRangeChange(0, parseInt(e.target.value))}
+              />
+              <input
+                type='range'
+                min={minPrice}
+                max={maxPrice}
+                value={priceRange[1]}
+                onChange={(e) => handlePriceRangeChange(1, parseInt(e.target.value))}
+              />
+            </div>
+            <div className='price-input'>
+              <input
+                type='text'
+                value={priceRange[1] === maxPrice ? 'No Max' : `$${priceRange[1].toLocaleString()}`}
+                onChange={(e) => {
+                  const value = e.target.value.replace(/\D/g, '');
+                  handlePriceRangeChange(1, value ? parseInt(value) : maxPrice);
+                }}
+              />
+            </div>
           </div>
           <button className='find-procedures' onClick={() => gender && bodyAreas.length > 0 && setShowResults(true)}>
             Find Matching Procedures
@@ -226,17 +246,6 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, view }) => {
           ))}
         </g>
       </svg>
-      <div className='selected-areas'>
-        {selectedAreas.length > 0 ? (
-          selectedAreas.map((area) => (
-            <div key={area} className='selected-area-tag'>
-              {area}
-            </div>
-          ))
-        ) : (
-          <p>No areas selected</p>
-        )}
-      </div>
     </div>
   );
 };
