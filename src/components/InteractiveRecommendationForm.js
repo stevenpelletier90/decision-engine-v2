@@ -234,6 +234,36 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, view }) => {
   return (
     <div className='svg-wrapper'>
       <svg width='100%' height='100%' viewBox='0 0 524.4 840'>
+        <defs>
+          <filter id='hover-filter'>
+            <feFlood flood-color='#000000' result='flood' />
+            <feComposite
+              in='SourceGraphic'
+              in2='flood'
+              operator='arithmetic'
+              k1='1'
+              k2='0'
+              k3='0'
+              k4='0'
+              result='composite'
+            />
+            <feBlend in='composite' in2='SourceGraphic' mode='hard-light' />
+          </filter>
+          <filter id='selected-filter'>
+            <feFlood flood-color='#c8b275' result='flood' />
+            <feComposite
+              in='SourceGraphic'
+              in2='flood'
+              operator='arithmetic'
+              k1='1'
+              k2='0'
+              k3='0'
+              k4='0'
+              result='composite'
+            />
+            <feBlend in='composite' in2='SourceGraphic' mode='hard-light' />
+          </filter>
+        </defs>
         <image href={baseSVG} width='100%' height='100%' />
         <g>
           {bodyAreaOptions[view][gender].map((area) => (
@@ -249,5 +279,4 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, view }) => {
     </div>
   );
 };
-
 export default InteractiveRecommendationForm;
