@@ -1,4 +1,4 @@
-.interactive-recommendation-form {
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,7 +6,7 @@
   min-height: 100vh;
 }
 
-.page-title {
+.pageTitle {
   font-size: 2.5rem;
   font-weight: 700;
   color: #1b1b1b;
@@ -17,13 +17,13 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.gender-buttons {
+.genderButtons {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
 }
 
-.gender-buttons button {
+.genderButtons button {
   background-color: #f5f5f5;
   border: 1px solid #c8b273;
   color: #1b1b1b;
@@ -34,12 +34,12 @@
   transition: all 0.3s ease;
 }
 
-.gender-buttons button.active {
+.genderButtons button.active {
   background-color: #c8b273;
   color: #1b1b1b;
 }
 
-.models-container {
+.modelsContainer {
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -48,7 +48,7 @@
   max-width: 800px;
 }
 
-.model-view {
+.modelView {
   flex: 1;
   max-width: 400px;
   display: flex;
@@ -56,14 +56,14 @@
   align-items: center;
 }
 
-.model-view h3 {
+.modelView h3 {
   text-align: center;
   margin-bottom: 1rem;
   width: 100%;
   text-transform: uppercase;
 }
 
-.form-container {
+.formContainer {
   width: 100%;
   max-width: 800px;
   background-color: #ffffff;
@@ -73,11 +73,11 @@
   margin-top: 1rem;
 }
 
-.form-section {
+.formSection {
   width: 100%;
 }
 
-.svg-container {
+.svgContainer {
   height: 400px;
   width: 100%;
   display: flex;
@@ -85,38 +85,38 @@
   align-items: center;
 }
 
-.svg-wrapper {
+.svgWrapper {
   position: relative;
 }
 
-.svg-wrapper svg {
+.svgWrapper svg {
   width: 100%;
   height: auto;
   max-height: 600px;
 }
 
-.area-use {
+.areaUse {
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease, fill 0.3s ease;
 }
 
-.area-use:hover {
+.areaUse:hover {
   opacity: 1;
   fill: #000000;
 }
 
-.area-use.selected {
+.areaUse.selected {
   opacity: 1;
   fill: #c8b275;
 }
 
-.svg-wrapper g {
+.svgWrapper g {
   isolation: isolate;
   mix-blend-mode: hard-light;
 }
 
-.selected-areas {
+.selectedAreas {
   margin-bottom: 1rem;
   text-align: center;
   display: flex;
@@ -126,7 +126,7 @@
   gap: 8px;
 }
 
-.selected-area-tag {
+.selectedAreaTag {
   background-color: #c8b273;
   color: #1b1b1b;
   padding: 4px 8px;
@@ -144,18 +144,18 @@
   text-align: center;
 }
 
-.price-range-container {
+.priceRangeContainer {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 1rem;
 }
 
-.price-input {
+.priceInput {
   flex: 0 0 auto;
 }
 
-.price-input input {
+.priceInput input {
   width: 100px;
   padding: 5px;
   border: 1px solid #ccc;
@@ -163,7 +163,7 @@
   text-align: center;
 }
 
-.price-slider {
+.priceSlider {
   flex: 1;
   position: relative;
   height: 5px;
@@ -171,7 +171,7 @@
   border-radius: 5px;
 }
 
-.price-slider input[type='range'] {
+.priceSlider input[type='range'] {
   position: absolute;
   width: 100%;
   height: 5px;
@@ -181,7 +181,7 @@
   appearance: none;
 }
 
-.price-slider input[type='range']::-webkit-slider-thumb {
+.priceSlider input[type='range']::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -191,7 +191,7 @@
   -webkit-appearance: none;
 }
 
-.price-slider input[type='range']::-moz-range-thumb {
+.priceSlider input[type='range']::-moz-range-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -200,7 +200,7 @@
   pointer-events: auto;
 }
 
-.find-procedures {
+.findProcedures {
   display: block;
   width: 100%;
   background-color: #c8b273;
@@ -213,11 +213,11 @@
   transition: background-color 0.3s ease;
 }
 
-.find-procedures:hover {
+.findProcedures:hover {
   background-color: #b09a5f;
 }
 
-.no-results {
+.noResults {
   text-align: center;
   font-size: 1.2rem;
   color: #721c24;

@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import './Results.module.css';
+import './Results.css';
 
 const formatPrice = (price) => {
   const numericPrice = typeof price === 'number' ? price : parseFloat(price.replace('$', '').replace(',', ''));

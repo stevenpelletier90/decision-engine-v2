@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import DoctorProcedures from '../Results/Results';
+import Results from '../Results/Results';
 import MaleFrontSVG from '../../assets/images/male-front.svg';
 import MaleBackSVG from '../../assets/images/male-back.svg';
 import MaleGoldFrontSVG from '../../assets/images/male-gold-front.svg';
@@ -8,7 +8,7 @@ import FemaleFrontSVG from '../../assets/images/female-front.svg';
 import FemaleBackSVG from '../../assets/images/female-back.svg';
 import FemaleGoldFrontSVG from '../../assets/images/female-gold-front.svg';
 import FemaleGoldBackSVG from '../../assets/images/female-gold-back.svg';
-import './Form.module.css';
+import './Form.css';
 
 const bodyAreaOptions = {
   front: {
@@ -21,7 +21,7 @@ const bodyAreaOptions = {
   },
 };
 
-const InteractiveRecommendationForm = ({ data }) => {
+const Form = ({ data }) => {
   const { maxPrice, minPrice } = useMemo(() => {
     let max = 0,
       min = Infinity;
@@ -75,8 +75,8 @@ const InteractiveRecommendationForm = ({ data }) => {
 
   const handleGenderChange = (selectedGender) => {
     setGender(selectedGender);
-    setBodyAreas([]); // Clear selected body areas when gender changes
-    setShowWarning(false); // Reset warning state
+    setBodyAreas([]);
+    setShowWarning(false);
   };
 
   const handleAreaClick = (area) => {
@@ -97,38 +97,44 @@ const InteractiveRecommendationForm = ({ data }) => {
   };
 
   return (
-    <div className='interactive-recommendation-form'>
-      <h1 className='page-title'>Find Your Ideal Procedure</h1>
+    <div className='form'>
+      <h1 className='pageTitle'>Find Your Ideal Procedure</h1>
 
-      <div className='gender-buttons'>
-        <button onClick={() => handleGenderChange('Male')} className={gender === 'Male' ? 'active' : ''}>
+      <div className='genderButtons'>
+        <button
+          onClick={() => handleGenderChange('Male')}
+          className={`genderButton ${gender === 'Male' ? 'active' : ''}`}
+        >
           Male
         </button>
-        <button onClick={() => handleGenderChange('Female')} className={gender === 'Female' ? 'active' : ''}>
+        <button
+          onClick={() => handleGenderChange('Female')}
+          className={`genderButton ${gender === 'Female' ? 'active' : ''}`}
+        >
           Female
         </button>
       </div>
 
       {gender && (
-        <div className='models-container'>
-          <div className='model-view'>
+        <div className='modelsContainer'>
+          <div className='modelView'>
             <h3>Front View</h3>
             <InteractiveSVG gender={gender} selectedAreas={bodyAreas} onAreaClick={handleAreaClick} view='front' />
           </div>
-          <div className='model-view'>
+          <div className='modelView'>
             <h3>Back View</h3>
             <InteractiveSVG gender={gender} selectedAreas={bodyAreas} onAreaClick={handleAreaClick} view='back' />
           </div>
         </div>
       )}
 
-      <div className='form-container'>
-        <div className='form-section'>
+      <div className='formContainer'>
+        <div className='formSection'>
           {showWarning && <div className='warning'>You can select a maximum of 3 body areas.</div>}
-          <div className='selected-areas'>
+          <div className='selectedAreas'>
             {bodyAreas.length > 0 ? (
               bodyAreas.map((area) => (
-                <div key={area} className='selected-area-tag'>
+                <div key={area} className='selectedAreaTag'>
                   {area}
                 </div>
               ))
@@ -137,8 +143,8 @@ const InteractiveRecommendationForm = ({ data }) => {
             )}
           </div>
 
-          <div className='price-range-container'>
-            <div className='price-input'>
+          <div className='priceRangeContainer'>
+            <div className='priceInput'>
               <input
                 type='text'
                 value={priceRange[0] === minPrice ? 'No Min' : `$${priceRange[0].toLocaleString()}`}
@@ -148,7 +154,7 @@ const InteractiveRecommendationForm = ({ data }) => {
                 }}
               />
             </div>
-            <div className='price-slider'>
+            <div className='priceSlider'>
               <input
                 type='range'
                 min={minPrice}
@@ -164,7 +170,7 @@ const InteractiveRecommendationForm = ({ data }) => {
                 onChange={(e) => handlePriceRangeChange(1, parseInt(e.target.value))}
               />
             </div>
-            <div className='price-input'>
+            <div className='priceInput'>
               <input
                 type='text'
                 value={priceRange[1] === maxPrice ? 'No Max' : `$${priceRange[1].toLocaleString()}`}
@@ -175,7 +181,7 @@ const InteractiveRecommendationForm = ({ data }) => {
               />
             </div>
           </div>
-          <button className='find-procedures' onClick={() => gender && bodyAreas.length > 0 && setShowResults(true)}>
+          <button className='findProcedures' onClick={() => gender && bodyAreas.length > 0 && setShowResults(true)}>
             Find Matching Procedures
           </button>
         </div>
@@ -184,9 +190,9 @@ const InteractiveRecommendationForm = ({ data }) => {
       {showResults && (
         <div className='results'>
           {Object.keys(filteredData).length > 0 ? (
-            <DoctorProcedures data={filteredData} selectedAreas={bodyAreas} priceRange={priceRange} gender={gender} />
+            <Results data={filteredData} selectedAreas={bodyAreas} priceRange={priceRange} gender={gender} />
           ) : (
-            <div className='no-results'>No doctors available for the selected criteria.</div>
+            <div className='noResults'>No doctors available for the selected criteria.</div>
           )}
         </div>
       )}
@@ -229,7 +235,7 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, view }) => {
   };
 
   return (
-    <div className='svg-wrapper'>
+    <div className='svgWrapper'>
       <svg width='100%' height='100%' viewBox='0 0 524.4 840'>
         <defs>
           <filter id='hover-filter'>
@@ -267,7 +273,7 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, view }) => {
             <use
               key={area}
               href={`${goldSVG}#${getAreaId(area)}`}
-              className={`area-use ${selectedAreas.includes(area) ? 'selected' : ''}`}
+              className={`areaUse ${selectedAreas.includes(area) ? 'selected' : ''}`}
               onClick={() => onAreaClick(area)}
             />
           ))}
@@ -276,4 +282,5 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, view }) => {
     </div>
   );
 };
-export default InteractiveRecommendationForm;
+
+export default Form;

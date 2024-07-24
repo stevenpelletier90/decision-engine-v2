@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import InteractiveRecommendationForm from './components/Form/Form';
+import Form from './components/Form/Form';
 import './styles/index.css';
 
 const App = () => {
@@ -43,7 +43,7 @@ const App = () => {
             <p>Error fetching data: {error.message}</p>
           </div>
         ) : (
-          <InteractiveRecommendationForm data={data} />
+          <Form data={data} />
         )}
       </div>
     </div>
