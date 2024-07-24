@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import InteractiveRecommendationForm from './components/InteractiveRecommendationForm';
+import InteractiveRecommendationForm from './components/Form/Form';
 import './styles/index.css';
 
 const App = () => {

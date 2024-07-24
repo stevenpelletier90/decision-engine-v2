@@ -1,17 +1,14 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import DoctorProcedures from './DoctorProcedures';
-
-// SVG imports
-import MaleFrontSVG from '../assets/images/male-front.svg';
-import MaleBackSVG from '../assets/images/male-back.svg';
-import MaleGoldFrontSVG from '../assets/images/male-gold-front.svg';
-import MaleGoldBackSVG from '../assets/images/male-gold-back.svg';
-import FemaleFrontSVG from '../assets/images/female-front.svg';
-import FemaleBackSVG from '../assets/images/female-back.svg';
-import FemaleGoldFrontSVG from '../assets/images/female-gold-front.svg';
-import FemaleGoldBackSVG from '../assets/images/female-gold-back.svg';
-
-import '../styles/index.css';
+import DoctorProcedures from '../Results/Results';
+import MaleFrontSVG from '../../assets/images/male-front.svg';
+import MaleBackSVG from '../../assets/images/male-back.svg';
+import MaleGoldFrontSVG from '../../assets/images/male-gold-front.svg';
+import MaleGoldBackSVG from '../../assets/images/male-gold-back.svg';
+import FemaleFrontSVG from '../../assets/images/female-front.svg';
+import FemaleBackSVG from '../../assets/images/female-back.svg';
+import FemaleGoldFrontSVG from '../../assets/images/female-gold-front.svg';
+import FemaleGoldBackSVG from '../../assets/images/female-gold-back.svg';
+import './Form.module.css';
 
 const bodyAreaOptions = {
   front: {
@@ -236,7 +233,7 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, view }) => {
       <svg width='100%' height='100%' viewBox='0 0 524.4 840'>
         <defs>
           <filter id='hover-filter'>
-            <feFlood flood-color='#000000' result='flood' />
+            <feFlood floodColor='#000000' result='flood' />
             <feComposite
               in='SourceGraphic'
               in2='flood'
@@ -250,7 +247,7 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, view }) => {
             <feBlend in='composite' in2='SourceGraphic' mode='hard-light' />
           </filter>
           <filter id='selected-filter'>
-            <feFlood flood-color='#c8b275' result='flood' />
+            <feFlood floodColor='#c8b275' result='flood' />
             <feComposite
               in='SourceGraphic'
               in2='flood'

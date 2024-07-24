@@ -1,0 +1,167 @@
+.results-container {
+  background-color: #1b1b1b;
+  color: #ffffff;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c8b273;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.cheapest-surgeries-section {
+  margin-bottom: 2rem;
+  background-color: #000000;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.cheapest-surgeries-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c8b273;
+  margin-bottom: 1rem;
+}
+
+.cheapest-surgeries-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.cheapest-surgery-card {
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.all-surgeries {
+  margin-bottom: 2rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2a2a2a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+}
+
+.table th {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  background-color: #1b1b1b;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #c8b273;
+}
+
+.table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  vertical-align: middle;
+}
+
+.th-button {
+  background: none;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding: 0;
+  color: #c8b273;
+}
+
+.sort-indicator {
+  margin-left: 5px;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+}
+
+.doctor-avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.view-price-button {
+  background-color: #c8b273;
+  color: #1b1b1b;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.mobile-card {
+  border: 1px solid #444;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #2a2a2a;
+}
+
+.mobile-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #c8b273;
+}
+
+.mobile-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-card-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-sort-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.mobile-sort-button {
+  background-color: #1b1b1b;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #c8b273;
+}
+
+.mobile-sort-button.active {
+  background-color: #c8b273;
+  color: #1b1b1b;
+}
+
+.link {
+  color: #c8b273;
+  text-decoration: none;
+}
