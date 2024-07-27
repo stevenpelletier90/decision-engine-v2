@@ -235,46 +235,35 @@ const InteractiveSVG = ({ gender, selectedAreas, onAreaClick, view }) => {
   };
 
   return (
-    <div className='svgWrapper'>
+    <div style={{ position: 'relative' }}>
       <svg width='100%' height='100%' viewBox='0 0 524.4 840'>
         <defs>
-          <filter id='hover-filter'>
-            <feFlood floodColor='#000000' result='flood' />
-            <feComposite
-              in='SourceGraphic'
-              in2='flood'
-              operator='arithmetic'
-              k1='1'
-              k2='0'
-              k3='0'
-              k4='0'
-              result='composite'
-            />
-            <feBlend in='composite' in2='SourceGraphic' mode='hard-light' />
-          </filter>
-          <filter id='selected-filter'>
-            <feFlood floodColor='#c8b275' result='flood' />
-            <feComposite
-              in='SourceGraphic'
-              in2='flood'
-              operator='arithmetic'
-              k1='1'
-              k2='0'
-              k3='0'
-              k4='0'
-              result='composite'
-            />
-            <feBlend in='composite' in2='SourceGraphic' mode='hard-light' />
+          <filter id='hardLight'>
+            <feBlend mode='hard-light' in='SourceGraphic' in2='SourceGraphic' />
           </filter>
         </defs>
         <image href={baseSVG} width='100%' height='100%' />
-        <g>
+        <g style={{ mixBlendMode: 'hard-light' }}>
           {bodyAreaOptions[view][gender].map((area) => (
             <use
               key={area}
               href={`${goldSVG}#${getAreaId(area)}`}
-              className={`areaUse ${selectedAreas.includes(area) ? 'selected' : ''}`}
+              style={{
+                cursor: 'pointer',
+                fill: selectedAreas.includes(area) ? '#c8b275' : 'transparent',
+                filter: 'url(#hardLight)',
+              }}
               onClick={() => onAreaClick(area)}
+              onMouseEnter={(e) => {
+                if (!selectedAreas.includes(area)) {
+                  e.target.style.fill = '#777777';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (!selectedAreas.includes(area)) {
+                  e.target.style.fill = 'transparent';
+                }
+              }}
             />
           ))}
         </g>

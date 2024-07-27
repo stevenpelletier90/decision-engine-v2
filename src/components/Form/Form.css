@@ -77,45 +77,6 @@
   width: 100%;
 }
 
-.svgContainer {
-  height: 400px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.svgWrapper {
-  position: relative;
-}
-
-.svgWrapper svg {
-  width: 100%;
-  height: auto;
-  max-height: 600px;
-}
-
-.areaUse {
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease, fill 0.3s ease;
-}
-
-.areaUse:hover {
-  opacity: 1;
-  fill: #000000;
-}
-
-.areaUse.selected {
-  opacity: 1;
-  fill: #c8b275;
-}
-
-.svgWrapper g {
-  isolation: isolate;
-  mix-blend-mode: hard-light;
-}
-
 .selectedAreas {
   margin-bottom: 1rem;
   text-align: center;
