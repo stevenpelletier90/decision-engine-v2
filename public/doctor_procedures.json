@@ -78,20 +78,20 @@
       },
       "Back": {
         "Male": {
-          "Male Circumferential Lift": "$10,300",
-          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Male Circumferential Lift": "$10,300"
         },
         "Female": {
-          "Circumferential Lift": "$10,300",
-          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Circumferential Lift": "$10,300"
         }
       },
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$6,350"
+          "Male Brazilian Butt Lift (BBL)": "$6,150",
+          "Male Fat Transfer to Hips": "$6,150"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$6,350"
+          "Brazilian Butt Lift (BBL)": "$6,150",
+          "Fat Transfer to Hips": "$6,150"
         }
       }
     }
@@ -105,12 +105,10 @@
     "Procedures": {
       "Face/Neck/Eyes": {
         "Male": {
-          "Male Buccal Fat Removal": "$3,500",
-          "Male Renuvion/JPlasma (Chin)": "$900"
+          "Male Buccal Fat Removal": "$3,500"
         },
         "Female": {
-          "Buccal Fat Removal": "$3,500",
-          "Renuvion/JPlasma (Chin)": "$900"
+          "Buccal Fat Removal": "$3,500"
         }
       },
       "Breast": {
@@ -130,13 +128,11 @@
       "Arms": {
         "Male": {
           "Male Arm Lift (Short scar)": "$6,450",
-          "Male Arm Lift (Long scar)": "$5,950",
-          "Male Renuvion/JPlasma (Arms)": "$1,700"
+          "Male Arm Lift (Long scar)": "$5,950"
         },
         "Female": {
           "Arm Lift (Short scar)": "$6,450",
-          "Arm Lift (Long scar)": "$5,950",
-          "Renuvion/JPlasma (Arms)": "$1,700"
+          "Arm Lift (Long scar)": "$5,950"
         }
       },
       "Legs": {
@@ -153,35 +149,31 @@
         "Male": {
           "Male Tummy Tuck (Standard)": "$5,900",
           "Male Tummy Tuck (Extended)": "$6,400",
-          "Male Liposuction Up to 12 areas": "$5,400",
-          "Male Renuvion/JPlasma (Full Abdomen)": "$3,200",
-          "Male Renuvion/JPlasma (Inner thighs)": "$1,700"
+          "Male Liposuction Up to 12 areas": "$5,400"
         },
         "Female": {
           "Tummy Tuck (Standard)": "$5,900",
           "Tummy Tuck (Extended)": "$6,400",
           "Liposuction Up to 12 areas": "$5,400",
-          "Labiaplasty": "$5,000",
-          "Renuvion/JPlasma (Full Abdomen)": "$3,200",
-          "Renuvion/JPlasma (Inner thighs)": "$1,700"
+          "Labiaplasty": "$5,000"
         }
       },
       "Back": {
         "Male": {
-          "Male Back Lift": "$5,000",
-          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Male Back Lift": "$5,000"
         },
         "Female": {
-          "Back Lift": "$5,000",
-          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Back Lift": "$5,000"
         }
       },
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$6,600"
+          "Male Brazilian Butt Lift (BBL)": "$6,400",
+          "Male Fat Transfer to Hips": "$6,400"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$6,600"
+          "Brazilian Butt Lift (BBL)": "$6,400",
+          "Fat Transfer to Hips": "$6,400"
         }
       }
     }
@@ -269,20 +261,20 @@
       },
       "Back": {
         "Male": {
-          "Male Back Lift": "$8,250",
-          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Male Back Lift": "$8,250"
         },
         "Female": {
-          "Back Lift": "$8,250",
-          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Back Lift": "$8,250"
         }
       },
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$7,550"
+          "Male Brazilian Butt Lift (BBL)": "$7,350",
+          "Male Fat Transfer to Hips": "$7,350"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$7,550"
+          "Brazilian Butt Lift (BBL)": "$7,350",
+          "Fat Transfer to Hips": "$7,350"
         }
       }
     }
@@ -297,13 +289,11 @@
       "Face/Neck/Eyes": {
         "Male": {
           "Male Buccal Fat Removal": "$3,500",
-          "Male Dimpleplasty Procedure Alone": "$1,250",
-          "Male Renuvion/JPlasma (Chin)": "$900"
+          "Male Dimpleplasty Procedure Alone": "$1,250"
         },
         "Female": {
           "Buccal Fat Removal": "$3,500",
-          "Dimpleplasty Procedure Alone": "$1,250",
-          "Renuvion/JPlasma (Chin)": "$900"
+          "Dimpleplasty Procedure Alone": "$1,250"
         }
       },
       "Breast": {
@@ -323,13 +313,11 @@
       "Arms": {
         "Male": {
           "Male Arm Lift (Short scar)": "$6,450",
-          "Male Arm Lift (Long scar)": "$5,950",
-          "Male Renuvion/JPlasma (Arms)": "$1,700"
+          "Male Arm Lift (Long scar)": "$5,950"
         },
         "Female": {
           "Arm Lift (Short scar)": "$6,450",
-          "Arm Lift (Long scar)": "$5,950",
-          "Renuvion/JPlasma (Arms)": "$1,700"
+          "Arm Lift (Long scar)": "$5,950"
         }
       },
       "Legs": {
@@ -346,35 +334,31 @@
         "Male": {
           "Male Tummy Tuck (Standard)": "$5,300",
           "Male Tummy Tuck (Extended)": "$5,800",
-          "Male Liposuction Up to 12 areas": "$4,800",
-          "Male Renuvion/JPlasma (Full Abdomen)": "$3,200",
-          "Male Renuvion/JPlasma (Inner thighs)": "$1,700"
+          "Male Liposuction Up to 12 areas": "$4,800"
         },
         "Female": {
           "Tummy Tuck (Standard)": "$5,300",
           "Tummy Tuck (Extended)": "$5,800",
           "Liposuction Up to 12 areas": "$4,800",
-          "Labiaplasty": "$5,000",
-          "Renuvion/JPlasma (Full Abdomen)": "$3,200",
-          "Renuvion/JPlasma (Inner thighs)": "$1,700"
+          "Labiaplasty": "$5,000"
         }
       },
       "Back": {
         "Male": {
-          "Male Back Lift": "$5,000",
-          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Male Back Lift": "$5,000"
         },
         "Female": {
-          "Back Lift": "$5,000",
-          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Back Lift": "$5,000"
         }
       },
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,400"
+          "Male Brazilian Butt Lift (BBL)": "$5,200",
+          "Male Fat Transfer to Hips": "5,200"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,400"
+          "Brazilian Butt Lift (BBL)": "$5,200",
+          "Fat Transfer to Hips": "5,200"
         }
       }
     }
@@ -391,15 +375,13 @@
           "Male Eyelid Lift Lower": "$5,000",
           "Male Eyelid Lift Upper": "$5,000",
           "Male Earlobe Repair (Both)": "$3,500",
-          "Male Earlobe Repair (Single)": "$2,000",
-          "Male Renuvion/JPlasma (Chin)": "$900"
+          "Male Earlobe Repair (Single)": "$2,000"
         },
         "Female": {
           "Eyelid Lift Lower": "$5,000",
           "Eyelid Lift Upper": "$5,000",
           "Earlobe Repair (Both)": "$3,500",
-          "Earlobe Repair (Single)": "$2,000",
-          "Renuvion/JPlasma (Chin)": "$900"
+          "Earlobe Repair (Single)": "$2,000"
         }
       },
       "Breast": {
@@ -412,19 +394,17 @@
           "Breast Lift (No implant)": "$7,350",
           "Breast Lift (Saline)": "$7,650",
           "Breast Lift (Gel)": "$8,150",
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$8,950"
+          "Brazilian Butt Lift (BBL)": "$8,950"
         }
       },
       "Arms": {
         "Male": {
           "Male Arm Lift (Short scar)": "$7,250",
-          "Male Arm Lift (Long scar)": "$7,750",
-          "Male Renuvion/JPlasma (Arms)": "$1,700"
+          "Male Arm Lift (Long scar)": "$7,750"
         },
         "Female": {
           "Arm Lift (Short scar)": "$7,250",
-          "Arm Lift (Long scar)": "$7,750",
-          "Renuvion/JPlasma (Arms)": "$1,700"
+          "Arm Lift (Long scar)": "$7,750"
         }
       },
       "Legs": {
@@ -451,27 +431,25 @@
           "Tummy Tuck Fleur De Lise": "$12,250",
           "Liposuction Up to 12 areas": "$7,950",
           "Abdominal Etching w/ Liposuction 12 Areas": "$9,750",
-          "Labiaplasty": "$6,000",
-          "Renuvion/JPlasma (Full Abdomen)": "$3,200",
-          "Renuvion/JPlasma (Inner thighs)": "$1,700"
+          "Labiaplasty": "$6,000"
         }
       },
       "Back": {
         "Male": {
-          "Male Back Lift": "$8,300",
-          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Male Back Lift": "$8,300"
         },
         "Female": {
-          "Back Lift": "$8,300",
-          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Back Lift": "$8,300"
         }
       },
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$8,950"
+          "Male Brazilian Butt Lift (BBL)": "$8,750",
+          "Male Fat Transfer to Hips": "$8,750"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$8,950"
+          "Brazilian Butt Lift (BBL)": "$8,750",
+          "Male Fat Transfer to Hips": "$8,750"
         }
       }
     }
@@ -493,8 +471,7 @@
           "Male Neck Rejuvenation": "$9,000",
           "Male Face Lift/Neck": "$12,000",
           "Male Rhinoplasty": "$5,000",
-          "Male Buccal Fat Removal": "$3,500",
-          "Male Renuvion/JPlasma (Chin)": "$900"
+          "Male Buccal Fat Removal": "$3,500"
         },
         "Female": {
           "Eyelid Lift Lower": "$3,700",
@@ -506,8 +483,7 @@
           "Neck Rejuvenation": "$9,000",
           "Face Lift/Neck": "$12,000",
           "Rhinoplasty": "$5,000",
-          "Buccal Fat Removal": "$3,500",
-          "Renuvion/JPlasma (Chin)": "$900"
+          "Buccal Fat Removal": "$3,500"
         }
       },
       "Breast": {
@@ -527,13 +503,11 @@
       "Arms": {
         "Male": {
           "Male Arm Lift (Short scar)": "$6,450",
-          "Male Arm Lift (Long scar)": "$5,950",
-          "Male Renuvion/JPlasma (Arms)": "$1,700"
+          "Male Arm Lift (Long scar)": "$5,950"
         },
         "Female": {
           "Arm Lift (Short scar)": "$6,450",
-          "Arm Lift (Long scar)": "$5,950",
-          "Renuvion/JPlasma (Arms)": "$1,700"
+          "Arm Lift (Long scar)": "$5,950"
         }
       },
       "Legs": {
@@ -551,36 +525,32 @@
           "Male Tummy Tuck (Standard)": "$5,200",
           "Male Tummy Tuck (Extended)": "$5,700",
           "Male Tummy Tuck Fleur De Lise": "$7,700",
-          "Male Liposuction Up to 12 areas": "$4,600",
-          "Male Renuvion/JPlasma (Full Abdomen)": "$3,200",
-          "Male Renuvion/JPlasma (Inner thighs)": "$1,700"
+          "Male Liposuction Up to 12 areas": "$4,600"
         },
         "Female": {
           "Tummy Tuck (Standard)": "$5,200",
           "Tummy Tuck (Extended)": "$5,700",
           "Tummy Tuck Fleur De Lise": "$7,700",
           "Liposuction Up to 12 areas": "$4,600",
-          "Labiaplasty": "$5,000",
-          "Renuvion/JPlasma (Full Abdomen)": "$3,200",
-          "Renuvion/JPlasma (Inner thighs)": "$1,700"
+          "Labiaplasty": "$5,000"
         }
       },
       "Back": {
         "Male": {
-          "Male Back Lift": "$6,200",
-          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Male Back Lift": "$6,200"
         },
         "Female": {
-          "Back Lift": "$6,200",
-          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Back Lift": "$6,200"
         }
       },
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,300"
+          "Male Brazilian Butt Lift (BBL)": "$5,100",
+          "Fat Transfer to Hips": "$5,100"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,300"
+          "Brazilian Butt Lift (BBL)": "$5,100",
+          "Fat Transfer to Hips": "$5,100"
         }
       }
     }
@@ -661,19 +631,17 @@
         }
       },
       "Back": {
-        "Male": {
-          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
-        },
-        "Female": {
-          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
-        }
+        "Male": {},
+        "Female": {}
       },
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$4,099"
+          "Male Brazilian Butt Lift (BBL)": "$3,899",
+          "Fat Transfer to Hips": "$3,899"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$4,099"
+          "Brazilian Butt Lift (BBL)": "$3,899",
+          "Fat Transfer to Hips": "$3,899"
         }
       }
     }
@@ -736,20 +704,20 @@
       },
       "Back": {
         "Male": {
-          "Male Back Lift": "$4,500",
-          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Male Back Lift": "$4,500"
         },
         "Female": {
-          "Back Lift": "$4,500",
-          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Back Lift": "$4,500"
         }
       },
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$4,099"
+          "Male Brazilian Butt Lift (BBL)": "$3,899",
+          "Fat Transfer to Hips": "$3,899"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$4,099"
+          "Brazilian Butt Lift (BBL)": "$3,899",
+          "Fat Transfer to Hips": "$3,899"
         }
       }
     }
@@ -835,20 +803,20 @@
       },
       "Back": {
         "Male": {
-          "Male Back Lift": "$6,100",
-          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Male Back Lift": "$6,100"
         },
         "Female": {
-          "Back Lift": "$6,100",
-          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
+          "Back Lift": "$6,100"
         }
       },
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$6,300"
+          "Male Brazilian Butt Lift (BBL)": "$6,100",
+          "Fat Transfer to Hips": "$6,100"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$6,300"
+          "Brazilian Butt Lift (BBL)": "$6,100",
+          "Fat Transfer to Hips": "$6,100"
         }
       }
     }
@@ -911,19 +879,17 @@
         }
       },
       "Back": {
-        "Male": {
-          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
-        },
-        "Female": {
-          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
-        }
+        "Male": {},
+        "Female": {}
       },
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,350"
+          "Male Brazilian Butt Lift (BBL)": "$5,150",
+          "Fat Transfer to Hips": "$5,150"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,350"
+          "Brazilian Butt Lift (BBL)": "$5,150",
+          "Fat Transfer to Hips": "$5,150"
         }
       }
     }
@@ -945,8 +911,7 @@
           "Male Neck Rejuvenation": "$9,000",
           "Male Face Lift/Neck": "$12,000",
           "Male Rhinoplasty": "$7,000",
-          "Male Buccal Fat Removal": "$4,500",
-          "Male Renuvion/JPlasma (Chin)": "$900"
+          "Male Buccal Fat Removal": "$4,500"
         },
         "Female": {
           "Eyelid Lift Lower": "$3,700",
@@ -958,8 +923,7 @@
           "Neck Rejuvenation": "$9,000",
           "Face Lift/Neck": "$12,000",
           "Rhinoplasty": "$7,000",
-          "Buccal Fat Removal": "$4,500",
-          "Renuvion/JPlasma (Chin)": "$900"
+          "Buccal Fat Removal": "$4,500"
         }
       },
       "Breast": {
@@ -979,13 +943,11 @@
       "Arms": {
         "Male": {
           "Male Arm Lift (Short scar)": "$5,950",
-          "Male Arm Lift (Long scar)": "$6,450",
-          "Male Renuvion/JPlasma (Arms)": "$1,700"
+          "Male Arm Lift (Long scar)": "$6,450"
         },
         "Female": {
           "Arm Lift (Short scar)": "$5,950",
-          "Arm Lift (Long scar)": "$6,450",
-          "Renuvion/JPlasma (Arms)": "$1,700"
+          "Arm Lift (Long scar)": "$6,450"
         }
       },
       "Legs": {
@@ -1014,19 +976,17 @@
         }
       },
       "Back": {
-        "Male": {
-          "Male Renuvion/JPlasma (Bra Rolls)": "$1,700"
-        },
-        "Female": {
-          "Renuvion/JPlasma (Bra Rolls)": "$1,700"
-        }
+        "Male": {},
+        "Female": {}
       },
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$6,300"
+          "Male Brazilian Butt Lift (BBL)": "$6,100",
+          "Fat Transfer to Hips": "$6,100"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$6,300"
+          "Brazilian Butt Lift (BBL)": "$6,100",
+          "Fat Transfer to Hips": "$6,100"
         }
       }
     }
@@ -1039,10 +999,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,600"
+          "Male Brazilian Butt Lift (BBL)": "$5,400",
+          "Fat Transfer to Hips": "$5,400"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,600"
+          "Brazilian Butt Lift (BBL)": "$5,400",
+          "Fat Transfer to Hips": "$5,400"
         }
       },
       "Face/Neck/Eyes": {
@@ -1114,10 +1076,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,200"
+          "Male Brazilian Butt Lift (BBL)": "$5,000",
+          "Fat Tranfer to Hips": "$5,000"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,200"
+          "Brazilian Butt Lift (BBL)": "$5,000",
+          "Fat Tranfer to Hips": "$5,000"
         }
       },
       "Face/Neck/Eyes": {
@@ -1189,10 +1153,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,850"
+          "Male Brazilian Butt Lift (BBL)": "$5,650",
+          "Fat Tranfer to Hips": "$5,650"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,850"
+          "Brazilian Butt Lift (BBL)": "$5,650",
+          "Fat Tranfer to Hips": "$5,650"
         }
       },
       "Face/Neck/Eyes": {
@@ -1264,10 +1230,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$11,850",
+          "Fat Tranfer to Hips": "$11,850"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$11,850",
+          "Fat Tranfer to Hips": "$11,850"
         }
       },
       "Face/Neck/Eyes": {
@@ -1339,10 +1307,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$6,450",
+          "Fat Tranfer to Hips": "$6,450"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$6,450",
+          "Fat Tranfer to Hips": "$6,450"
         }
       },
       "Face/Neck/Eyes": {
@@ -1414,10 +1384,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$5,800",
+          "Fat Tranfer to Hips": "$5,800"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$5,800",
+          "Fat Tranfer to Hips": "$5,800"
         }
       },
       "Face/Neck/Eyes": {
@@ -1489,10 +1461,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$5,100",
+          "Fat Tranfer to Hips": "$5,100"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$5,100",
+          "Fat Tranfer to Hips": "$5,100"
         }
       },
       "Face/Neck/Eyes": {
@@ -1564,10 +1538,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$5,300",
+          "Fat Tranfer to Hips": "$5,300"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$5,300",
+          "Fat Tranfer to Hips": "$5,300"
         }
       },
       "Face/Neck/Eyes": {
@@ -1639,10 +1615,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$4,900",
+          "Fat Tranfer to Hips": "$4,900"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$4,900",
+          "Fat Tranfer to Hips": "$4,900"
         }
       },
       "Face/Neck/Eyes": {
@@ -1714,10 +1692,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$3,999",
+          "Fat Tranfer to Hips": "$3,999"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$3,999",
+          "Fat Tranfer to Hips": "$3,999"
         }
       },
       "Face/Neck/Eyes": {
@@ -1789,10 +1769,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$5,800",
+          "Fat Tranfer to Hips": "$5,800"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$5,800",
+          "Fat Tranfer to Hips": "$5,800"
         }
       },
       "Face/Neck/Eyes": {
@@ -1864,10 +1846,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$6,550"
+          "Male Brazilian Butt Lift (BBL)": "$6,350",
+          "Fat Tranfer to Hips": "$6,350"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$6,550"
+          "Brazilian Butt Lift (BBL)": "$6,350",
+          "Fat Tranfer to Hips": "$6,350"
         }
       },
       "Face/Neck/Eyes": {
@@ -1939,10 +1923,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$6,850",
+          "Fat Tranfer to Hips": "$6,850"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$6,850",
+          "Fat Tranfer to Hips": "$6,850"
         }
       },
       "Face/Neck/Eyes": {
@@ -2014,10 +2000,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$4,000",
+          "Fat Tranfer to Hips": "$4,000"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$4,000",
+          "Fat Tranfer to Hips": "$4,000"
         }
       },
       "Face/Neck/Eyes": {
@@ -2089,10 +2077,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$5,200",
+          "Fat Tranfer to Hips": "$5,200"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$5,200",
+          "Fat Tranfer to Hips": "$5,200"
         }
       },
       "Face/Neck/Eyes": {
@@ -2164,10 +2154,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$5,200",
+          "Fat Tranfer to Hips": "$5,200"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$$5,200",
+          "Fat Tranfer to Hips": "$5,200"
         }
       },
       "Face/Neck/Eyes": {
@@ -2239,10 +2231,12 @@
     "Procedures": {
       "Buttocks": {
         "Male": {
-          "Male Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Male Brazilian Butt Lift (BBL)": "$4,650",
+          "Fat Tranfer to Hips": "$4,650"
         },
         "Female": {
-          "Brazilian Butt Lift OR Fat Transfer to Hips": "$5,500"
+          "Brazilian Butt Lift (BBL)": "$4,650",
+          "Fat Tranfer to Hips": "$4,650"
         }
       },
       "Face/Neck/Eyes": {

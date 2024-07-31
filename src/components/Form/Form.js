@@ -21,17 +21,26 @@ const bodyAreaOptions = {
   },
 };
 
+const mapAreaToDataKey = (area, gender) => {
+  if (area === 'Chest' && gender === 'Male') {
+    return 'Breast';
+  }
+  return area;
+};
+
 const Form = ({ data }) => {
   const { maxPrice, minPrice } = useMemo(() => {
-    let max = 0,
-      min = Infinity;
+    let max = -Infinity;
+    let min = Infinity;
     Object.values(data).forEach((doctor) => {
       Object.values(doctor.Procedures).forEach((bodyArea) => {
         Object.values(bodyArea).forEach((genderProcedures) => {
           Object.values(genderProcedures).forEach((price) => {
-            const numericPrice = parseFloat(price.replace('$', '').replace(',', ''));
-            max = Math.max(max, numericPrice);
-            min = Math.min(min, numericPrice);
+            const numericPrice = parseFloat(price.replace(/[^0-9.-]+/g, ''));
+            if (!isNaN(numericPrice)) {
+              max = Math.max(max, numericPrice);
+              min = Math.min(min, numericPrice);
+            }
           });
         });
       });
@@ -57,11 +66,12 @@ const Form = ({ data }) => {
     return Object.entries(data).reduce((acc, [doctorName, doctorData]) => {
       const relevantProcedures = {};
       bodyAreas.forEach((area) => {
-        if (doctorData.Procedures[area] && doctorData.Procedures[area][gender]) {
-          relevantProcedures[area] = Object.entries(doctorData.Procedures[area][gender])
+        const dataKey = mapAreaToDataKey(area, gender);
+        if (doctorData.Procedures[dataKey] && doctorData.Procedures[dataKey][gender]) {
+          relevantProcedures[area] = Object.entries(doctorData.Procedures[dataKey][gender])
             .filter(([_, price]) => {
-              const numericPrice = parseFloat(price.replace('$', '').replace(',', ''));
-              return numericPrice >= priceRange[0] && numericPrice <= priceRange[1];
+              const numericPrice = parseFloat(price.replace(/[^0-9.-]+/g, ''));
+              return !isNaN(numericPrice) && numericPrice >= priceRange[0] && numericPrice <= priceRange[1];
             })
             .reduce((obj, [procedure, price]) => ({ ...obj, [procedure]: price }), {});
         }

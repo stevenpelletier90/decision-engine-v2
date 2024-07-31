@@ -51,7 +51,7 @@ const CheapestSurgeries = ({ surgeries }) => {
 
   return (
     <div className='cheapest-surgeries-section'>
-      <h3 className='cheapest-surgeries-title'>Cheapest Surgeries by Procedure</h3>
+      <h3 className='cheapest-surgeries-title'>Most Affordable Procedures</h3>
       <div className='cheapest-surgeries-list'>
         {cheapestByProcedure.map((surgery) => (
           <div key={surgery.procedure} className='cheapest-surgery-card'>
