@@ -1,0 +1,189 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1b1b1b;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.genderButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.genderButtons button {
+  background-color: #f5f5f5;
+  border: 1px solid #c8b273;
+  color: #1b1b1b;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.genderButtons button.active {
+  background-color: #c8b273;
+  color: #1b1b1b;
+}
+
+.modelsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.modelView {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modelView h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.formSection {
+  width: 100%;
+}
+
+.selectedAreas {
+  margin-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selectedAreaTag {
+  background-color: #c8b273;
+  color: #1b1b1b;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.priceRangeContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.priceInput {
+  flex: 0 0 auto;
+}
+
+.priceInput input {
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.priceSlider {
+  flex: 1;
+  position: relative;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.priceSlider input[type='range'] {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.priceSlider input[type='range']::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #c8b273;
+  cursor: pointer;
+  pointer-events: auto;
+  -webkit-appearance: none;
+}
+
+.priceSlider input[type='range']::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #c8b273;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.findProcedures {
+  display: block;
+  width: 100%;
+  background-color: #c8b273;
+  color: #1b1b1b;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.findProcedures:hover {
+  background-color: #b09a5f;
+}
+
+.noResults {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #721c24;
+  background-color: #f8d7da;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
